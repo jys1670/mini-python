@@ -1,0 +1,90 @@
+\hypertarget{lexer_8h}{}\doxysection{src/lexer.h File Reference}
+\label{lexer_8h}\index{src/lexer.h@{src/lexer.h}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$iosfwd$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$variant$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Number}{parse\+::token\+\_\+type\+::\+Number}}
+\begin{DoxyCompactList}\small\item\em Numeric constant. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Id}{parse\+::token\+\_\+type\+::\+Id}}
+\begin{DoxyCompactList}\small\item\em User-\/defined names (variables, classes, etc) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Char}{parse\+::token\+\_\+type\+::\+Char}}
+\begin{DoxyCompactList}\small\item\em ASCII symbol. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1String}{parse\+::token\+\_\+type\+::\+String}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structparse_1_1token__type_1_1String}{String}} literal. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Class}{parse\+::token\+\_\+type\+::\+Class}}
+\begin{DoxyCompactList}\small\item\em Class operator \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Return}{parse\+::token\+\_\+type\+::\+Return}}
+\begin{DoxyCompactList}\small\item\em Return keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1If}{parse\+::token\+\_\+type\+::\+If}}
+\begin{DoxyCompactList}\small\item\em If keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Else}{parse\+::token\+\_\+type\+::\+Else}}
+\begin{DoxyCompactList}\small\item\em Else keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Def}{parse\+::token\+\_\+type\+::\+Def}}
+\begin{DoxyCompactList}\small\item\em Def keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Newline}{parse\+::token\+\_\+type\+::\+Newline}}
+\begin{DoxyCompactList}\small\item\em Newline symbol \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Print}{parse\+::token\+\_\+type\+::\+Print}}
+\begin{DoxyCompactList}\small\item\em Print function \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Indent}{parse\+::token\+\_\+type\+::\+Indent}}
+\begin{DoxyCompactList}\small\item\em Indentation increased by two spaces. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Dedent}{parse\+::token\+\_\+type\+::\+Dedent}}
+\begin{DoxyCompactList}\small\item\em Indentation decreased by two spaces. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{parse\+::token\+\_\+type\+::\+Eof}}
+\begin{DoxyCompactList}\small\item\em End of file. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1And}{parse\+::token\+\_\+type\+::\+And}}
+\begin{DoxyCompactList}\small\item\em And keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Or}{parse\+::token\+\_\+type\+::\+Or}}
+\begin{DoxyCompactList}\small\item\em Or keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Not}{parse\+::token\+\_\+type\+::\+Not}}
+\begin{DoxyCompactList}\small\item\em Not keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1Eq}{parse\+::token\+\_\+type\+::\+Eq}}
+\begin{DoxyCompactList}\small\item\em Sequence of chars ==. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1NotEq}{parse\+::token\+\_\+type\+::\+Not\+Eq}}
+\begin{DoxyCompactList}\small\item\em Sequence of chars !=. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1LessOrEq}{parse\+::token\+\_\+type\+::\+Less\+Or\+Eq}}
+\begin{DoxyCompactList}\small\item\em Sequence of chars \texorpdfstring{$<$}{<}=. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1GreaterOrEq}{parse\+::token\+\_\+type\+::\+Greater\+Or\+Eq}}
+\begin{DoxyCompactList}\small\item\em Sequence of chars \texorpdfstring{$>$}{>}=. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1None}{parse\+::token\+\_\+type\+::\+None}}
+\begin{DoxyCompactList}\small\item\em None keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1True}{parse\+::token\+\_\+type\+::\+True}}
+\begin{DoxyCompactList}\small\item\em True keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1token__type_1_1False}{parse\+::token\+\_\+type\+::\+False}}
+\begin{DoxyCompactList}\small\item\em False keyword \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structparse_1_1Token}{parse\+::\+Token}}
+\item 
+class \mbox{\hyperlink{classparse_1_1LexerError}{parse\+::\+Lexer\+Error}}
+\item 
+class \mbox{\hyperlink{classparse_1_1Lexer}{parse\+::\+Lexer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceparse}{parse}}
+\item 
+namespace \mbox{\hyperlink{namespaceparse_1_1token__type}{parse\+::token\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceparse_a381d67b58756d5aa9eb7031b4f9d91a2}{parse\+::\+Token\+Base}} = std\+::variant$<$ token\+\_\+type\+::\+Number, token\+\_\+type\+::\+Id, token\+\_\+type\+::\+Char, token\+\_\+type\+::\+String, token\+\_\+type\+::\+Class, token\+\_\+type\+::\+Return, token\+\_\+type\+::\+If, token\+\_\+type\+::\+Else, token\+\_\+type\+::\+Def, token\+\_\+type\+::\+Newline, token\+\_\+type\+::\+Print, token\+\_\+type\+::\+Indent, token\+\_\+type\+::\+Dedent, token\+\_\+type\+::\+And, token\+\_\+type\+::\+Or, token\+\_\+type\+::\+Not, token\+\_\+type\+::\+Eq, token\+\_\+type\+::\+Not\+Eq, token\+\_\+type\+::\+Less\+Or\+Eq, token\+\_\+type\+::\+Greater\+Or\+Eq, token\+\_\+type\+::\+None, token\+\_\+type\+::\+True, token\+\_\+type\+::\+False, token\+\_\+type\+::\+Eof $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceparse_a03317f4395b46fb4bd446c2bc45884b9}{parse\+::operator==}} (const Token \&lhs, const Token \&rhs)
+\item 
+bool \mbox{\hyperlink{namespaceparse_aae3f46867c9ac5667db503d5d12ca4f9}{parse\+::operator!=}} (const Token \&lhs, const Token \&rhs)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceparse_a1903a984b8f8fe421549207e8b69c4d1}{parse\+::operator$<$$<$}} (std\+::ostream \&os, const Token \&rhs)
+\end{DoxyCompactItemize}

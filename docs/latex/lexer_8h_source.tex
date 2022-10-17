@@ -1,0 +1,237 @@
+\hypertarget{lexer_8h_source}{}\doxysection{lexer.\+h}
+\label{lexer_8h_source}\index{src/lexer.h@{src/lexer.h}}
+\mbox{\hyperlink{lexer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iosfwd>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <optional>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <unordered\_set>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <variant>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceparse}{parse}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }token\_type}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{21 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Number}{Number}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} \mbox{\hyperlink{structparse_1_1token__type_1_1Number_afda56903180bd9b79a07474a2367e023}{value}};}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{27 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Id}{Id}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     std::string \mbox{\hyperlink{structparse_1_1token__type_1_1Id_ae490ccdfebb3156e37feceadbc7a1f9f}{value}};}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{33 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Char}{Char}}}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \textcolor{keywordtype}{char} \mbox{\hyperlink{structparse_1_1token__type_1_1Char_a5968509e38b6e85d1a82d136ef0e8608}{value}};}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{39 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1String}{String}}}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     std::string \mbox{\hyperlink{structparse_1_1token__type_1_1String_ab312f271b0b09b95ca12ee037f476e39}{value}};}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{45 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Class}{Class}}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Return}{Return}}}
+\DoxyCodeLine{51 \{}
+\DoxyCodeLine{52 \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{55 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1If}{If}}}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{60 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Else}{Else}}}
+\DoxyCodeLine{61 \{}
+\DoxyCodeLine{62 \};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Def}{Def}}}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67 \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Newline}{Newline}}}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72 \};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{75 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Print}{Print}}}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77 \};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{80 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Indent}{Indent}}}
+\DoxyCodeLine{81 \{}
+\DoxyCodeLine{82 \};}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{85 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Dedent}{Dedent}}}
+\DoxyCodeLine{86 \{}
+\DoxyCodeLine{87 \};}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{90 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{Eof}}}
+\DoxyCodeLine{91 \{}
+\DoxyCodeLine{92 \};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{95 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1And}{And}}}
+\DoxyCodeLine{96 \{}
+\DoxyCodeLine{97 \};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{100 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Or}{Or}}}
+\DoxyCodeLine{101 \{}
+\DoxyCodeLine{102 \};}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{105 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Not}{Not}}}
+\DoxyCodeLine{106 \{}
+\DoxyCodeLine{107 \};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{110 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1Eq}{Eq}}}
+\DoxyCodeLine{111 \{}
+\DoxyCodeLine{112 \};}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{115 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1NotEq}{NotEq}}}
+\DoxyCodeLine{116 \{}
+\DoxyCodeLine{117 \};}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{120 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1LessOrEq}{LessOrEq}}}
+\DoxyCodeLine{121 \{}
+\DoxyCodeLine{122 \};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{125 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1GreaterOrEq}{GreaterOrEq}}}
+\DoxyCodeLine{126 \{}
+\DoxyCodeLine{127 \};}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{130 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1None}{None}}}
+\DoxyCodeLine{131 \{}
+\DoxyCodeLine{132 \};}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{135 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1True}{True}}}
+\DoxyCodeLine{136 \{}
+\DoxyCodeLine{137 \};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{140 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1token__type_1_1False}{False}}}
+\DoxyCodeLine{141 \{}
+\DoxyCodeLine{142 \};}
+\DoxyCodeLine{143 \} \textcolor{comment}{// namespace token\_type}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 \textcolor{keyword}{using }\mbox{\hyperlink{namespaceparse_a381d67b58756d5aa9eb7031b4f9d91a2}{TokenBase}} =}
+\DoxyCodeLine{146     std::variant<\mbox{\hyperlink{structparse_1_1token__type_1_1Number}{token\_type::Number}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Id}{token\_type::Id}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Char}{token\_type::Char}}, \mbox{\hyperlink{structparse_1_1token__type_1_1String}{token\_type::String}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Class}{token\_type::Class}},}
+\DoxyCodeLine{147                  \mbox{\hyperlink{structparse_1_1token__type_1_1Return}{token\_type::Return}}, \mbox{\hyperlink{structparse_1_1token__type_1_1If}{token\_type::If}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Else}{token\_type::Else}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Def}{token\_type::Def}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Newline}{token\_type::Newline}},}
+\DoxyCodeLine{148                  \mbox{\hyperlink{structparse_1_1token__type_1_1Print}{token\_type::Print}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Indent}{token\_type::Indent}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Dedent}{token\_type::Dedent}}, \mbox{\hyperlink{structparse_1_1token__type_1_1And}{token\_type::And}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Or}{token\_type::Or}},}
+\DoxyCodeLine{149                  \mbox{\hyperlink{structparse_1_1token__type_1_1Not}{token\_type::Not}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Eq}{token\_type::Eq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1NotEq}{token\_type::NotEq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1LessOrEq}{token\_type::LessOrEq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1GreaterOrEq}{token\_type::GreaterOrEq}},}
+\DoxyCodeLine{150                  \mbox{\hyperlink{structparse_1_1token__type_1_1None}{token\_type::None}}, \mbox{\hyperlink{structparse_1_1token__type_1_1True}{token\_type::True}}, \mbox{\hyperlink{structparse_1_1token__type_1_1False}{token\_type::False}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{token\_type::Eof}}>;}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{keyword}{struct }\mbox{\hyperlink{structparse_1_1Token}{Token}} : \mbox{\hyperlink{namespaceparse_a381d67b58756d5aa9eb7031b4f9d91a2}{TokenBase}}}
+\DoxyCodeLine{153 \{}
+\DoxyCodeLine{154     \textcolor{keyword}{using }TokenBase::TokenBase;}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> [[nodiscard]] \textcolor{keywordtype}{bool} \mbox{\hyperlink{structparse_1_1Token_afb73ccf63a245fa6e209b02e0edaf79c}{Is}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{157 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{158         \textcolor{keywordflow}{return} std::holds\_alternative<T>(*\textcolor{keyword}{this});}
+\DoxyCodeLine{159     \}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> [[nodiscard]] \textcolor{keyword}{const} T \&\mbox{\hyperlink{structparse_1_1Token_aa5c3d15425702195203a76661964ade1}{As}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{162 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{163         \textcolor{keywordflow}{return} std::get<T>(*\textcolor{keyword}{this});}
+\DoxyCodeLine{164     \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> [[nodiscard]] \textcolor{keyword}{const} T *\mbox{\hyperlink{structparse_1_1Token_a0974c83ca781e92d2686b762a6420fd9}{TryAs}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{167 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{168         \textcolor{keywordflow}{return} std::get\_if<T>(\textcolor{keyword}{this});}
+\DoxyCodeLine{169     \}}
+\DoxyCodeLine{170 \};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 \textcolor{keyword}{namespace }token\_type}
+\DoxyCodeLine{173 \{}
+\DoxyCodeLine{175 \textcolor{keyword}{static} \textcolor{keyword}{const} std::unordered\_map<std::string, Token> keyword\_to\_token = \{}
+\DoxyCodeLine{176     \{\textcolor{stringliteral}{"{}class"{}}, Class\{\}\}, \{\textcolor{stringliteral}{"{}return"{}}, Return\{\}\}, \{\textcolor{stringliteral}{"{}if"{}}, If\{\}\},   \{\textcolor{stringliteral}{"{}else"{}}, Else\{\}\}, \{\textcolor{stringliteral}{"{}def"{}}, Def\{\}\},   \{\textcolor{stringliteral}{"{}print"{}}, Print\{\}\},}
+\DoxyCodeLine{177     \{\textcolor{stringliteral}{"{}and"{}}, And\{\}\},     \{\textcolor{stringliteral}{"{}or"{}}, Or\{\}\},         \{\textcolor{stringliteral}{"{}not"{}}, Not\{\}\}, \{\textcolor{stringliteral}{"{}None"{}}, None\{\}\}, \{\textcolor{stringliteral}{"{}True"{}}, True\{\}\}, \{\textcolor{stringliteral}{"{}False"{}}, False\{\}\}\};}
+\DoxyCodeLine{178 \} \textcolor{comment}{// namespace token\_type}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 \textcolor{keyword}{static} \textcolor{keyword}{const} std::unordered\_set<char> comparison\_symbols = \{\textcolor{charliteral}{'='}, \textcolor{charliteral}{'!'}, \textcolor{charliteral}{'<'}, \textcolor{charliteral}{'>'}\};}
+\DoxyCodeLine{181 \textcolor{keyword}{static} \textcolor{keyword}{const} std::unordered\_set<char> special\_symbols = \{\textcolor{charliteral}{'.'}, \textcolor{charliteral}{','}, \textcolor{charliteral}{':'}, \textcolor{charliteral}{'+'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'*'}, \textcolor{charliteral}{'/'}, \textcolor{charliteral}{'('}, \textcolor{charliteral}{')'}, \textcolor{charliteral}{'='}, \textcolor{charliteral}{'<'}, \textcolor{charliteral}{'>'}\};}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceparse_a03317f4395b46fb4bd446c2bc45884b9}{operator==}}(\textcolor{keyword}{const} Token \&lhs, \textcolor{keyword}{const} Token \&rhs);}
+\DoxyCodeLine{184 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespaceparse_aae3f46867c9ac5667db503d5d12ca4f9}{operator!=}}(\textcolor{keyword}{const} Token \&lhs, \textcolor{keyword}{const} Token \&rhs);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 std::ostream \&\mbox{\hyperlink{namespaceparse_a1903a984b8f8fe421549207e8b69c4d1}{operator<<}}(std::ostream \&os, \textcolor{keyword}{const} Token \&rhs);}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{keyword}{class }\mbox{\hyperlink{classparse_1_1LexerError}{LexerError}} : \textcolor{keyword}{public} std::runtime\_error}
+\DoxyCodeLine{189 \{}
+\DoxyCodeLine{190   \textcolor{keyword}{public}:}
+\DoxyCodeLine{191     \textcolor{keyword}{using }std::runtime\_error::runtime\_error;}
+\DoxyCodeLine{192 \};}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194 \textcolor{keyword}{class }\mbox{\hyperlink{classparse_1_1Lexer}{Lexer}}}
+\DoxyCodeLine{195 \{}
+\DoxyCodeLine{196   \textcolor{keyword}{public}:}
+\DoxyCodeLine{197     \textcolor{keyword}{explicit} \mbox{\hyperlink{classparse_1_1Lexer}{Lexer}}(std::istream \&input);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{200     [[nodiscard]] \textcolor{keyword}{const} \mbox{\hyperlink{structparse_1_1Token}{Token}} \&\mbox{\hyperlink{classparse_1_1Lexer_accb0e9b9d874db41209a1f6f31b6086d}{CurrentToken}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{203     \mbox{\hyperlink{structparse_1_1Token}{Token}} \mbox{\hyperlink{classparse_1_1Lexer_af2e7773454549634767faca8328c8d24}{NextToken}}();}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{206     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keyword}{const} T \&\mbox{\hyperlink{classparse_1_1Lexer_a769fa1a8b26ebf8aa0180b98d4ffd643}{Expect}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{207 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{208         \textcolor{keyword}{using namespace }std::literals;}
+\DoxyCodeLine{209         \textcolor{keywordflow}{if} (token\_.\mbox{\hyperlink{structparse_1_1Token_afb73ccf63a245fa6e209b02e0edaf79c}{Is}}<T>())}
+\DoxyCodeLine{210         \{}
+\DoxyCodeLine{211             \textcolor{keywordflow}{return} token\_.\mbox{\hyperlink{structparse_1_1Token_aa5c3d15425702195203a76661964ade1}{As}}<T>();}
+\DoxyCodeLine{212         \}}
+\DoxyCodeLine{213         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classparse_1_1LexerError}{LexerError}}(\textcolor{stringliteral}{"{}Incorrect token"{}}s);}
+\DoxyCodeLine{214     \}}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{218     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U> \textcolor{keywordtype}{void} \mbox{\hyperlink{classparse_1_1Lexer_a935e4059048c15661c3ade153081dcc5}{Expect}}(\textcolor{keyword}{const} U \&value)\textcolor{keyword}{ const}}
+\DoxyCodeLine{219 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{220         \textcolor{keyword}{using namespace }std::literals;}
+\DoxyCodeLine{221         Expect<T>();}
+\DoxyCodeLine{222         \textcolor{keywordflow}{if} (token\_.\mbox{\hyperlink{structparse_1_1Token_aa5c3d15425702195203a76661964ade1}{As}}<T>().value == value)}
+\DoxyCodeLine{223         \{}
+\DoxyCodeLine{224             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{225         \}}
+\DoxyCodeLine{226         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classparse_1_1LexerError}{LexerError}}(\textcolor{stringliteral}{"{}Incorrect value"{}}s);}
+\DoxyCodeLine{227     \}}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{230     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keyword}{const} T \&\mbox{\hyperlink{classparse_1_1Lexer_a8b707025bb60d234e981f2c0b05e4698}{ExpectNext}}()}
+\DoxyCodeLine{231     \{}
+\DoxyCodeLine{232         \mbox{\hyperlink{classparse_1_1Lexer_af2e7773454549634767faca8328c8d24}{NextToken}}();}
+\DoxyCodeLine{233         \textcolor{keywordflow}{return} Expect<T>();}
+\DoxyCodeLine{234     \}}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{238     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U> \textcolor{keywordtype}{void} \mbox{\hyperlink{classparse_1_1Lexer_aea5851740888f009c47aac2d7ce54560}{ExpectNext}}(\textcolor{keyword}{const} U \&value)}
+\DoxyCodeLine{239     \{}
+\DoxyCodeLine{240         \textcolor{keyword}{using namespace }std::literals;}
+\DoxyCodeLine{241         ExpectNext<T>();}
+\DoxyCodeLine{242         \textcolor{keywordflow}{if} (token\_.\mbox{\hyperlink{structparse_1_1Token_aa5c3d15425702195203a76661964ade1}{As}}<T>().value == value)}
+\DoxyCodeLine{243         \{}
+\DoxyCodeLine{244             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{245         \}}
+\DoxyCodeLine{246         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classparse_1_1LexerError}{LexerError}}(\textcolor{stringliteral}{"{}Incorrect value"{}}s);}
+\DoxyCodeLine{247     \}}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249   \textcolor{keyword}{private}:}
+\DoxyCodeLine{250     \textcolor{keywordtype}{int} indent\_\{0\};}
+\DoxyCodeLine{251     \textcolor{keywordtype}{int} indent\_diff\_\{0\};}
+\DoxyCodeLine{252     Token token\_;}
+\DoxyCodeLine{253     std::istream \&input\_;}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255     Token GetName();}
+\DoxyCodeLine{256     Token GetCompOperator();}
+\DoxyCodeLine{257     Token GetIndentDedent();}
+\DoxyCodeLine{258     Token GetNumber();}
+\DoxyCodeLine{259     Token GetStrLiteral();}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261     \textcolor{keywordtype}{void} SkipUselessSymbols();}
+\DoxyCodeLine{262 \};}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 \} \textcolor{comment}{// namespace parse}}
+
+\end{DoxyCode}

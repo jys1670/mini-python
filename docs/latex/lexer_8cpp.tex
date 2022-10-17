@@ -1,0 +1,58 @@
+\hypertarget{lexer_8cpp}{}\doxysection{src/lexer.cpp File Reference}
+\label{lexer_8cpp}\index{src/lexer.cpp@{src/lexer.cpp}}
+{\ttfamily \#include \char`\"{}lexer.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceparse}{parse}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lexer_8cpp_a1b0df276eb55d662ce16015f9d823aa0}{VALUED\+\_\+\+OUTPUT}}(type)
+\item 
+\#define \mbox{\hyperlink{lexer_8cpp_af1708bb972fe0f3bd9eca781b777693d}{UNVALUED\+\_\+\+OUTPUT}}(type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceparse_a03317f4395b46fb4bd446c2bc45884b9}{parse\+::operator==}} (const Token \&lhs, const Token \&rhs)
+\item 
+bool \mbox{\hyperlink{namespaceparse_aae3f46867c9ac5667db503d5d12ca4f9}{parse\+::operator!=}} (const Token \&lhs, const Token \&rhs)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceparse_a1903a984b8f8fe421549207e8b69c4d1}{parse\+::operator$<$$<$}} (std\+::ostream \&os, const Token \&rhs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr auto \mbox{\hyperlink{namespaceparse_a683d5d5452c965bbd53b0b1d75d6fe51}{parse\+::max\+\_\+size}} = std\+::numeric\+\_\+limits$<$std\+::streamsize$>$\+::max()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lexer_8cpp_af1708bb972fe0f3bd9eca781b777693d}\label{lexer_8cpp_af1708bb972fe0f3bd9eca781b777693d}} 
+\index{lexer.cpp@{lexer.cpp}!UNVALUED\_OUTPUT@{UNVALUED\_OUTPUT}}
+\index{UNVALUED\_OUTPUT@{UNVALUED\_OUTPUT}!lexer.cpp@{lexer.cpp}}
+\doxysubsubsection{\texorpdfstring{UNVALUED\_OUTPUT}{UNVALUED\_OUTPUT}}
+{\footnotesize\ttfamily \#define UNVALUED\+\_\+\+OUTPUT(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rhs.Is<type>())                                                                                                \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} os << \#type;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{lexer_8cpp_a1b0df276eb55d662ce16015f9d823aa0}\label{lexer_8cpp_a1b0df276eb55d662ce16015f9d823aa0}} 
+\index{lexer.cpp@{lexer.cpp}!VALUED\_OUTPUT@{VALUED\_OUTPUT}}
+\index{VALUED\_OUTPUT@{VALUED\_OUTPUT}!lexer.cpp@{lexer.cpp}}
+\doxysubsubsection{\texorpdfstring{VALUED\_OUTPUT}{VALUED\_OUTPUT}}
+{\footnotesize\ttfamily \#define VALUED\+\_\+\+OUTPUT(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\textcolor{keyword}{auto} p = rhs.TryAs<type>())                                                                                    \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} os << \#type << \textcolor{charliteral}{'\{'} << p-\/>value << \textcolor{charliteral}{'\}'};}
+
+\end{DoxyCode}

@@ -1,0 +1,97 @@
+\hypertarget{classparse_1_1Lexer}{}\doxysection{parse\+::Lexer Class Reference}
+\label{classparse_1_1Lexer}\index{parse::Lexer@{parse::Lexer}}
+
+
+{\ttfamily \#include $<$lexer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparse_1_1Lexer_ae62ad255092b96c4099e541c972f50bd}{Lexer}} (std\+::istream \&input)
+\item 
+const \mbox{\hyperlink{structparse_1_1Token}{Token}} \& \mbox{\hyperlink{classparse_1_1Lexer_accb0e9b9d874db41209a1f6f31b6086d}{Current\+Token}} () const
+\begin{DoxyCompactList}\small\item\em Returns current token or \mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{token\+\_\+type\+::\+Eof}} if token stream is over. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparse_1_1Token}{Token}} \mbox{\hyperlink{classparse_1_1Lexer_af2e7773454549634767faca8328c8d24}{Next\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Returns next token or \mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{token\+\_\+type\+::\+Eof}} if token stream is over. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const T \& \mbox{\hyperlink{classparse_1_1Lexer_a769fa1a8b26ebf8aa0180b98d4ffd643}{Expect}} () const
+\begin{DoxyCompactList}\small\item\em Returns current token as type T if it\textquotesingle{}s really that type; otherwise throws \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \mbox{\hyperlink{classparse_1_1Lexer_a935e4059048c15661c3ade153081dcc5}{Expect}} (const U \&value) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\const T \& \mbox{\hyperlink{classparse_1_1Lexer_a8b707025bb60d234e981f2c0b05e4698}{Expect\+Next}} ()
+\begin{DoxyCompactList}\small\item\em Returns next token as type T if it\textquotesingle{}s really that type; otherwise throws \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \mbox{\hyperlink{classparse_1_1Lexer_aea5851740888f009c47aac2d7ce54560}{Expect\+Next}} (const U \&value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparse_1_1Lexer_ae62ad255092b96c4099e541c972f50bd}\label{classparse_1_1Lexer_ae62ad255092b96c4099e541c972f50bd}} 
+\index{parse::Lexer@{parse::Lexer}!Lexer@{Lexer}}
+\index{Lexer@{Lexer}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{Lexer()}{Lexer()}}
+{\footnotesize\ttfamily parse\+::\+Lexer\+::\+Lexer (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparse_1_1Lexer_accb0e9b9d874db41209a1f6f31b6086d}\label{classparse_1_1Lexer_accb0e9b9d874db41209a1f6f31b6086d}} 
+\index{parse::Lexer@{parse::Lexer}!CurrentToken@{CurrentToken}}
+\index{CurrentToken@{CurrentToken}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{CurrentToken()}{CurrentToken()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structparse_1_1Token}{Token}} \& parse\+::\+Lexer\+::\+Current\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns current token or \mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{token\+\_\+type\+::\+Eof}} if token stream is over. 
+
+Returns current token. \mbox{\Hypertarget{classparse_1_1Lexer_a769fa1a8b26ebf8aa0180b98d4ffd643}\label{classparse_1_1Lexer_a769fa1a8b26ebf8aa0180b98d4ffd643}} 
+\index{parse::Lexer@{parse::Lexer}!Expect@{Expect}}
+\index{Expect@{Expect}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{Expect()}{Expect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& parse\+::\+Lexer\+::\+Expect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns current token as type T if it\textquotesingle{}s really that type; otherwise throws \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}}. 
+
+\mbox{\Hypertarget{classparse_1_1Lexer_a935e4059048c15661c3ade153081dcc5}\label{classparse_1_1Lexer_a935e4059048c15661c3ade153081dcc5}} 
+\index{parse::Lexer@{parse::Lexer}!Expect@{Expect}}
+\index{Expect@{Expect}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{Expect()}{Expect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void parse\+::\+Lexer\+::\+Expect (\begin{DoxyParamCaption}\item[{const U \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks whether current token has type T and value equal to what is given as argument, otherwise throws \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}} \mbox{\Hypertarget{classparse_1_1Lexer_a8b707025bb60d234e981f2c0b05e4698}\label{classparse_1_1Lexer_a8b707025bb60d234e981f2c0b05e4698}} 
+\index{parse::Lexer@{parse::Lexer}!ExpectNext@{ExpectNext}}
+\index{ExpectNext@{ExpectNext}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{ExpectNext()}{ExpectNext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& parse\+::\+Lexer\+::\+Expect\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns next token as type T if it\textquotesingle{}s really that type; otherwise throws \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}}. 
+
+\mbox{\Hypertarget{classparse_1_1Lexer_aea5851740888f009c47aac2d7ce54560}\label{classparse_1_1Lexer_aea5851740888f009c47aac2d7ce54560}} 
+\index{parse::Lexer@{parse::Lexer}!ExpectNext@{ExpectNext}}
+\index{ExpectNext@{ExpectNext}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{ExpectNext()}{ExpectNext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void parse\+::\+Lexer\+::\+Expect\+Next (\begin{DoxyParamCaption}\item[{const U \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks whether next token has type T and value equal to what is given as argument, otherwise throws \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}} \mbox{\Hypertarget{classparse_1_1Lexer_af2e7773454549634767faca8328c8d24}\label{classparse_1_1Lexer_af2e7773454549634767faca8328c8d24}} 
+\index{parse::Lexer@{parse::Lexer}!NextToken@{NextToken}}
+\index{NextToken@{NextToken}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{NextToken()}{NextToken()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structparse_1_1Token}{Token}} parse\+::\+Lexer\+::\+Next\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns next token or \mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{token\+\_\+type\+::\+Eof}} if token stream is over. 
+
+Generates token after reading from input stream, this is core function of lexer. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{lexer_8h}{lexer.\+h}}\item 
+src/\mbox{\hyperlink{lexer_8cpp}{lexer.\+cpp}}\end{DoxyCompactItemize}

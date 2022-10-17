@@ -1,0 +1,146 @@
+\hypertarget{namespaceparse}{}\doxysection{parse Namespace Reference}
+\label{namespaceparse}\index{parse@{parse}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceparse_1_1token__type}{token\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classparse_1_1Lexer}{Lexer}}
+\item 
+class \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}}
+\item 
+struct \mbox{\hyperlink{structparse_1_1Token}{Token}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceparse_a381d67b58756d5aa9eb7031b4f9d91a2}{Token\+Base}} = std\+::variant$<$ \mbox{\hyperlink{structparse_1_1token__type_1_1Number}{token\+\_\+type\+::\+Number}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Id}{token\+\_\+type\+::\+Id}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Char}{token\+\_\+type\+::\+Char}}, \mbox{\hyperlink{structparse_1_1token__type_1_1String}{token\+\_\+type\+::\+String}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Class}{token\+\_\+type\+::\+Class}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Return}{token\+\_\+type\+::\+Return}}, \mbox{\hyperlink{structparse_1_1token__type_1_1If}{token\+\_\+type\+::\+If}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Else}{token\+\_\+type\+::\+Else}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Def}{token\+\_\+type\+::\+Def}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Newline}{token\+\_\+type\+::\+Newline}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Print}{token\+\_\+type\+::\+Print}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Indent}{token\+\_\+type\+::\+Indent}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Dedent}{token\+\_\+type\+::\+Dedent}}, \mbox{\hyperlink{structparse_1_1token__type_1_1And}{token\+\_\+type\+::\+And}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Or}{token\+\_\+type\+::\+Or}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Not}{token\+\_\+type\+::\+Not}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Eq}{token\+\_\+type\+::\+Eq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1NotEq}{token\+\_\+type\+::\+Not\+Eq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1LessOrEq}{token\+\_\+type\+::\+Less\+Or\+Eq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1GreaterOrEq}{token\+\_\+type\+::\+Greater\+Or\+Eq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1None}{token\+\_\+type\+::\+None}}, \mbox{\hyperlink{structparse_1_1token__type_1_1True}{token\+\_\+type\+::\+True}}, \mbox{\hyperlink{structparse_1_1token__type_1_1False}{token\+\_\+type\+::\+False}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{token\+\_\+type\+::\+Eof}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceparse_a03317f4395b46fb4bd446c2bc45884b9}{operator==}} (const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&lhs, const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&rhs)
+\item 
+bool \mbox{\hyperlink{namespaceparse_aae3f46867c9ac5667db503d5d12ca4f9}{operator!=}} (const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&lhs, const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&rhs)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceparse_a1903a984b8f8fe421549207e8b69c4d1}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&rhs)
+\item 
+void \mbox{\hyperlink{namespaceparse_ac2a001bce1450375376a939683187da6}{Test\+Operations}} ()
+\item 
+void \mbox{\hyperlink{namespaceparse_a1ce76b79279181f260419c4dff0a30de}{Test\+Indents\+And\+Newlines}} ()
+\item 
+void \mbox{\hyperlink{namespaceparse_a42d5ce01c2582767825227a707d71543}{Test\+Empty\+Lines\+Are\+Ignored}} ()
+\item 
+void \mbox{\hyperlink{namespaceparse_a1e6b13b7ad8108fdcde7f3eb269eb817}{Test\+Mython\+Program}} ()
+\item 
+void \mbox{\hyperlink{namespaceparse_a814ac396b8ac8bbcd98ed9b792703a07}{Test\+Expect}} ()
+\item 
+void \mbox{\hyperlink{namespaceparse_ae6f1b7bbd2b393c8302f0d1a1762e183}{Test\+Expect\+Next}} ()
+\item 
+void \mbox{\hyperlink{namespaceparse_a6eb78aff6915d3133555eba82416bdc5}{Test\+Always\+Emits\+Newline\+At\+The\+End\+Of\+Nonempty\+Line}} ()
+\item 
+void \mbox{\hyperlink{namespaceparse_a35c0b6f7f8c168db67509b621842fb49}{Test\+Comments\+Are\+Ignored}} ()
+\item 
+void \mbox{\hyperlink{namespaceparse_a7aca64ab795a8b631c1cb733979e9661}{Run\+Open\+Lexer\+Tests}} (\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&tr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr auto \mbox{\hyperlink{namespaceparse_a683d5d5452c965bbd53b0b1d75d6fe51}{max\+\_\+size}} = std\+::numeric\+\_\+limits$<$std\+::streamsize$>$\+::max()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceparse_a381d67b58756d5aa9eb7031b4f9d91a2}\label{namespaceparse_a381d67b58756d5aa9eb7031b4f9d91a2}} 
+\index{parse@{parse}!TokenBase@{TokenBase}}
+\index{TokenBase@{TokenBase}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{TokenBase}{TokenBase}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceparse_a381d67b58756d5aa9eb7031b4f9d91a2}{parse\+::\+Token\+Base}} = typedef std\+::variant$<$\mbox{\hyperlink{structparse_1_1token__type_1_1Number}{token\+\_\+type\+::\+Number}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Id}{token\+\_\+type\+::\+Id}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Char}{token\+\_\+type\+::\+Char}}, \mbox{\hyperlink{structparse_1_1token__type_1_1String}{token\+\_\+type\+::\+String}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Class}{token\+\_\+type\+::\+Class}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Return}{token\+\_\+type\+::\+Return}}, \mbox{\hyperlink{structparse_1_1token__type_1_1If}{token\+\_\+type\+::\+If}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Else}{token\+\_\+type\+::\+Else}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Def}{token\+\_\+type\+::\+Def}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Newline}{token\+\_\+type\+::\+Newline}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Print}{token\+\_\+type\+::\+Print}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Indent}{token\+\_\+type\+::\+Indent}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Dedent}{token\+\_\+type\+::\+Dedent}}, \mbox{\hyperlink{structparse_1_1token__type_1_1And}{token\+\_\+type\+::\+And}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Or}{token\+\_\+type\+::\+Or}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Not}{token\+\_\+type\+::\+Not}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Eq}{token\+\_\+type\+::\+Eq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1NotEq}{token\+\_\+type\+::\+Not\+Eq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1LessOrEq}{token\+\_\+type\+::\+Less\+Or\+Eq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1GreaterOrEq}{token\+\_\+type\+::\+Greater\+Or\+Eq}}, \mbox{\hyperlink{structparse_1_1token__type_1_1None}{token\+\_\+type\+::\+None}}, \mbox{\hyperlink{structparse_1_1token__type_1_1True}{token\+\_\+type\+::\+True}}, \mbox{\hyperlink{structparse_1_1token__type_1_1False}{token\+\_\+type\+::\+False}}, \mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{token\+\_\+type\+::\+Eof}}$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceparse_aae3f46867c9ac5667db503d5d12ca4f9}\label{namespaceparse_aae3f46867c9ac5667db503d5d12ca4f9}} 
+\index{parse@{parse}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool parse\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_a1903a984b8f8fe421549207e8b69c4d1}\label{namespaceparse_a1903a984b8f8fe421549207e8b69c4d1}} 
+\index{parse@{parse}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& parse\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_a03317f4395b46fb4bd446c2bc45884b9}\label{namespaceparse_a03317f4395b46fb4bd446c2bc45884b9}} 
+\index{parse@{parse}!operator==@{operator==}}
+\index{operator==@{operator==}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool parse\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{structparse_1_1Token}{Token}} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_a7aca64ab795a8b631c1cb733979e9661}\label{namespaceparse_a7aca64ab795a8b631c1cb733979e9661}} 
+\index{parse@{parse}!RunOpenLexerTests@{RunOpenLexerTests}}
+\index{RunOpenLexerTests@{RunOpenLexerTests}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{RunOpenLexerTests()}{RunOpenLexerTests()}}
+{\footnotesize\ttfamily void parse\+::\+Run\+Open\+Lexer\+Tests (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&}]{tr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_a6eb78aff6915d3133555eba82416bdc5}\label{namespaceparse_a6eb78aff6915d3133555eba82416bdc5}} 
+\index{parse@{parse}!TestAlwaysEmitsNewlineAtTheEndOfNonemptyLine@{TestAlwaysEmitsNewlineAtTheEndOfNonemptyLine}}
+\index{TestAlwaysEmitsNewlineAtTheEndOfNonemptyLine@{TestAlwaysEmitsNewlineAtTheEndOfNonemptyLine}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{TestAlwaysEmitsNewlineAtTheEndOfNonemptyLine()}{TestAlwaysEmitsNewlineAtTheEndOfNonemptyLine()}}
+{\footnotesize\ttfamily void parse\+::\+Test\+Always\+Emits\+Newline\+At\+The\+End\+Of\+Nonempty\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_a35c0b6f7f8c168db67509b621842fb49}\label{namespaceparse_a35c0b6f7f8c168db67509b621842fb49}} 
+\index{parse@{parse}!TestCommentsAreIgnored@{TestCommentsAreIgnored}}
+\index{TestCommentsAreIgnored@{TestCommentsAreIgnored}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{TestCommentsAreIgnored()}{TestCommentsAreIgnored()}}
+{\footnotesize\ttfamily void parse\+::\+Test\+Comments\+Are\+Ignored (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_a42d5ce01c2582767825227a707d71543}\label{namespaceparse_a42d5ce01c2582767825227a707d71543}} 
+\index{parse@{parse}!TestEmptyLinesAreIgnored@{TestEmptyLinesAreIgnored}}
+\index{TestEmptyLinesAreIgnored@{TestEmptyLinesAreIgnored}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{TestEmptyLinesAreIgnored()}{TestEmptyLinesAreIgnored()}}
+{\footnotesize\ttfamily void parse\+::\+Test\+Empty\+Lines\+Are\+Ignored (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_a814ac396b8ac8bbcd98ed9b792703a07}\label{namespaceparse_a814ac396b8ac8bbcd98ed9b792703a07}} 
+\index{parse@{parse}!TestExpect@{TestExpect}}
+\index{TestExpect@{TestExpect}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{TestExpect()}{TestExpect()}}
+{\footnotesize\ttfamily void parse\+::\+Test\+Expect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_ae6f1b7bbd2b393c8302f0d1a1762e183}\label{namespaceparse_ae6f1b7bbd2b393c8302f0d1a1762e183}} 
+\index{parse@{parse}!TestExpectNext@{TestExpectNext}}
+\index{TestExpectNext@{TestExpectNext}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{TestExpectNext()}{TestExpectNext()}}
+{\footnotesize\ttfamily void parse\+::\+Test\+Expect\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_a1ce76b79279181f260419c4dff0a30de}\label{namespaceparse_a1ce76b79279181f260419c4dff0a30de}} 
+\index{parse@{parse}!TestIndentsAndNewlines@{TestIndentsAndNewlines}}
+\index{TestIndentsAndNewlines@{TestIndentsAndNewlines}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{TestIndentsAndNewlines()}{TestIndentsAndNewlines()}}
+{\footnotesize\ttfamily void parse\+::\+Test\+Indents\+And\+Newlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_a1e6b13b7ad8108fdcde7f3eb269eb817}\label{namespaceparse_a1e6b13b7ad8108fdcde7f3eb269eb817}} 
+\index{parse@{parse}!TestMythonProgram@{TestMythonProgram}}
+\index{TestMythonProgram@{TestMythonProgram}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{TestMythonProgram()}{TestMythonProgram()}}
+{\footnotesize\ttfamily void parse\+::\+Test\+Mython\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceparse_ac2a001bce1450375376a939683187da6}\label{namespaceparse_ac2a001bce1450375376a939683187da6}} 
+\index{parse@{parse}!TestOperations@{TestOperations}}
+\index{TestOperations@{TestOperations}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{TestOperations()}{TestOperations()}}
+{\footnotesize\ttfamily void parse\+::\+Test\+Operations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceparse_a683d5d5452c965bbd53b0b1d75d6fe51}\label{namespaceparse_a683d5d5452c965bbd53b0b1d75d6fe51}} 
+\index{parse@{parse}!max\_size@{max\_size}}
+\index{max\_size@{max\_size}!parse@{parse}}
+\doxysubsubsection{\texorpdfstring{max\_size}{max\_size}}
+{\footnotesize\ttfamily constexpr auto parse\+::max\+\_\+size = std\+::numeric\+\_\+limits$<$std\+::streamsize$>$\+::max()\hspace{0.3cm}{\ttfamily [constexpr]}}
+

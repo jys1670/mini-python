@@ -1,0 +1,194 @@
+\hypertarget{test__runner__p_8h_source}{}\doxysection{test\+\_\+runner\+\_\+p.\+h}
+\label{test__runner__p_8h_source}\index{src/test\_runner\_p.h@{src/test\_runner\_p.h}}
+\mbox{\hyperlink{test__runner__p_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceTestRunnerPrivate}{TestRunnerPrivate}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 \textcolor{keyword}{template} <\textcolor{keyword}{class} Map> std::ostream \&\mbox{\hyperlink{namespaceTestRunnerPrivate_a1606890ed6c2d0343850d0d894c70463}{PrintMap}}(std::ostream \&os, \textcolor{keyword}{const} Map \&m)}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     os << \textcolor{stringliteral}{"{}\{"{}};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} first = \textcolor{keyword}{true};}
+\DoxyCodeLine{18     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&kv : m)}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         \textcolor{keywordflow}{if} (!first)}
+\DoxyCodeLine{21         \{}
+\DoxyCodeLine{22             os << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{23         \}}
+\DoxyCodeLine{24         first = \textcolor{keyword}{false};}
+\DoxyCodeLine{25         os << kv.first << \textcolor{stringliteral}{"{}: "{}} << kv.second;}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27     \textcolor{keywordflow}{return} os << \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{28 \}}
+\DoxyCodeLine{29 \} \textcolor{comment}{// namespace TestRunnerPrivate}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{template} <\textcolor{keyword}{class} T> std::ostream \&\mbox{\hyperlink{test__runner__p_8h_aea0cf07fab8dac684dd045cc70ff2d52}{operator<<}}(std::ostream \&os, \textcolor{keyword}{const} std::vector<T> \&s)}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     os << \textcolor{stringliteral}{"{}\{"{}};}
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} first = \textcolor{keyword}{true};}
+\DoxyCodeLine{35     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&x : s)}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         \textcolor{keywordflow}{if} (!first)}
+\DoxyCodeLine{38         \{}
+\DoxyCodeLine{39             os << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{40         \}}
+\DoxyCodeLine{41         first = \textcolor{keyword}{false};}
+\DoxyCodeLine{42         os << x;}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} os << \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{45 \}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{template} <\textcolor{keyword}{class} T> std::ostream \&\mbox{\hyperlink{test__runner__p_8h_aea0cf07fab8dac684dd045cc70ff2d52}{operator<<}}(std::ostream \&os, \textcolor{keyword}{const} std::set<T> \&s)}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     os << \textcolor{stringliteral}{"{}\{"{}};}
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} first = \textcolor{keyword}{true};}
+\DoxyCodeLine{51     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&x : s)}
+\DoxyCodeLine{52     \{}
+\DoxyCodeLine{53         \textcolor{keywordflow}{if} (!first)}
+\DoxyCodeLine{54         \{}
+\DoxyCodeLine{55             os << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{56         \}}
+\DoxyCodeLine{57         first = \textcolor{keyword}{false};}
+\DoxyCodeLine{58         os << x;}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{return} os << \textcolor{stringliteral}{"{}\}"{}};}
+\DoxyCodeLine{61 \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keyword}{template} <\textcolor{keyword}{class} K, \textcolor{keyword}{class} V> std::ostream \&\mbox{\hyperlink{test__runner__p_8h_aea0cf07fab8dac684dd045cc70ff2d52}{operator<<}}(std::ostream \&os, \textcolor{keyword}{const} std::map<K, V> \&m)}
+\DoxyCodeLine{64 \{}
+\DoxyCodeLine{65     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceTestRunnerPrivate_a1606890ed6c2d0343850d0d894c70463}{TestRunnerPrivate::PrintMap}}(os, m);}
+\DoxyCodeLine{66 \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{keyword}{template} <\textcolor{keyword}{class} K, \textcolor{keyword}{class} V> std::ostream \&\mbox{\hyperlink{test__runner__p_8h_aea0cf07fab8dac684dd045cc70ff2d52}{operator<<}}(std::ostream \&os, \textcolor{keyword}{const} std::unordered\_map<K, V> \&m)}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceTestRunnerPrivate_a1606890ed6c2d0343850d0d894c70463}{TestRunnerPrivate::PrintMap}}(os, m);}
+\DoxyCodeLine{71 \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{template} <\textcolor{keyword}{class} T, \textcolor{keyword}{class} U> \textcolor{keywordtype}{void} \mbox{\hyperlink{test__runner__p_8h_a3e9942aeb82fa470efcb551d2f4da554}{AssertEqual}}(\textcolor{keyword}{const} T \&t, \textcolor{keyword}{const} U \&u, \textcolor{keyword}{const} std::string \&hint = \{\})}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75     \textcolor{keywordflow}{if} (!(t == u))}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77         std::ostringstream os;}
+\DoxyCodeLine{78         os << \textcolor{stringliteral}{"{}Assertion failed: "{}} << t << \textcolor{stringliteral}{"{} != "{}} << u;}
+\DoxyCodeLine{79         \textcolor{keywordflow}{if} (!hint.empty())}
+\DoxyCodeLine{80         \{}
+\DoxyCodeLine{81             os << \textcolor{stringliteral}{"{} hint: "{}} << hint;}
+\DoxyCodeLine{82         \}}
+\DoxyCodeLine{83         \textcolor{keywordflow}{throw} std::runtime\_error(os.str());}
+\DoxyCodeLine{84     \}}
+\DoxyCodeLine{85 \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{test__runner__p_8h_a83ee00944b95e4ef14f9e7993b7cea6c}{Assert}}(\textcolor{keywordtype}{bool} b, \textcolor{keyword}{const} std::string \&hint)}
+\DoxyCodeLine{88 \{}
+\DoxyCodeLine{89     \mbox{\hyperlink{test__runner__p_8h_a3e9942aeb82fa470efcb551d2f4da554}{AssertEqual}}(b, \textcolor{keyword}{true}, hint);}
+\DoxyCodeLine{90 \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{keyword}{class }\mbox{\hyperlink{classTestRunner}{TestRunner}}}
+\DoxyCodeLine{93 \{}
+\DoxyCodeLine{94   \textcolor{keyword}{public}:}
+\DoxyCodeLine{95     \textcolor{keyword}{template} <\textcolor{keyword}{class} TestFunc> \textcolor{keywordtype}{void} \mbox{\hyperlink{classTestRunner_a542c9dff33ef0b9f4cda6ee36dff62a0}{RunTest}}(TestFunc func, \textcolor{keyword}{const} std::string \&test\_name)}
+\DoxyCodeLine{96     \{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{try}}
+\DoxyCodeLine{98         \{}
+\DoxyCodeLine{99             func();}
+\DoxyCodeLine{100             std::cerr << test\_name << \textcolor{stringliteral}{"{} OK"{}} << std::endl;}
+\DoxyCodeLine{101         \}}
+\DoxyCodeLine{102         \textcolor{keywordflow}{catch} (std::exception \&e)}
+\DoxyCodeLine{103         \{}
+\DoxyCodeLine{104             ++fail\_count;}
+\DoxyCodeLine{105             std::cerr << test\_name << \textcolor{stringliteral}{"{} fail: "{}} << e.what() << std::endl;}
+\DoxyCodeLine{106         \}}
+\DoxyCodeLine{107         \textcolor{keywordflow}{catch} (...)}
+\DoxyCodeLine{108         \{}
+\DoxyCodeLine{109             ++fail\_count;}
+\DoxyCodeLine{110             std::cerr << \textcolor{stringliteral}{"{}Unknown exception caught"{}} << std::endl;}
+\DoxyCodeLine{111         \}}
+\DoxyCodeLine{112     \}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     \mbox{\hyperlink{classTestRunner_a121456d7e522c0d83d648a0118ec0c6f}{\string~TestRunner}}()}
+\DoxyCodeLine{115     \{}
+\DoxyCodeLine{116         std::cerr.flush();}
+\DoxyCodeLine{117         \textcolor{keywordflow}{if} (fail\_count > 0)}
+\DoxyCodeLine{118         \{}
+\DoxyCodeLine{119             std::cerr << fail\_count << \textcolor{stringliteral}{"{} unit tests failed. Terminate"{}} << std::endl;}
+\DoxyCodeLine{120             exit(1);}
+\DoxyCodeLine{121         \}}
+\DoxyCodeLine{122     \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124   \textcolor{keyword}{private}:}
+\DoxyCodeLine{125     \textcolor{keywordtype}{int} fail\_count = 0;}
+\DoxyCodeLine{126 \};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#ifndef FILE\_NAME}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define FILE\_NAME \_\_FILE\_\_}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define ASSERT\_EQUAL(x, y)                                                                                             \(\backslash\)}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{    \{                                                                                                                  \(\backslash\)}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{        std::ostringstream \_\_assert\_equal\_private\_os;                                                                  \(\backslash\)}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{        \_\_assert\_equal\_private\_os << \#x << "{} != "{}} << \#y << "{}, "{} << FILE\_NAME << "{}:"{} << \_\_LINE\_\_;                       \(\backslash\)}
+\DoxyCodeLine{136         AssertEqual(x, y, \_\_assert\_equal\_private\_os.str());                                                            \(\backslash\)}
+\DoxyCodeLine{137     \}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define ASSERT(x)                                                                                                      \(\backslash\)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{    \{                                                                                                                  \(\backslash\)}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{        std::ostringstream \_\_assert\_private\_os;                                                                        \(\backslash\)}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{        \_\_assert\_private\_os << \#x << "{} is false, "{}} << FILE\_NAME << "{}:"{} << \_\_LINE\_\_;                                    \(\backslash\)}
+\DoxyCodeLine{143         Assert(static\_cast<bool>(x), \_\_assert\_private\_os.str());                                                       \(\backslash\)}
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define RUN\_TEST(tr, func) tr.RunTest(func, \#func)}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define ASSERT\_THROWS(expr, expected\_exception)                                                                        \(\backslash\)}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{    \{                                                                                                                  \(\backslash\)}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{        bool \_\_assert\_private\_flag = true;                                                                             \(\backslash\)}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{        try                                                                                                            \(\backslash\)}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{        \{                                                                                                              \(\backslash\)}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{            expr;                                                                                                      \(\backslash\)}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{            \_\_assert\_private\_flag = false;                                                                             \(\backslash\)}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{        \}                                                                                                              \(\backslash\)}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{        catch (expected\_exception \&)                                                                                   \(\backslash\)}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{        \{                                                                                                              \(\backslash\)}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{        \}                                                                                                              \(\backslash\)}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{        catch (...)                                                                                                    \(\backslash\)}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{        \{                                                                                                              \(\backslash\)}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{            std::ostringstream \_\_assert\_private\_os;                                                                    \(\backslash\)}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{            \_\_assert\_private\_os << "{}Expression "{}} \#expr "{} threw an unexpected exception"{}                                \(\backslash\)}
+\DoxyCodeLine{163                                    "{} "{} FILE\_NAME "{}:"{}                                                                   \(\backslash\)}
+\DoxyCodeLine{164                                 << \_\_LINE\_\_;                                                                           \(\backslash\)}
+\DoxyCodeLine{165             Assert(false, \_\_assert\_private\_os.str());                                                                  \(\backslash\)}
+\DoxyCodeLine{166         \}                                                                                                              \(\backslash\)}
+\DoxyCodeLine{167         if (!\_\_assert\_private\_flag)                                                                                    \(\backslash\)}
+\DoxyCodeLine{168         \{                                                                                                              \(\backslash\)}
+\DoxyCodeLine{169             std::ostringstream \_\_assert\_private\_os;                                                                    \(\backslash\)}
+\DoxyCodeLine{170             \_\_assert\_private\_os << "{}Expression "{} \#expr "{} is expected to throw "{} \#expected\_exception "{} "{} FILE\_NAME "{}:"{}  \(\backslash\)}
+\DoxyCodeLine{171                                 << \_\_LINE\_\_;                                                                           \(\backslash\)}
+\DoxyCodeLine{172             Assert(false, \_\_assert\_private\_os.str());                                                                  \(\backslash\)}
+\DoxyCodeLine{173         \}                                                                                                              \(\backslash\)}
+\DoxyCodeLine{174     \}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define ASSERT\_DOESNT\_THROW(expr)                                                                                      \(\backslash\)}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{    try                                                                                                                \(\backslash\)}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{    \{                                                                                                                  \(\backslash\)}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{        expr;                                                                                                          \(\backslash\)}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{    \}                                                                                                                  \(\backslash\)}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{    catch (...)                                                                                                        \(\backslash\)}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{    \{                                                                                                                  \(\backslash\)}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{        std::ostringstream \_\_assert\_private\_os;                                                                        \(\backslash\)}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{        \_\_assert\_private\_os << "{}Expression "{}} \#expr "{} threw an unexpected exception"{}                                    \(\backslash\)}
+\DoxyCodeLine{185                                "{} "{} FILE\_NAME "{}:"{}                                                                       \(\backslash\)}
+\DoxyCodeLine{186                             << \_\_LINE\_\_;                                                                               \(\backslash\)}
+\DoxyCodeLine{187         Assert(false, \_\_assert\_private\_os.str());                                                                      \(\backslash\)}
+\DoxyCodeLine{188     \}}
+
+\end{DoxyCode}
