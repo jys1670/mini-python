@@ -1,0 +1,199 @@
+\hypertarget{test__runner__p_8h}{}\doxysection{src/test\+\_\+runner\+\_\+p.h File Reference}
+\label{test__runner__p_8h}\index{src/test\_runner\_p.h@{src/test\_runner\_p.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTestRunner}{Test\+Runner}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceTestRunnerPrivate}{Test\+Runner\+Private}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__runner__p_8h_ab117546549783a058d0321a287699579}{FILE\+\_\+\+NAME}}~\+\_\+\+\_\+\+FILE\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{test__runner__p_8h_a07fc9e3c2fa55f275fe572e4bb251316}{ASSERT\+\_\+\+EQUAL}}(x,  y)
+\item 
+\#define \mbox{\hyperlink{test__runner__p_8h_aca68c0d4ac8df0838e209fb5300f7be3}{ASSERT}}(x)
+\item 
+\#define \mbox{\hyperlink{test__runner__p_8h_a25012349285b237b180b92a39a520cb9}{RUN\+\_\+\+TEST}}(tr,  func)~tr.\+Run\+Test(func, \#func)
+\item 
+\#define \mbox{\hyperlink{test__runner__p_8h_a5376ec8f267fe560d2f3f6cbc408faf9}{ASSERT\+\_\+\+THROWS}}(expr,  expected\+\_\+exception)
+\item 
+\#define \mbox{\hyperlink{test__runner__p_8h_a2e3e42fccc4e1007391c02eef0a42d8f}{ASSERT\+\_\+\+DOESNT\+\_\+\+THROW}}(expr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Map $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceTestRunnerPrivate_a1606890ed6c2d0343850d0d894c70463}{Test\+Runner\+Private\+::\+Print\+Map}} (std\+::ostream \&os, const Map \&m)
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& \mbox{\hyperlink{test__runner__p_8h_aea0cf07fab8dac684dd045cc70ff2d52}{operator$<$$<$}} (std\+::ostream \&os, const std\+::vector$<$ T $>$ \&s)
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& \mbox{\hyperlink{test__runner__p_8h_a7ceff19c1a2b98d7c2821d33f7b1bdf4}{operator$<$$<$}} (std\+::ostream \&os, const std\+::set$<$ T $>$ \&s)
+\item 
+{\footnotesize template$<$class K , class V $>$ }\\std\+::ostream \& \mbox{\hyperlink{test__runner__p_8h_abe5e504ebfc580bb0ee2b1a75e7ff1f7}{operator$<$$<$}} (std\+::ostream \&os, const std\+::map$<$ K, V $>$ \&m)
+\item 
+{\footnotesize template$<$class K , class V $>$ }\\std\+::ostream \& \mbox{\hyperlink{test__runner__p_8h_a4eb10398ab6f07196a56e4efef6f6166}{operator$<$$<$}} (std\+::ostream \&os, const std\+::unordered\+\_\+map$<$ K, V $>$ \&m)
+\item 
+{\footnotesize template$<$class T , class U $>$ }\\void \mbox{\hyperlink{test__runner__p_8h_a3e9942aeb82fa470efcb551d2f4da554}{Assert\+Equal}} (const T \&t, const U \&u, const std\+::string \&hint=\{\})
+\item 
+void \mbox{\hyperlink{test__runner__p_8h_a83ee00944b95e4ef14f9e7993b7cea6c}{Assert}} (bool b, const std\+::string \&hint)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__runner__p_8h_aca68c0d4ac8df0838e209fb5300f7be3}\label{test__runner__p_8h_aca68c0d4ac8df0838e209fb5300f7be3}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!ASSERT@{ASSERT}}
+\index{ASSERT@{ASSERT}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT}{ASSERT}}
+{\footnotesize\ttfamily \#define ASSERT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{                                                                                                                  \(\backslash\)}
+\DoxyCodeLine{        std::ostringstream \_\_assert\_private\_os;                                                                        \(\backslash\)}
+\DoxyCodeLine{        \_\_assert\_private\_os << \#x << \textcolor{stringliteral}{"{} is false, "{}} << \mbox{\hyperlink{test__runner__p_8h_ab117546549783a058d0321a287699579}{FILE\_NAME}} << \textcolor{stringliteral}{"{}:"{}} << \_\_LINE\_\_;                                    \(\backslash\)}
+\DoxyCodeLine{        Assert(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(x), \_\_assert\_private\_os.str());                                                       \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__runner__p_8h_a2e3e42fccc4e1007391c02eef0a42d8f}\label{test__runner__p_8h_a2e3e42fccc4e1007391c02eef0a42d8f}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!ASSERT\_DOESNT\_THROW@{ASSERT\_DOESNT\_THROW}}
+\index{ASSERT\_DOESNT\_THROW@{ASSERT\_DOESNT\_THROW}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_DOESNT\_THROW}{ASSERT\_DOESNT\_THROW}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+DOESNT\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{try}                                                                                                                \(\backslash\)}
+\DoxyCodeLine{    \{                                                                                                                  \(\backslash\)}
+\DoxyCodeLine{        expr;                                                                                                          \(\backslash\)}
+\DoxyCodeLine{    \}                                                                                                                  \(\backslash\)}
+\DoxyCodeLine{    catch (...)                                                                                                        \(\backslash\)}
+\DoxyCodeLine{    \{                                                                                                                  \(\backslash\)}
+\DoxyCodeLine{        std::ostringstream \_\_assert\_private\_os;                                                                        \(\backslash\)}
+\DoxyCodeLine{        \_\_assert\_private\_os << \textcolor{stringliteral}{"{}Expression "{}} \#expr \textcolor{stringliteral}{"{} threw an unexpected exception"{}}                                    \(\backslash\)}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"{} "{}} \mbox{\hyperlink{test__runner__p_8h_ab117546549783a058d0321a287699579}{FILE\_NAME}} \textcolor{stringliteral}{"{}:"{}}                                                                       \(\backslash\)}
+\DoxyCodeLine{                            << \_\_LINE\_\_;                                                                               \(\backslash\)}
+\DoxyCodeLine{        Assert(\textcolor{keyword}{false}, \_\_assert\_private\_os.str());                                                                      \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__runner__p_8h_a07fc9e3c2fa55f275fe572e4bb251316}\label{test__runner__p_8h_a07fc9e3c2fa55f275fe572e4bb251316}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!ASSERT\_EQUAL@{ASSERT\_EQUAL}}
+\index{ASSERT\_EQUAL@{ASSERT\_EQUAL}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_EQUAL}{ASSERT\_EQUAL}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+EQUAL(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{                                                                                                                  \(\backslash\)}
+\DoxyCodeLine{        std::ostringstream \_\_assert\_equal\_private\_os;                                                                  \(\backslash\)}
+\DoxyCodeLine{        \_\_assert\_equal\_private\_os << \#x << \textcolor{stringliteral}{"{} != "{}} << \#y << \textcolor{stringliteral}{"{}, "{}} << \mbox{\hyperlink{test__runner__p_8h_ab117546549783a058d0321a287699579}{FILE\_NAME}} << \textcolor{stringliteral}{"{}:"{}} << \_\_LINE\_\_;                       \(\backslash\)}
+\DoxyCodeLine{        AssertEqual(x, y, \_\_assert\_equal\_private\_os.str());                                                            \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__runner__p_8h_a5376ec8f267fe560d2f3f6cbc408faf9}\label{test__runner__p_8h_a5376ec8f267fe560d2f3f6cbc408faf9}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!ASSERT\_THROWS@{ASSERT\_THROWS}}
+\index{ASSERT\_THROWS@{ASSERT\_THROWS}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_THROWS}{ASSERT\_THROWS}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+THROWS(\begin{DoxyParamCaption}\item[{}]{expr,  }\item[{}]{expected\+\_\+exception }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{                                                                                                                  \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keywordtype}{bool} \_\_assert\_private\_flag = \textcolor{keyword}{true};                                                                             \(\backslash\)}
+\DoxyCodeLine{        \textcolor{keywordflow}{try}                                                                                                            \(\backslash\)}
+\DoxyCodeLine{        \{                                                                                                              \(\backslash\)}
+\DoxyCodeLine{            expr;                                                                                                      \(\backslash\)}
+\DoxyCodeLine{            \_\_assert\_private\_flag = \textcolor{keyword}{false};                                                                             \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                                              \(\backslash\)}
+\DoxyCodeLine{        catch (expected\_exception \&)                                                                                   \(\backslash\)}
+\DoxyCodeLine{        \{                                                                                                              \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                                              \(\backslash\)}
+\DoxyCodeLine{        catch (...)                                                                                                    \(\backslash\)}
+\DoxyCodeLine{        \{                                                                                                              \(\backslash\)}
+\DoxyCodeLine{            std::ostringstream \_\_assert\_private\_os;                                                                    \(\backslash\)}
+\DoxyCodeLine{            \_\_assert\_private\_os << \textcolor{stringliteral}{"{}Expression "{}} \#expr \textcolor{stringliteral}{"{} threw an unexpected exception"{}}                                \(\backslash\)}
+\DoxyCodeLine{                                   \textcolor{stringliteral}{"{} "{}} \mbox{\hyperlink{test__runner__p_8h_ab117546549783a058d0321a287699579}{FILE\_NAME}} \textcolor{stringliteral}{"{}:"{}}                                                                   \(\backslash\)}
+\DoxyCodeLine{                                << \_\_LINE\_\_;                                                                           \(\backslash\)}
+\DoxyCodeLine{            Assert(\textcolor{keyword}{false}, \_\_assert\_private\_os.str());                                                                  \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                                              \(\backslash\)}
+\DoxyCodeLine{        if (!\_\_assert\_private\_flag)                                                                                    \(\backslash\)}
+\DoxyCodeLine{        \{                                                                                                              \(\backslash\)}
+\DoxyCodeLine{            std::ostringstream \_\_assert\_private\_os;                                                                    \(\backslash\)}
+\DoxyCodeLine{            \_\_assert\_private\_os << \textcolor{stringliteral}{"{}Expression "{}} \#expr \textcolor{stringliteral}{"{} is expected to throw "{}} \#expected\_exception \textcolor{stringliteral}{"{} "{}} \mbox{\hyperlink{test__runner__p_8h_ab117546549783a058d0321a287699579}{FILE\_NAME}} \textcolor{stringliteral}{"{}:"{}}  \(\backslash\)}
+\DoxyCodeLine{                                << \_\_LINE\_\_;                                                                           \(\backslash\)}
+\DoxyCodeLine{            Assert(\textcolor{keyword}{false}, \_\_assert\_private\_os.str());                                                                  \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                                              \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{test__runner__p_8h_ab117546549783a058d0321a287699579}\label{test__runner__p_8h_ab117546549783a058d0321a287699579}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!FILE\_NAME@{FILE\_NAME}}
+\index{FILE\_NAME@{FILE\_NAME}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{FILE\_NAME}{FILE\_NAME}}
+{\footnotesize\ttfamily \#define FILE\+\_\+\+NAME~\+\_\+\+\_\+\+FILE\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{test__runner__p_8h_a25012349285b237b180b92a39a520cb9}\label{test__runner__p_8h_a25012349285b237b180b92a39a520cb9}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!RUN\_TEST@{RUN\_TEST}}
+\index{RUN\_TEST@{RUN\_TEST}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{RUN\_TEST}{RUN\_TEST}}
+{\footnotesize\ttfamily \#define RUN\+\_\+\+TEST(\begin{DoxyParamCaption}\item[{}]{tr,  }\item[{}]{func }\end{DoxyParamCaption})~tr.\+Run\+Test(func, \#func)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__runner__p_8h_a83ee00944b95e4ef14f9e7993b7cea6c}\label{test__runner__p_8h_a83ee00944b95e4ef14f9e7993b7cea6c}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!Assert@{Assert}}
+\index{Assert@{Assert}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{Assert()}{Assert()}}
+{\footnotesize\ttfamily void Assert (\begin{DoxyParamCaption}\item[{bool}]{b,  }\item[{const std\+::string \&}]{hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{test__runner__p_8h_a3e9942aeb82fa470efcb551d2f4da554}\label{test__runner__p_8h_a3e9942aeb82fa470efcb551d2f4da554}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!AssertEqual@{AssertEqual}}
+\index{AssertEqual@{AssertEqual}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{AssertEqual()}{AssertEqual()}}
+{\footnotesize\ttfamily template$<$class T , class U $>$ \\
+void Assert\+Equal (\begin{DoxyParamCaption}\item[{const T \&}]{t,  }\item[{const U \&}]{u,  }\item[{const std\+::string \&}]{hint = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__runner__p_8h_abe5e504ebfc580bb0ee2b1a75e7ff1f7}\label{test__runner__p_8h_abe5e504ebfc580bb0ee2b1a75e7ff1f7}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class K , class V $>$ \\
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const std\+::map$<$ K, V $>$ \&}]{m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__runner__p_8h_a7ceff19c1a2b98d7c2821d33f7b1bdf4}\label{test__runner__p_8h_a7ceff19c1a2b98d7c2821d33f7b1bdf4}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const std\+::set$<$ T $>$ \&}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__runner__p_8h_a4eb10398ab6f07196a56e4efef6f6166}\label{test__runner__p_8h_a4eb10398ab6f07196a56e4efef6f6166}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class K , class V $>$ \\
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const std\+::unordered\+\_\+map$<$ K, V $>$ \&}]{m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{test__runner__p_8h_aea0cf07fab8dac684dd045cc70ff2d52}\label{test__runner__p_8h_aea0cf07fab8dac684dd045cc70ff2d52}} 
+\index{test\_runner\_p.h@{test\_runner\_p.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!test\_runner\_p.h@{test\_runner\_p.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const std\+::vector$<$ T $>$ \&}]{s }\end{DoxyParamCaption})}
+

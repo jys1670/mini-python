@@ -1,0 +1,107 @@
+\hypertarget{classruntime_1_1ClassInstance}{}\doxysection{runtime\+::Class\+Instance Class Reference}
+\label{classruntime_1_1ClassInstance}\index{runtime::ClassInstance@{runtime::ClassInstance}}
+
+
+\mbox{\hyperlink{classruntime_1_1Class}{Class}} instance.  
+
+
+
+
+{\ttfamily \#include $<$runtime.\+h$>$}
+
+Inheritance diagram for runtime\+::Class\+Instance\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classruntime_1_1ClassInstance}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classruntime_1_1ClassInstance_a3d33653937d01efff8fa01170f8ae904}{Class\+Instance}} (const \mbox{\hyperlink{classruntime_1_1Class}{Class}} \&cls)
+\item 
+void \mbox{\hyperlink{classruntime_1_1ClassInstance_ad3661f0bfe59eda41bf97e789a250fc3}{Print}} (std\+::ostream \&os, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context) override
+\begin{DoxyCompactList}\small\item\em If objects has {\bfseries{str}} methods, outputs string representation, otherwise prints memory address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \mbox{\hyperlink{classruntime_1_1ClassInstance_a1e376df25c79ce95e827b9401a88d460}{Call}} (const std\+::string \&method, const std\+::vector$<$ \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} $>$ \&args, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&ctx)
+\begin{DoxyCompactList}\small\item\em Calls method with give \char`\"{}actual\+\_\+args\char`\"{} arguments and output context \char`\"{}ctx\char`\"{}. In case method does not exist in current or parent class, throws runtime\+\_\+error. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classruntime_1_1ClassInstance_a09b61f7da99f25906338bf9c64dc58f8}{Has\+Method}} (const std\+::string \&method, size\+\_\+t argc) const
+\begin{DoxyCompactList}\small\item\em Checks if there is method that takes \char`\"{}argc\char`\"{} amount of arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{Closure}} \& \mbox{\hyperlink{classruntime_1_1ClassInstance_a3620517a50276226e2c57c0fab006696}{Fields}} ()
+\begin{DoxyCompactList}\small\item\em Returns closure containing object fields. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{Closure}} \& \mbox{\hyperlink{classruntime_1_1ClassInstance_a02fcbad3e7dad8bac5d4aa10fe0788d8}{Fields}} () const
+\begin{DoxyCompactList}\small\item\em Returns constant closure containing object fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classruntime_1_1Class}{Class}} instance. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classruntime_1_1ClassInstance_a3d33653937d01efff8fa01170f8ae904}\label{classruntime_1_1ClassInstance_a3d33653937d01efff8fa01170f8ae904}} 
+\index{runtime::ClassInstance@{runtime::ClassInstance}!ClassInstance@{ClassInstance}}
+\index{ClassInstance@{ClassInstance}!runtime::ClassInstance@{runtime::ClassInstance}}
+\doxysubsubsection{\texorpdfstring{ClassInstance()}{ClassInstance()}}
+{\footnotesize\ttfamily runtime\+::\+Class\+Instance\+::\+Class\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1Class}{Class}} \&}]{cls }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classruntime_1_1ClassInstance_a1e376df25c79ce95e827b9401a88d460}\label{classruntime_1_1ClassInstance_a1e376df25c79ce95e827b9401a88d460}} 
+\index{runtime::ClassInstance@{runtime::ClassInstance}!Call@{Call}}
+\index{Call@{Call}!runtime::ClassInstance@{runtime::ClassInstance}}
+\doxysubsubsection{\texorpdfstring{Call()}{Call()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} runtime\+::\+Class\+Instance\+::\+Call (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{method,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} $>$ \&}]{args,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Calls method with give \char`\"{}actual\+\_\+args\char`\"{} arguments and output context \char`\"{}ctx\char`\"{}. In case method does not exist in current or parent class, throws runtime\+\_\+error. 
+
+\mbox{\Hypertarget{classruntime_1_1ClassInstance_a3620517a50276226e2c57c0fab006696}\label{classruntime_1_1ClassInstance_a3620517a50276226e2c57c0fab006696}} 
+\index{runtime::ClassInstance@{runtime::ClassInstance}!Fields@{Fields}}
+\index{Fields@{Fields}!runtime::ClassInstance@{runtime::ClassInstance}}
+\doxysubsubsection{\texorpdfstring{Fields()}{Fields()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{Closure}} \& runtime\+::\+Class\+Instance\+::\+Fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns closure containing object fields. 
+
+\mbox{\Hypertarget{classruntime_1_1ClassInstance_a02fcbad3e7dad8bac5d4aa10fe0788d8}\label{classruntime_1_1ClassInstance_a02fcbad3e7dad8bac5d4aa10fe0788d8}} 
+\index{runtime::ClassInstance@{runtime::ClassInstance}!Fields@{Fields}}
+\index{Fields@{Fields}!runtime::ClassInstance@{runtime::ClassInstance}}
+\doxysubsubsection{\texorpdfstring{Fields()}{Fields()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{Closure}} \& runtime\+::\+Class\+Instance\+::\+Fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns constant closure containing object fields. 
+
+\mbox{\Hypertarget{classruntime_1_1ClassInstance_a09b61f7da99f25906338bf9c64dc58f8}\label{classruntime_1_1ClassInstance_a09b61f7da99f25906338bf9c64dc58f8}} 
+\index{runtime::ClassInstance@{runtime::ClassInstance}!HasMethod@{HasMethod}}
+\index{HasMethod@{HasMethod}!runtime::ClassInstance@{runtime::ClassInstance}}
+\doxysubsubsection{\texorpdfstring{HasMethod()}{HasMethod()}}
+{\footnotesize\ttfamily bool runtime\+::\+Class\+Instance\+::\+Has\+Method (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{method,  }\item[{size\+\_\+t}]{argc }\end{DoxyParamCaption}) const}
+
+
+
+Checks if there is method that takes \char`\"{}argc\char`\"{} amount of arguments. 
+
+\mbox{\Hypertarget{classruntime_1_1ClassInstance_ad3661f0bfe59eda41bf97e789a250fc3}\label{classruntime_1_1ClassInstance_ad3661f0bfe59eda41bf97e789a250fc3}} 
+\index{runtime::ClassInstance@{runtime::ClassInstance}!Print@{Print}}
+\index{Print@{Print}!runtime::ClassInstance@{runtime::ClassInstance}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void runtime\+::\+Class\+Instance\+::\+Print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+If objects has {\bfseries{str}} methods, outputs string representation, otherwise prints memory address. 
+
+
+
+Implements \mbox{\hyperlink{classruntime_1_1Object_a5d102c104edcf14e2889a438b68f0889}{runtime\+::\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{runtime_8h}{runtime.\+h}}\item 
+src/\mbox{\hyperlink{runtime_8cpp}{runtime.\+cpp}}\end{DoxyCompactItemize}

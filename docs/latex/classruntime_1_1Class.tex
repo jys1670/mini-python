@@ -1,0 +1,87 @@
+\hypertarget{classruntime_1_1Class}{}\doxysection{runtime\+::Class Class Reference}
+\label{classruntime_1_1Class}\index{runtime::Class@{runtime::Class}}
+
+
+Implements class.  
+
+
+
+
+{\ttfamily \#include $<$runtime.\+h$>$}
+
+Inheritance diagram for runtime\+::Class\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classruntime_1_1Class}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classruntime_1_1Class_a4f5be1331f80c93414913379344959c4}{Class}} (std\+::string name, std\+::vector$<$ \mbox{\hyperlink{structruntime_1_1Method}{Method}} $>$ \&\&methods, const \mbox{\hyperlink{classruntime_1_1Class}{Class}} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Creates class with a given name and set of methods, inherited from parent (can be nullptr) \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structruntime_1_1Method}{Method}} $\ast$ \mbox{\hyperlink{classruntime_1_1Class_a2ecd01a8f8f8e5c2c05ffab9144022ba}{Get\+Method}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns pointer to method or nullptr. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classruntime_1_1Class_a93c75fed57627588b3daf52fa15883d7}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns class name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classruntime_1_1Class_a572c29c9430551609997519150a2254d}{Print}} (std\+::ostream \&os, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context) override
+\begin{DoxyCompactList}\small\item\em prints \char`\"{}\+Class $<$name$>$\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classruntime_1_1Class_a4f5be1331f80c93414913379344959c4}\label{classruntime_1_1Class_a4f5be1331f80c93414913379344959c4}} 
+\index{runtime::Class@{runtime::Class}!Class@{Class}}
+\index{Class@{Class}!runtime::Class@{runtime::Class}}
+\doxysubsubsection{\texorpdfstring{Class()}{Class()}}
+{\footnotesize\ttfamily runtime\+::\+Class\+::\+Class (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structruntime_1_1Method}{Method}} $>$ \&\&}]{methods,  }\item[{const \mbox{\hyperlink{classruntime_1_1Class}{Class}} $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates class with a given name and set of methods, inherited from parent (can be nullptr) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classruntime_1_1Class_a2ecd01a8f8f8e5c2c05ffab9144022ba}\label{classruntime_1_1Class_a2ecd01a8f8f8e5c2c05ffab9144022ba}} 
+\index{runtime::Class@{runtime::Class}!GetMethod@{GetMethod}}
+\index{GetMethod@{GetMethod}!runtime::Class@{runtime::Class}}
+\doxysubsubsection{\texorpdfstring{GetMethod()}{GetMethod()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structruntime_1_1Method}{Method}} $\ast$ runtime\+::\+Class\+::\+Get\+Method (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns pointer to method or nullptr. 
+
+\mbox{\Hypertarget{classruntime_1_1Class_a93c75fed57627588b3daf52fa15883d7}\label{classruntime_1_1Class_a93c75fed57627588b3daf52fa15883d7}} 
+\index{runtime::Class@{runtime::Class}!GetName@{GetName}}
+\index{GetName@{GetName}!runtime::Class@{runtime::Class}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily const std\+::string \& runtime\+::\+Class\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns class name. 
+
+\mbox{\Hypertarget{classruntime_1_1Class_a572c29c9430551609997519150a2254d}\label{classruntime_1_1Class_a572c29c9430551609997519150a2254d}} 
+\index{runtime::Class@{runtime::Class}!Print@{Print}}
+\index{Print@{Print}!runtime::Class@{runtime::Class}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void runtime\+::\+Class\+::\+Print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+prints \char`\"{}\+Class $<$name$>$\char`\"{} 
+
+
+
+Implements \mbox{\hyperlink{classruntime_1_1Object_a5d102c104edcf14e2889a438b68f0889}{runtime\+::\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{runtime_8h}{runtime.\+h}}\item 
+src/\mbox{\hyperlink{runtime_8cpp}{runtime.\+cpp}}\end{DoxyCompactItemize}

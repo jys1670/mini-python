@@ -14,7 +14,10 @@ endif ()
 
 include_directories(src)
 
+
+aux_source_directory(./src MPYTHON_SRC)
+
 add_executable(
         mini-python
-        src/main.cpp
+        ${MPYTHON_SRC}
 )
