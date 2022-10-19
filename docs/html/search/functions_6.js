@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nexttoken_0',['NextToken',['../classparse_1_1Lexer.html#af2e7773454549634767faca8328c8d24',1,'parse::Lexer']]]
+  ['istrue_0',['IsTrue',['../namespaceruntime.html#a3c35fabf1a30a5ff92b0b5fe62274998',1,'runtime']]]
 ];

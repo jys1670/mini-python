@@ -3,13 +3,31 @@
 
 #include <iostream>
 
+using namespace std;
+
 namespace parse
 {
 void RunOpenLexerTests(TestRunner &tr);
 }
 
+namespace runtime
+{
+void RunObjectHolderTests(TestRunner &tr);
+void RunObjectsTests(TestRunner &tr);
+} // namespace runtime
+
+void TestAll()
+{
+    TestRunner tr;
+    runtime::RunObjectHolderTests(tr);
+    runtime::RunObjectsTests(tr);
+}
+
+
 int main()
 {
+    TestAll();
+
     try
     {
         TestRunner tr;

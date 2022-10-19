@@ -1,0 +1,151 @@
+\hypertarget{namespaceruntime}{}\doxysection{runtime Namespace Reference}
+\label{namespaceruntime}\index{runtime@{runtime}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classruntime_1_1Bool}{Bool}}
+\begin{DoxyCompactList}\small\item\em Boolean. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1Class}{Class}}
+\begin{DoxyCompactList}\small\item\em Implements class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1ClassInstance}{Class\+Instance}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classruntime_1_1Class}{Class}} instance. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1Context}{Context}}
+\begin{DoxyCompactList}\small\item\em Mini-\/python instructions execution context. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structruntime_1_1DummyContext}{Dummy\+Context}}
+\item 
+class \mbox{\hyperlink{classruntime_1_1Executable}{Executable}}
+\begin{DoxyCompactList}\small\item\em Interface that links runtime module with semantic analyzer. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structruntime_1_1Method}{Method}}
+\begin{DoxyCompactList}\small\item\em Describes class method. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1Object}{Object}}
+\begin{DoxyCompactList}\small\item\em Base class of all objects, just like in normal Python. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}}
+\begin{DoxyCompactList}\small\item\em Special wrapper, contains methods that make it easier to construct Objects and access their values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1SimpleContext}{Simple\+Context}}
+\item 
+class \mbox{\hyperlink{classruntime_1_1ValueObject}{Value\+Object}}
+\begin{DoxyCompactList}\small\item\em Stores value of type T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{Closure}} = std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} $>$
+\begin{DoxyCompactList}\small\item\em Symbols table, connects object name and its value. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespaceruntime_a04290d8ea5a3420c01e09eab30bf7b02}{String}} = \mbox{\hyperlink{classruntime_1_1ValueObject}{Value\+Object}}$<$ std\+::string $>$
+\begin{DoxyCompactList}\small\item\em String literal. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespaceruntime_a90c5044b8e6092d39198dd5a02d81b12}{Number}} = \mbox{\hyperlink{classruntime_1_1ValueObject}{Value\+Object}}$<$ int $>$
+\begin{DoxyCompactList}\small\item\em Number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceruntime_ac9a07edfef567626ca0f03e7168b9dd2}{Run\+Object\+Holder\+Tests}} (\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&tr)
+\item 
+void \mbox{\hyperlink{namespaceruntime_aea3df1d6bfb45537fab62402598b8203}{Run\+Objects\+Tests}} (\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&tr)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_a3c35fabf1a30a5ff92b0b5fe62274998}{Is\+True}} (const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&object)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_af9f2cbd741a85e037fb3db279aabd601}{Equal}} (const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&lhs, const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&rhs, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_ab0ba36b671cf55518c5dec99c88304e6}{Less}} (const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&lhs, const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&rhs, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context)
+\begin{DoxyCompactList}\small\item\em Same principles as in Equal operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceruntime_a815ccd5798ebc8775f1d1bfe20eb46d3}{Not\+Equal}} (const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&lhs, const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&rhs, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_a0b0af5adce370cb1c5275ed40abdaa67}{Greater}} (const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&lhs, const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&rhs, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_af7bccc5ded0da3ef4e4aa64ad8296411}{Less\+Or\+Equal}} (const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&lhs, const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&rhs, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_a56d02fadecb0878734ea83f44ba8d840}{Greater\+Or\+Equal}} (const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&lhs, const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&rhs, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}\label{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}} 
+\index{runtime@{runtime}!Closure@{Closure}}
+\index{Closure@{Closure}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{Closure}{Closure}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} = typedef std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}}$>$}
+
+
+
+Symbols table, connects object name and its value. 
+
+\mbox{\Hypertarget{namespaceruntime_a90c5044b8e6092d39198dd5a02d81b12}\label{namespaceruntime_a90c5044b8e6092d39198dd5a02d81b12}} 
+\index{runtime@{runtime}!Number@{Number}}
+\index{Number@{Number}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{Number}{Number}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceruntime_a90c5044b8e6092d39198dd5a02d81b12}{runtime\+::\+Number}} = typedef \mbox{\hyperlink{classruntime_1_1ValueObject}{Value\+Object}}$<$int$>$}
+
+
+
+Number. 
+
+\mbox{\Hypertarget{namespaceruntime_a04290d8ea5a3420c01e09eab30bf7b02}\label{namespaceruntime_a04290d8ea5a3420c01e09eab30bf7b02}} 
+\index{runtime@{runtime}!String@{String}}
+\index{String@{String}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{String}{String}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceruntime_a04290d8ea5a3420c01e09eab30bf7b02}{runtime\+::\+String}} = typedef \mbox{\hyperlink{classruntime_1_1ValueObject}{Value\+Object}}$<$std\+::string$>$}
+
+
+
+String literal. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceruntime_af9f2cbd741a85e037fb3db279aabd601}\label{namespaceruntime_af9f2cbd741a85e037fb3db279aabd601}} 
+\index{runtime@{runtime}!Equal@{Equal}}
+\index{Equal@{Equal}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{Equal()}{Equal()}}
+{\footnotesize\ttfamily bool runtime\+::\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{rhs,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})}
+
+Returns true if lhs and rhs are equal numbers, strings and booleans. If both are None, returns true as well. For other types checks whether object has {\bfseries{eq}} method and uses it. Lastly, if case is something not previously mentioned, throws runtime\+\_\+error \mbox{\Hypertarget{namespaceruntime_a0b0af5adce370cb1c5275ed40abdaa67}\label{namespaceruntime_a0b0af5adce370cb1c5275ed40abdaa67}} 
+\index{runtime@{runtime}!Greater@{Greater}}
+\index{Greater@{Greater}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{Greater()}{Greater()}}
+{\footnotesize\ttfamily bool runtime\+::\+Greater (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{rhs,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceruntime_a56d02fadecb0878734ea83f44ba8d840}\label{namespaceruntime_a56d02fadecb0878734ea83f44ba8d840}} 
+\index{runtime@{runtime}!GreaterOrEqual@{GreaterOrEqual}}
+\index{GreaterOrEqual@{GreaterOrEqual}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{GreaterOrEqual()}{GreaterOrEqual()}}
+{\footnotesize\ttfamily bool runtime\+::\+Greater\+Or\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{rhs,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceruntime_a3c35fabf1a30a5ff92b0b5fe62274998}\label{namespaceruntime_a3c35fabf1a30a5ff92b0b5fe62274998}} 
+\index{runtime@{runtime}!IsTrue@{IsTrue}}
+\index{IsTrue@{IsTrue}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{IsTrue()}{IsTrue()}}
+{\footnotesize\ttfamily bool runtime\+::\+Is\+True (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{object }\end{DoxyParamCaption})}
+
+Checks whether object contains value convertible to boolean \char`\"{}\+True\char`\"{} Non-\/zero numbers, non-\/empty strings are \char`\"{}\+True\char`\"{}, everything else is \char`\"{}\+False\char`\"{} \mbox{\Hypertarget{namespaceruntime_ab0ba36b671cf55518c5dec99c88304e6}\label{namespaceruntime_ab0ba36b671cf55518c5dec99c88304e6}} 
+\index{runtime@{runtime}!Less@{Less}}
+\index{Less@{Less}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{Less()}{Less()}}
+{\footnotesize\ttfamily bool runtime\+::\+Less (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{rhs,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})}
+
+
+
+Same principles as in Equal operator. 
+
+\mbox{\Hypertarget{namespaceruntime_af7bccc5ded0da3ef4e4aa64ad8296411}\label{namespaceruntime_af7bccc5ded0da3ef4e4aa64ad8296411}} 
+\index{runtime@{runtime}!LessOrEqual@{LessOrEqual}}
+\index{LessOrEqual@{LessOrEqual}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{LessOrEqual()}{LessOrEqual()}}
+{\footnotesize\ttfamily bool runtime\+::\+Less\+Or\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{rhs,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceruntime_a815ccd5798ebc8775f1d1bfe20eb46d3}\label{namespaceruntime_a815ccd5798ebc8775f1d1bfe20eb46d3}} 
+\index{runtime@{runtime}!NotEqual@{NotEqual}}
+\index{NotEqual@{NotEqual}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{NotEqual()}{NotEqual()}}
+{\footnotesize\ttfamily bool runtime\+::\+Not\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{rhs,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceruntime_ac9a07edfef567626ca0f03e7168b9dd2}\label{namespaceruntime_ac9a07edfef567626ca0f03e7168b9dd2}} 
+\index{runtime@{runtime}!RunObjectHolderTests@{RunObjectHolderTests}}
+\index{RunObjectHolderTests@{RunObjectHolderTests}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{RunObjectHolderTests()}{RunObjectHolderTests()}}
+{\footnotesize\ttfamily void runtime\+::\+Run\+Object\+Holder\+Tests (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&}]{tr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceruntime_aea3df1d6bfb45537fab62402598b8203}\label{namespaceruntime_aea3df1d6bfb45537fab62402598b8203}} 
+\index{runtime@{runtime}!RunObjectsTests@{RunObjectsTests}}
+\index{RunObjectsTests@{RunObjectsTests}!runtime@{runtime}}
+\doxysubsubsection{\texorpdfstring{RunObjectsTests()}{RunObjectsTests()}}
+{\footnotesize\ttfamily void runtime\+::\+Run\+Objects\+Tests (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&}]{tr }\end{DoxyParamCaption})}
+

@@ -1,0 +1,65 @@
+\hypertarget{runtime_8h}{}\doxysection{src/runtime.h File Reference}
+\label{runtime_8h}\index{src/runtime.h@{src/runtime.h}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}}
+\begin{DoxyCompactList}\small\item\em Mini-\/python instructions execution context. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1Object}{runtime\+::\+Object}}
+\begin{DoxyCompactList}\small\item\em Base class of all objects, just like in normal Python. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}}
+\begin{DoxyCompactList}\small\item\em Special wrapper, contains methods that make it easier to construct Objects and access their values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1ValueObject}{runtime\+::\+Value\+Object$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Stores value of type T. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1Executable}{runtime\+::\+Executable}}
+\begin{DoxyCompactList}\small\item\em Interface that links runtime module with semantic analyzer. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1Bool}{runtime\+::\+Bool}}
+\begin{DoxyCompactList}\small\item\em Boolean. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structruntime_1_1Method}{runtime\+::\+Method}}
+\begin{DoxyCompactList}\small\item\em Describes class method. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}}
+\begin{DoxyCompactList}\small\item\em Implements class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classruntime_1_1ClassInstance}{runtime\+::\+Class\+Instance}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classruntime_1_1Class}{Class}} instance. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structruntime_1_1DummyContext}{runtime\+::\+Dummy\+Context}}
+\item 
+class \mbox{\hyperlink{classruntime_1_1SimpleContext}{runtime\+::\+Simple\+Context}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceruntime}{runtime}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} = std\+::unordered\+\_\+map$<$ std\+::string, Object\+Holder $>$
+\begin{DoxyCompactList}\small\item\em Symbols table, connects object name and its value. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespaceruntime_a04290d8ea5a3420c01e09eab30bf7b02}{runtime\+::\+String}} = Value\+Object$<$ std\+::string $>$
+\begin{DoxyCompactList}\small\item\em String literal. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespaceruntime_a90c5044b8e6092d39198dd5a02d81b12}{runtime\+::\+Number}} = Value\+Object$<$ int $>$
+\begin{DoxyCompactList}\small\item\em Number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceruntime_a3c35fabf1a30a5ff92b0b5fe62274998}{runtime\+::\+Is\+True}} (const Object\+Holder \&object)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_af9f2cbd741a85e037fb3db279aabd601}{runtime\+::\+Equal}} (const Object\+Holder \&lhs, const Object\+Holder \&rhs, Context \&context)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_ab0ba36b671cf55518c5dec99c88304e6}{runtime\+::\+Less}} (const Object\+Holder \&lhs, const Object\+Holder \&rhs, Context \&context)
+\begin{DoxyCompactList}\small\item\em Same principles as in Equal operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespaceruntime_a815ccd5798ebc8775f1d1bfe20eb46d3}{runtime\+::\+Not\+Equal}} (const Object\+Holder \&lhs, const Object\+Holder \&rhs, Context \&context)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_a0b0af5adce370cb1c5275ed40abdaa67}{runtime\+::\+Greater}} (const Object\+Holder \&lhs, const Object\+Holder \&rhs, Context \&context)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_af7bccc5ded0da3ef4e4aa64ad8296411}{runtime\+::\+Less\+Or\+Equal}} (const Object\+Holder \&lhs, const Object\+Holder \&rhs, Context \&context)
+\item 
+bool \mbox{\hyperlink{namespaceruntime_a56d02fadecb0878734ea83f44ba8d840}{runtime\+::\+Greater\+Or\+Equal}} (const Object\+Holder \&lhs, const Object\+Holder \&rhs, Context \&context)
+\end{DoxyCompactItemize}

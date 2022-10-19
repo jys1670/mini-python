@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['char_0',['Char',['../structparse_1_1token__type_1_1Char.html',1,'parse::token_type']]],
-  ['class_1',['Class',['../structparse_1_1token__type_1_1Class.html',1,'parse::token_type']]]
+  ['class_0',['Class',['../classruntime_1_1Class.html',1,'runtime']]],
+  ['classinstance_1',['ClassInstance',['../classruntime_1_1ClassInstance.html',1,'runtime']]],
+  ['context_2',['Context',['../classruntime_1_1Context.html',1,'runtime']]]
 ];

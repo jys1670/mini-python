@@ -1,0 +1,44 @@
+\hypertarget{classruntime_1_1Executable}{}\doxysection{runtime\+::Executable Class Reference}
+\label{classruntime_1_1Executable}\index{runtime::Executable@{runtime::Executable}}
+
+
+Interface that links runtime module with semantic analyzer.  
+
+
+
+
+{\ttfamily \#include $<$runtime.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classruntime_1_1Executable_a7e53f76628d68eead1d0e66b89dd246b}{$\sim$\+Executable}} ()=default
+\item 
+virtual \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface that links runtime module with semantic analyzer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classruntime_1_1Executable_a7e53f76628d68eead1d0e66b89dd246b}\label{classruntime_1_1Executable_a7e53f76628d68eead1d0e66b89dd246b}} 
+\index{runtime::Executable@{runtime::Executable}!````~Executable@{$\sim$Executable}}
+\index{````~Executable@{$\sim$Executable}!runtime::Executable@{runtime::Executable}}
+\doxysubsubsection{\texorpdfstring{$\sim$Executable()}{~Executable()}}
+{\footnotesize\ttfamily virtual runtime\+::\+Executable\+::$\sim$\+Executable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}\label{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}} 
+\index{runtime::Executable@{runtime::Executable}!Execute@{Execute}}
+\index{Execute@{Execute}!runtime::Executable@{runtime::Executable}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} runtime\+::\+Executable\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Does something with objects inside of closure, outputs to context Returns result or None 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{runtime_8h}{runtime.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,166 @@
+\hypertarget{classruntime_1_1ObjectHolder}{}\doxysection{runtime\+::Object\+Holder Class Reference}
+\label{classruntime_1_1ObjectHolder}\index{runtime::ObjectHolder@{runtime::ObjectHolder}}
+
+
+Special wrapper, contains methods that make it easier to construct Objects and access their values.  
+
+
+
+
+{\ttfamily \#include $<$runtime.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder_ad98b35bacb64be17052b8f2a8dd4b07e}{Object\+Holder}} ()=default
+\begin{DoxyCompactList}\small\item\em Create empty value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder_ae2958089094440cdb64f9b085bb21ded}{Object\+Holder}} (const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&other)
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \& \mbox{\hyperlink{classruntime_1_1ObjectHolder_a9a79ec6738f57733657545e9efb9124f}{operator=}} (const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&other)
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder_a0b5f3c9725039a3fe02794fa80024b26}{Object\+Holder}} (\mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \& \mbox{\hyperlink{classruntime_1_1ObjectHolder_a72247562d975b4e1661735ccadb682ba}{operator=}} (\mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classruntime_1_1Object}{Object}} \& \mbox{\hyperlink{classruntime_1_1ObjectHolder_a8d4048607c733e7d5a3924e84751ec27}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em Returns reference to \mbox{\hyperlink{classruntime_1_1Object}{Object}} inside of \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classruntime_1_1Object}{Object}} $\ast$ \mbox{\hyperlink{classruntime_1_1ObjectHolder_a47852c21ebd658f4c62e146dca0a016f}{operator-\/$>$}} () const
+\begin{DoxyCompactList}\small\item\em Returns pointer to \mbox{\hyperlink{classruntime_1_1Object}{Object}} inside of \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classruntime_1_1Object}{Object}} $\ast$ \mbox{\hyperlink{classruntime_1_1ObjectHolder_aa4f1c38d938ceb41a9e130621fd5e805}{Get}} () const
+\begin{DoxyCompactList}\small\item\em Return raw \mbox{\hyperlink{classruntime_1_1Object}{Object}} pointer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classruntime_1_1ObjectHolder_a9d3cd09d877066cf3ea6cb01249e6d7f}{Try\+As}} () const
+\begin{DoxyCompactList}\small\item\em Returns raw pointer to object of type T or nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder_ae6b060ac95e7992bfa54bec7d5fab76b}{operator bool}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} is not empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \mbox{\hyperlink{classruntime_1_1ObjectHolder_a0b14bf7a184cc2632891cde38ce391dc}{Own}} (T \&\&object)
+\item 
+static \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \mbox{\hyperlink{classruntime_1_1ObjectHolder_abb0b38928f91129a289664c9d63f23f3}{Share}} (\mbox{\hyperlink{classruntime_1_1Object}{Object}} \&object)
+\item 
+static \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \mbox{\hyperlink{classruntime_1_1ObjectHolder_a0b7a12fb2b45a05e6ef4ca3a08bf8a04}{None}} ()
+\begin{DoxyCompactList}\small\item\em Returns empty \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}}, \char`\"{}\+None\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Special wrapper, contains methods that make it easier to construct Objects and access their values. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_ad98b35bacb64be17052b8f2a8dd4b07e}\label{classruntime_1_1ObjectHolder_ad98b35bacb64be17052b8f2a8dd4b07e}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!ObjectHolder@{ObjectHolder}}
+\index{ObjectHolder@{ObjectHolder}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily runtime\+::\+Object\+Holder\+::\+Object\+Holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Create empty value. 
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_ae2958089094440cdb64f9b085bb21ded}\label{classruntime_1_1ObjectHolder_ae2958089094440cdb64f9b085bb21ded}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!ObjectHolder@{ObjectHolder}}
+\index{ObjectHolder@{ObjectHolder}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily runtime\+::\+Object\+Holder\+::\+Object\+Holder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_a0b5f3c9725039a3fe02794fa80024b26}\label{classruntime_1_1ObjectHolder_a0b5f3c9725039a3fe02794fa80024b26}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!ObjectHolder@{ObjectHolder}}
+\index{ObjectHolder@{ObjectHolder}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily runtime\+::\+Object\+Holder\+::\+Object\+Holder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_aa4f1c38d938ceb41a9e130621fd5e805}\label{classruntime_1_1ObjectHolder_aa4f1c38d938ceb41a9e130621fd5e805}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!Get@{Get}}
+\index{Get@{Get}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1Object}{Object}} $\ast$ runtime\+::\+Object\+Holder\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return raw \mbox{\hyperlink{classruntime_1_1Object}{Object}} pointer. 
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_a0b7a12fb2b45a05e6ef4ca3a08bf8a04}\label{classruntime_1_1ObjectHolder_a0b7a12fb2b45a05e6ef4ca3a08bf8a04}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!None@{None}}
+\index{None@{None}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{None()}{None()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} runtime\+::\+Object\+Holder\+::\+None (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns empty \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}}, \char`\"{}\+None\char`\"{}. 
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_ae6b060ac95e7992bfa54bec7d5fab76b}\label{classruntime_1_1ObjectHolder_ae6b060ac95e7992bfa54bec7d5fab76b}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily runtime\+::\+Object\+Holder\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Returns true if \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} is not empty. 
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_a8d4048607c733e7d5a3924e84751ec27}\label{classruntime_1_1ObjectHolder_a8d4048607c733e7d5a3924e84751ec27}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1Object}{Object}} \& runtime\+::\+Object\+Holder\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns reference to \mbox{\hyperlink{classruntime_1_1Object}{Object}} inside of \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}}. 
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_a47852c21ebd658f4c62e146dca0a016f}\label{classruntime_1_1ObjectHolder_a47852c21ebd658f4c62e146dca0a016f}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1Object}{Object}} $\ast$ runtime\+::\+Object\+Holder\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns pointer to \mbox{\hyperlink{classruntime_1_1Object}{Object}} inside of \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}}. 
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_a9a79ec6738f57733657545e9efb9124f}\label{classruntime_1_1ObjectHolder_a9a79ec6738f57733657545e9efb9124f}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!operator=@{operator=}}
+\index{operator=@{operator=}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \& runtime\+::\+Object\+Holder\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_a72247562d975b4e1661735ccadb682ba}\label{classruntime_1_1ObjectHolder_a72247562d975b4e1661735ccadb682ba}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!operator=@{operator=}}
+\index{operator=@{operator=}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \& runtime\+::\+Object\+Holder\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_a0b14bf7a184cc2632891cde38ce391dc}\label{classruntime_1_1ObjectHolder_a0b14bf7a184cc2632891cde38ce391dc}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!Own@{Own}}
+\index{Own@{Own}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{Own()}{Own()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} runtime\+::\+Object\+Holder\+::\+Own (\begin{DoxyParamCaption}\item[{T \&\&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} that owns object of type T T -\/ type derived from \mbox{\hyperlink{classruntime_1_1Object}{Object}} \mbox{\hyperlink{classruntime_1_1Object}{Object}} is copied or moved to heap \mbox{\Hypertarget{classruntime_1_1ObjectHolder_abb0b38928f91129a289664c9d63f23f3}\label{classruntime_1_1ObjectHolder_abb0b38928f91129a289664c9d63f23f3}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!Share@{Share}}
+\index{Share@{Share}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{Share()}{Share()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} runtime\+::\+Object\+Holder\+::\+Share (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classruntime_1_1Object}{Object}} \&}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns non-\/owning \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} (shared\+\_\+ptr with empty deleter), similar to weak\+\_\+ptr This is mainly used for \char`\"{}self\char`\"{} parameter in class methods calls \mbox{\Hypertarget{classruntime_1_1ObjectHolder_a9d3cd09d877066cf3ea6cb01249e6d7f}\label{classruntime_1_1ObjectHolder_a9d3cd09d877066cf3ea6cb01249e6d7f}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!TryAs@{TryAs}}
+\index{TryAs@{TryAs}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{TryAs()}{TryAs()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T $\ast$ runtime\+::\+Object\+Holder\+::\+Try\+As (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns raw pointer to object of type T or nullptr. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{runtime_8h}{runtime.\+h}}\item 
+src/\mbox{\hyperlink{runtime_8cpp}{runtime.\+cpp}}\end{DoxyCompactItemize}

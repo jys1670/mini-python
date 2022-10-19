@@ -1,0 +1,58 @@
+\hypertarget{classruntime_1_1Object}{}\doxysection{runtime\+::Object Class Reference}
+\label{classruntime_1_1Object}\index{runtime::Object@{runtime::Object}}
+
+
+Base class of all objects, just like in normal Python.  
+
+
+
+
+{\ttfamily \#include $<$runtime.\+h$>$}
+
+Inheritance diagram for runtime\+::Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.270270cm]{classruntime_1_1Object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classruntime_1_1Object_aeae526a491727fcdfb09453929c1ff46}{$\sim$\+Object}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classruntime_1_1Object_a5d102c104edcf14e2889a438b68f0889}{Print}} (std\+::ostream \&os, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context)=0
+\begin{DoxyCompactList}\small\item\em Each object must have string representation, which can be printed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class of all objects, just like in normal Python. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classruntime_1_1Object_aeae526a491727fcdfb09453929c1ff46}\label{classruntime_1_1Object_aeae526a491727fcdfb09453929c1ff46}} 
+\index{runtime::Object@{runtime::Object}!````~Object@{$\sim$Object}}
+\index{````~Object@{$\sim$Object}!runtime::Object@{runtime::Object}}
+\doxysubsubsection{\texorpdfstring{$\sim$Object()}{~Object()}}
+{\footnotesize\ttfamily virtual runtime\+::\+Object\+::$\sim$\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classruntime_1_1Object_a5d102c104edcf14e2889a438b68f0889}\label{classruntime_1_1Object_a5d102c104edcf14e2889a438b68f0889}} 
+\index{runtime::Object@{runtime::Object}!Print@{Print}}
+\index{Print@{Print}!runtime::Object@{runtime::Object}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily virtual void runtime\+::\+Object\+::\+Print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Each object must have string representation, which can be printed. 
+
+
+
+Implemented in \mbox{\hyperlink{classruntime_1_1ValueObject_ae3e163f84700cbd1f3496b95c82a24a9}{runtime\+::\+Value\+Object$<$ T $>$}}, \mbox{\hyperlink{classruntime_1_1ValueObject_ae3e163f84700cbd1f3496b95c82a24a9}{runtime\+::\+Value\+Object$<$ bool $>$}}, \mbox{\hyperlink{classruntime_1_1Bool_aa7e46d53e06085fdb5b68e648d62bc10}{runtime\+::\+Bool}}, \mbox{\hyperlink{classruntime_1_1Class_a572c29c9430551609997519150a2254d}{runtime\+::\+Class}}, and \mbox{\hyperlink{classruntime_1_1ClassInstance_ad3661f0bfe59eda41bf97e789a250fc3}{runtime\+::\+Class\+Instance}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{runtime_8h}{runtime.\+h}}\end{DoxyCompactItemize}
