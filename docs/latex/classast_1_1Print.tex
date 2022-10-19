@@ -1,0 +1,90 @@
+\hypertarget{classast_1_1Print}{}\doxysection{ast\+::Print Class Reference}
+\label{classast_1_1Print}\index{ast::Print@{ast::Print}}
+
+
+print command  
+
+
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::Print\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1Print}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1Print_ab6a7b135752a0546413a9f4046d2807f}{Print}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&argument)
+\begin{DoxyCompactList}\small\item\em Initializes print command to output value of the \char`\"{}argument\char`\"{} statement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classast_1_1Print_af516fd8e1641f825bec39841a88c04aa}{Print}} (std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \&\&args)
+\begin{DoxyCompactList}\small\item\em Initializes print command to output values of vector of statements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1Print_a6ab5b27717ced4b5de9a2ec35402232e}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classast_1_1Print}{Print}} outputs to stream given by \char`\"{}context\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classast_1_1Print}{Print}} $>$ \mbox{\hyperlink{classast_1_1Print_a5b923e919d406d9db41cbed67396ce45}{Variable}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Initializes print command to output value of variable with given name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+print command 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1Print_ab6a7b135752a0546413a9f4046d2807f}\label{classast_1_1Print_ab6a7b135752a0546413a9f4046d2807f}} 
+\index{ast::Print@{ast::Print}!Print@{Print}}
+\index{Print@{Print}!ast::Print@{ast::Print}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ast\+::\+Print\+::\+Print (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{argument }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Initializes print command to output value of the \char`\"{}argument\char`\"{} statement. 
+
+\mbox{\Hypertarget{classast_1_1Print_af516fd8e1641f825bec39841a88c04aa}\label{classast_1_1Print_af516fd8e1641f825bec39841a88c04aa}} 
+\index{ast::Print@{ast::Print}!Print@{Print}}
+\index{Print@{Print}!ast::Print@{ast::Print}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ast\+::\+Print\+::\+Print (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \&\&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Initializes print command to output values of vector of statements. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1Print_a6ab5b27717ced4b5de9a2ec35402232e}\label{classast_1_1Print_a6ab5b27717ced4b5de9a2ec35402232e}} 
+\index{ast::Print@{ast::Print}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::Print@{ast::Print}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+Print\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classast_1_1Print}{Print}} outputs to stream given by \char`\"{}context\char`\"{}. 
+
+
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+\mbox{\Hypertarget{classast_1_1Print_a5b923e919d406d9db41cbed67396ce45}\label{classast_1_1Print_a5b923e919d406d9db41cbed67396ce45}} 
+\index{ast::Print@{ast::Print}!Variable@{Variable}}
+\index{Variable@{Variable}!ast::Print@{ast::Print}}
+\doxysubsubsection{\texorpdfstring{Variable()}{Variable()}}
+{\footnotesize\ttfamily unique\+\_\+ptr$<$ \mbox{\hyperlink{classast_1_1Print}{Print}} $>$ ast\+::\+Print\+::\+Variable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initializes print command to output value of variable with given name. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

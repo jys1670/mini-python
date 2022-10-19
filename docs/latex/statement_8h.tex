@@ -1,0 +1,72 @@
+\hypertarget{statement_8h}{}\doxysection{src/statement.h File Reference}
+\label{statement_8h}\index{src/statement.h@{src/statement.h}}
+{\ttfamily \#include \char`\"{}runtime.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classast_1_1ValueStatement}{ast\+::\+Value\+Statement$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classast_1_1VariableValue}{ast\+::\+Variable\+Value}}
+\item 
+class \mbox{\hyperlink{classast_1_1Assignment}{ast\+::\+Assignment}}
+\begin{DoxyCompactList}\small\item\em Assigns the value of the \char`\"{}rv\char`\"{} statement to the variable \char`\"{}var\char`\"{}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1FieldAssignment}{ast\+::\+Field\+Assignment}}
+\begin{DoxyCompactList}\small\item\em Assigns value of the \char`\"{}rv\char`\"{} to \char`\"{}object.\+field\+\_\+name\char`\"{} field. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1None}{ast\+::\+None}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classast_1_1None}{None}} value. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Print}{ast\+::\+Print}}
+\begin{DoxyCompactList}\small\item\em print command \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1MethodCall}{ast\+::\+Method\+Call}}
+\begin{DoxyCompactList}\small\item\em Calls method \char`\"{}object.\+method\char`\"{} with a given arguments \char`\"{}args\char`\"{}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1NewInstance}{ast\+::\+New\+Instance}}
+\item 
+class \mbox{\hyperlink{classast_1_1UnaryOperation}{ast\+::\+Unary\+Operation}}
+\begin{DoxyCompactList}\small\item\em Unary operations base class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Stringify}{ast\+::\+Stringify}}
+\begin{DoxyCompactList}\small\item\em str operation, returns string representation of whatever object \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1BinaryOperation}{ast\+::\+Binary\+Operation}}
+\begin{DoxyCompactList}\small\item\em Binary operation base class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Add}{ast\+::\+Add}}
+\begin{DoxyCompactList}\small\item\em Returns result of addition. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Sub}{ast\+::\+Sub}}
+\begin{DoxyCompactList}\small\item\em Returns result of subtraction. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Mult}{ast\+::\+Mult}}
+\begin{DoxyCompactList}\small\item\em Returns result of multiplication. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Div}{ast\+::\+Div}}
+\begin{DoxyCompactList}\small\item\em Returns result of division. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Or}{ast\+::\+Or}}
+\begin{DoxyCompactList}\small\item\em Returns result of logical OR. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1And}{ast\+::\+And}}
+\begin{DoxyCompactList}\small\item\em Returns result of logical AND. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Not}{ast\+::\+Not}}
+\begin{DoxyCompactList}\small\item\em Returns result of logical NOT. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Compound}{ast\+::\+Compound}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classast_1_1Compound}{Compound}} statement, combines other statements (i.\+e. method body insides, if-\/else blocks, etc) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1MethodBody}{ast\+::\+Method\+Body}}
+\begin{DoxyCompactList}\small\item\em Method body. Usually contains compound statement. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Return}{ast\+::\+Return}}
+\begin{DoxyCompactList}\small\item\em Executes return with a given statement. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1ClassDefinition}{ast\+::\+Class\+Definition}}
+\begin{DoxyCompactList}\small\item\em Class definition. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1IfElse}{ast\+::\+If\+Else}}
+\begin{DoxyCompactList}\small\item\em if \texorpdfstring{$<$}{<}condition\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}if\+\_\+body\texorpdfstring{$>$}{>} else \texorpdfstring{$<$}{<}else\+\_\+body\texorpdfstring{$>$}{>} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classast_1_1Comparison}{ast\+::\+Comparison}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classast_1_1Comparison}{Comparison}} operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceast}{ast}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{ast\+::\+Statement}} = \mbox{\hyperlink{classruntime_1_1Executable}{runtime\+::\+Executable}}
+\item 
+using \mbox{\hyperlink{namespaceast_a9239a4dc51aed0b597ecefeacfd6a615}{ast\+::\+Numeric\+Const}} = Value\+Statement$<$ \mbox{\hyperlink{namespaceruntime_a90c5044b8e6092d39198dd5a02d81b12}{runtime\+::\+Number}} $>$
+\item 
+using \mbox{\hyperlink{namespaceast_a699df7026b4b60e01a8362aa0b65e223}{ast\+::\+String\+Const}} = Value\+Statement$<$ \mbox{\hyperlink{namespaceruntime_a04290d8ea5a3420c01e09eab30bf7b02}{runtime\+::\+String}} $>$
+\item 
+using \mbox{\hyperlink{namespaceast_adba892001d56b3730ddeb68f30cb5640}{ast\+::\+Bool\+Const}} = Value\+Statement$<$ \mbox{\hyperlink{classruntime_1_1Bool}{runtime\+::\+Bool}} $>$
+\end{DoxyCompactItemize}

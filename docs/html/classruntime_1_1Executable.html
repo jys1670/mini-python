@@ -86,6 +86,29 @@ $(function() {
  <a href="classruntime_1_1Executable.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="runtime_8h_source.html">runtime.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for runtime::Executable:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classruntime_1_1Executable.png" usemap="#runtime::Executable_map" alt=""/>
+  <map id="runtime::Executable_map" name="runtime::Executable_map">
+<area href="classast_1_1Assignment.html" title="Assigns the value of the &quot;rv&quot; statement to the variable &quot;var&quot;." alt="ast::Assignment" shape="rect" coords="162,56,314,80"/>
+<area href="classast_1_1BinaryOperation.html" title="Binary operation base class." alt="ast::BinaryOperation" shape="rect" coords="162,112,314,136"/>
+<area href="classast_1_1ClassDefinition.html" title="Class definition." alt="ast::ClassDefinition" shape="rect" coords="162,168,314,192"/>
+<area href="classast_1_1Compound.html" title="Compound statement, combines other statements (i.e. method body insides, if-else blocks,..." alt="ast::Compound" shape="rect" coords="162,224,314,248"/>
+<area href="classast_1_1FieldAssignment.html" title="Assigns value of the &quot;rv&quot; to &quot;object.field_name&quot; field." alt="ast::FieldAssignment" shape="rect" coords="162,280,314,304"/>
+<area href="classast_1_1IfElse.html" title="if &lt;condition&gt; &lt;if_body&gt; else &lt;else_body&gt;" alt="ast::IfElse" shape="rect" coords="162,336,314,360"/>
+<area href="classast_1_1MethodBody.html" title="Method body. Usually contains compound statement." alt="ast::MethodBody" shape="rect" coords="162,392,314,416"/>
+<area href="classast_1_1MethodCall.html" title="Calls method &quot;object.method&quot; with a given arguments &quot;args&quot;." alt="ast::MethodCall" shape="rect" coords="162,448,314,472"/>
+<area href="classast_1_1NewInstance.html" alt="ast::NewInstance" shape="rect" coords="162,504,314,528"/>
+<area href="classast_1_1None.html" title="None value." alt="ast::None" shape="rect" coords="162,560,314,584"/>
+<area href="classast_1_1Print.html" title="print command" alt="ast::Print" shape="rect" coords="162,616,314,640"/>
+<area href="classast_1_1Return.html" title="Executes return with a given statement." alt="ast::Return" shape="rect" coords="162,672,314,696"/>
+<area href="classast_1_1UnaryOperation.html" title="Unary operations base class." alt="ast::UnaryOperation" shape="rect" coords="162,728,314,752"/>
+<area href="classast_1_1ValueStatement.html" alt="ast::ValueStatement&lt; T &gt;" shape="rect" coords="162,784,314,808"/>
+<area href="classast_1_1VariableValue.html" alt="ast::VariableValue" shape="rect" coords="162,840,314,864"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,7 +179,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Does something with objects inside of closure, outputs to context Returns result or None </p>
+<p >Does something with objects inside of closure, outputs to context. Returns result or None </p>
+
+<p>Implemented in <a class="el" href="classast_1_1ValueStatement.html#a3ee4136f81d96f52f9df0dacbc4c3113">ast::ValueStatement&lt; T &gt;</a>, <a class="el" href="classast_1_1VariableValue.html#aca3944cb8226889332903fe374742a2d">ast::VariableValue</a>, <a class="el" href="classast_1_1Assignment.html#a7a0f20bacb0c81792b37c573ca5b92ec">ast::Assignment</a>, <a class="el" href="classast_1_1FieldAssignment.html#acff1f1f8c829daad09f376b9d255f717">ast::FieldAssignment</a>, <a class="el" href="classast_1_1None.html#a31e0b67596f24a76cea111773df11349">ast::None</a>, <a class="el" href="classast_1_1Print.html#a6ab5b27717ced4b5de9a2ec35402232e">ast::Print</a>, <a class="el" href="classast_1_1MethodCall.html#abc5aae6aaee24d09627b2015b768163f">ast::MethodCall</a>, <a class="el" href="classast_1_1NewInstance.html#ab386fba270f10bd8a12c95d172273c00">ast::NewInstance</a>, <a class="el" href="classast_1_1Stringify.html#a78596d156830b508008d668b594f872b">ast::Stringify</a>, <a class="el" href="classast_1_1Add.html#acff76dedf700d584212341962cbdcaec">ast::Add</a>, <a class="el" href="classast_1_1Sub.html#ab3f40ae701da3e8da405cd99922f2db6">ast::Sub</a>, <a class="el" href="classast_1_1Mult.html#a3044c9ed69a9ff558a971456a378c880">ast::Mult</a>, <a class="el" href="classast_1_1Div.html#a60fb359ba768902cf5b6594b5b96cad7">ast::Div</a>, <a class="el" href="classast_1_1Or.html#ae5a0522781bbdc5e9c05d54078ede7f3">ast::Or</a>, <a class="el" href="classast_1_1And.html#a0d5b2e2eb17f04997f6b1e4d87a9948a">ast::And</a>, <a class="el" href="classast_1_1Not.html#adca5a4fdf4a38e49f83d113cea801872">ast::Not</a>, <a class="el" href="classast_1_1Compound.html#a570e7e3f7b69add76b05d3c17cfa23d0">ast::Compound</a>, <a class="el" href="classast_1_1MethodBody.html#a69ab9acba19a05d721bd65e86990eafa">ast::MethodBody</a>, <a class="el" href="classast_1_1Return.html#abdea0c72c4cfc5b989460511d72b4026">ast::Return</a>, <a class="el" href="classast_1_1ClassDefinition.html#a1bb9898d59a0a0859108209e9d60b039">ast::ClassDefinition</a>, <a class="el" href="classast_1_1IfElse.html#a1b40495e581bf579fbec72b14deb0a3f">ast::IfElse</a>, and <a class="el" href="classast_1_1Comparison.html#aa123a1ef00235e76e6b4cccc13dafe9a">ast::Comparison</a>.</p>
 
 </div>
 </div>

@@ -1,0 +1,55 @@
+\hypertarget{classast_1_1MethodCall}{}\doxysection{ast\+::Method\+Call Class Reference}
+\label{classast_1_1MethodCall}\index{ast::MethodCall@{ast::MethodCall}}
+
+
+Calls method \char`\"{}object.\+method\char`\"{} with a given arguments \char`\"{}args\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::Method\+Call\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1MethodCall}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1MethodCall_a64628c9b5f72217e7eb066014fd03285}{Method\+Call}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&object, std\+::string method, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \&\&args)
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1MethodCall_abc5aae6aaee24d09627b2015b768163f}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Calls method \char`\"{}object.\+method\char`\"{} with a given arguments \char`\"{}args\char`\"{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1MethodCall_a64628c9b5f72217e7eb066014fd03285}\label{classast_1_1MethodCall_a64628c9b5f72217e7eb066014fd03285}} 
+\index{ast::MethodCall@{ast::MethodCall}!MethodCall@{MethodCall}}
+\index{MethodCall@{MethodCall}!ast::MethodCall@{ast::MethodCall}}
+\doxysubsubsection{\texorpdfstring{MethodCall()}{MethodCall()}}
+{\footnotesize\ttfamily ast\+::\+Method\+Call\+::\+Method\+Call (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{object,  }\item[{std\+::string}]{method,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \&\&}]{args }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1MethodCall_abc5aae6aaee24d09627b2015b768163f}\label{classast_1_1MethodCall_abc5aae6aaee24d09627b2015b768163f}} 
+\index{ast::MethodCall@{ast::MethodCall}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::MethodCall@{ast::MethodCall}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+Method\+Call\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

@@ -11,7 +11,7 @@
 namespace runtime
 {
 
-//! Mini-python instructions execution context
+//! Instructions execution context
 class Context
 {
   public:
@@ -116,7 +116,7 @@ class Executable
 {
   public:
     virtual ~Executable() = default;
-    //! Does something with objects inside of closure, outputs to context
+    //! Does something with objects inside of closure, outputs to context.
     //! Returns result or None
     virtual ObjectHolder Execute(Closure &closure, Context &context) = 0;
 };

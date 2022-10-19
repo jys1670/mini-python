@@ -1,0 +1,62 @@
+\hypertarget{classast_1_1NewInstance}{}\doxysection{ast\+::New\+Instance Class Reference}
+\label{classast_1_1NewInstance}\index{ast::NewInstance@{ast::NewInstance}}
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::New\+Instance\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1NewInstance}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1NewInstance_ab047d3a20c08941b903aa357c9f8a7af}{New\+Instance}} (const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}} \&class\+\_\+)
+\item 
+\mbox{\hyperlink{classast_1_1NewInstance_a007ca56eecb2a921dc04ac80824f37fd}{New\+Instance}} (const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}} \&class\+\_\+, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \&\&args)
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1NewInstance_ab386fba270f10bd8a12c95d172273c00}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\begin{DoxyCompactList}\small\item\em Returns object containing value of type Class\+Instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates a new instance of the \char`\"{}class\+\_\+\char`\"{} class, passing its constructor an \char`\"{}args\char`\"{} vector of parameters. If the class does not have the \char`\"{}\+\_\+\+\_\+init\+\_\+\+\_\+\char`\"{} method with the specified number of arguments, then an instance of the class is created without calling the constructor (the object fields will not be initialized)\+: 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1NewInstance_ab047d3a20c08941b903aa357c9f8a7af}\label{classast_1_1NewInstance_ab047d3a20c08941b903aa357c9f8a7af}} 
+\index{ast::NewInstance@{ast::NewInstance}!NewInstance@{NewInstance}}
+\index{NewInstance@{NewInstance}!ast::NewInstance@{ast::NewInstance}}
+\doxysubsubsection{\texorpdfstring{NewInstance()}{NewInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ast\+::\+New\+Instance\+::\+New\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}} \&}]{class\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classast_1_1NewInstance_a007ca56eecb2a921dc04ac80824f37fd}\label{classast_1_1NewInstance_a007ca56eecb2a921dc04ac80824f37fd}} 
+\index{ast::NewInstance@{ast::NewInstance}!NewInstance@{NewInstance}}
+\index{NewInstance@{NewInstance}!ast::NewInstance@{ast::NewInstance}}
+\doxysubsubsection{\texorpdfstring{NewInstance()}{NewInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ast\+::\+New\+Instance\+::\+New\+Instance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}} \&}]{class\+\_\+,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \&\&}]{args }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1NewInstance_ab386fba270f10bd8a12c95d172273c00}\label{classast_1_1NewInstance_ab386fba270f10bd8a12c95d172273c00}} 
+\index{ast::NewInstance@{ast::NewInstance}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::NewInstance@{ast::NewInstance}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+New\+Instance\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns object containing value of type Class\+Instance. 
+
+
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

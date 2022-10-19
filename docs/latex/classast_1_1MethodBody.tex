@@ -1,0 +1,59 @@
+\hypertarget{classast_1_1MethodBody}{}\doxysection{ast\+::Method\+Body Class Reference}
+\label{classast_1_1MethodBody}\index{ast::MethodBody@{ast::MethodBody}}
+
+
+Method body. Usually contains compound statement.  
+
+
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::Method\+Body\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1MethodBody}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1MethodBody_a99c701004732d952a20b2a9052487892}{Method\+Body}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&\mbox{\hyperlink{runtime__test_8cpp_a26a6523695396e05c185b10340bb7c80}{body}})
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1MethodBody_a69ab9acba19a05d721bd65e86990eafa}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\begin{DoxyCompactList}\small\item\em Computes statement passed as body\+\_\+, returns \mbox{\hyperlink{classast_1_1None}{None}} unless there is return statement as body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Method body. Usually contains compound statement. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1MethodBody_a99c701004732d952a20b2a9052487892}\label{classast_1_1MethodBody_a99c701004732d952a20b2a9052487892}} 
+\index{ast::MethodBody@{ast::MethodBody}!MethodBody@{MethodBody}}
+\index{MethodBody@{MethodBody}!ast::MethodBody@{ast::MethodBody}}
+\doxysubsubsection{\texorpdfstring{MethodBody()}{MethodBody()}}
+{\footnotesize\ttfamily ast\+::\+Method\+Body\+::\+Method\+Body (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1MethodBody_a69ab9acba19a05d721bd65e86990eafa}\label{classast_1_1MethodBody_a69ab9acba19a05d721bd65e86990eafa}} 
+\index{ast::MethodBody@{ast::MethodBody}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::MethodBody@{ast::MethodBody}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+Method\+Body\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Computes statement passed as body\+\_\+, returns \mbox{\hyperlink{classast_1_1None}{None}} unless there is return statement as body. 
+
+
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

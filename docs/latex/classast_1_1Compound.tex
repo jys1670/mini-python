@@ -1,0 +1,72 @@
+\hypertarget{classast_1_1Compound}{}\doxysection{ast\+::Compound Class Reference}
+\label{classast_1_1Compound}\index{ast::Compound@{ast::Compound}}
+
+
+\mbox{\hyperlink{classast_1_1Compound}{Compound}} statement, combines other statements (i.\+e. method body insides, if-\/else blocks, etc)  
+
+
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::Compound\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1Compound}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\\mbox{\hyperlink{classast_1_1Compound_a7b3421c5d2c4c4d1d572e3902fae6722}{Compound}} (Args \&\&...args)
+\item 
+void \mbox{\hyperlink{classast_1_1Compound_a48d7340126bb931faa5c0a2e87dc19f0}{Add\+Statement}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&stmt)
+\begin{DoxyCompactList}\small\item\em Adds statement to the end of compound. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1Compound_a570e7e3f7b69add76b05d3c17cfa23d0}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\begin{DoxyCompactList}\small\item\em Sequentially executes all compound statements and returns \mbox{\hyperlink{classast_1_1None}{None}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classast_1_1Compound}{Compound}} statement, combines other statements (i.\+e. method body insides, if-\/else blocks, etc) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1Compound_a7b3421c5d2c4c4d1d572e3902fae6722}\label{classast_1_1Compound_a7b3421c5d2c4c4d1d572e3902fae6722}} 
+\index{ast::Compound@{ast::Compound}!Compound@{Compound}}
+\index{Compound@{Compound}!ast::Compound@{ast::Compound}}
+\doxysubsubsection{\texorpdfstring{Compound()}{Compound()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+ast\+::\+Compound\+::\+Compound (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1Compound_a48d7340126bb931faa5c0a2e87dc19f0}\label{classast_1_1Compound_a48d7340126bb931faa5c0a2e87dc19f0}} 
+\index{ast::Compound@{ast::Compound}!AddStatement@{AddStatement}}
+\index{AddStatement@{AddStatement}!ast::Compound@{ast::Compound}}
+\doxysubsubsection{\texorpdfstring{AddStatement()}{AddStatement()}}
+{\footnotesize\ttfamily void ast\+::\+Compound\+::\+Add\+Statement (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{stmt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds statement to the end of compound. 
+
+\mbox{\Hypertarget{classast_1_1Compound_a570e7e3f7b69add76b05d3c17cfa23d0}\label{classast_1_1Compound_a570e7e3f7b69add76b05d3c17cfa23d0}} 
+\index{ast::Compound@{ast::Compound}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::Compound@{ast::Compound}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+Compound\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sequentially executes all compound statements and returns \mbox{\hyperlink{classast_1_1None}{None}}. 
+
+
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

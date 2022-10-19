@@ -1,0 +1,74 @@
+\hypertarget{classast_1_1Comparison}{}\doxysection{ast\+::Comparison Class Reference}
+\label{classast_1_1Comparison}\index{ast::Comparison@{ast::Comparison}}
+
+
+\mbox{\hyperlink{classast_1_1Comparison}{Comparison}} operation.  
+
+
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::Comparison\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classast_1_1Comparison}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classast_1_1Comparison_af1b8634f396f8abc74bfc418797a1769}{Comparator}} = std\+::function$<$ bool(const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \&, const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \&, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1Comparison_abbdf2c81af92d99a246e74733636952c}{Comparison}} (\mbox{\hyperlink{classast_1_1Comparison_af1b8634f396f8abc74bfc418797a1769}{Comparator}} cmp, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&lhs, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&rhs)
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1Comparison_aa123a1ef00235e76e6b4cccc13dafe9a}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\begin{DoxyCompactList}\small\item\em Computes lhs/rhs and returns comparator execution result, converted into \mbox{\hyperlink{classruntime_1_1Bool}{runtime\+::\+Bool}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classast_1_1Comparison}{Comparison}} operation. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classast_1_1Comparison_af1b8634f396f8abc74bfc418797a1769}\label{classast_1_1Comparison_af1b8634f396f8abc74bfc418797a1769}} 
+\index{ast::Comparison@{ast::Comparison}!Comparator@{Comparator}}
+\index{Comparator@{Comparator}!ast::Comparison@{ast::Comparison}}
+\doxysubsubsection{\texorpdfstring{Comparator}{Comparator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classast_1_1Comparison_af1b8634f396f8abc74bfc418797a1769}{ast\+::\+Comparison\+::\+Comparator}} =  std\+::function$<$bool(const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \&, const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \&, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&)$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1Comparison_abbdf2c81af92d99a246e74733636952c}\label{classast_1_1Comparison_abbdf2c81af92d99a246e74733636952c}} 
+\index{ast::Comparison@{ast::Comparison}!Comparison@{Comparison}}
+\index{Comparison@{Comparison}!ast::Comparison@{ast::Comparison}}
+\doxysubsubsection{\texorpdfstring{Comparison()}{Comparison()}}
+{\footnotesize\ttfamily ast\+::\+Comparison\+::\+Comparison (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classast_1_1Comparison_af1b8634f396f8abc74bfc418797a1769}{Comparator}}}]{cmp,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{lhs,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1Comparison_aa123a1ef00235e76e6b4cccc13dafe9a}\label{classast_1_1Comparison_aa123a1ef00235e76e6b4cccc13dafe9a}} 
+\index{ast::Comparison@{ast::Comparison}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::Comparison@{ast::Comparison}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+Comparison\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Computes lhs/rhs and returns comparator execution result, converted into \mbox{\hyperlink{classruntime_1_1Bool}{runtime\+::\+Bool}}. 
+
+
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

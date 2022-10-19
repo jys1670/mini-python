@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['_7econtext_0',['~Context',['../classruntime_1_1Context.html#a7944a6e590df245656cc0688e760ef2f',1,'runtime::Context']]],
-  ['_7eexecutable_1',['~Executable',['../classruntime_1_1Executable.html#a7e53f76628d68eead1d0e66b89dd246b',1,'runtime::Executable']]],
-  ['_7eobject_2',['~Object',['../classruntime_1_1Object.html#aeae526a491727fcdfb09453929c1ff46',1,'runtime::Object']]],
-  ['_7etestrunner_3',['~TestRunner',['../classTestRunner.html#a121456d7e522c0d83d648a0118ec0c6f',1,'TestRunner']]]
+  ['unaryoperation_0',['UnaryOperation',['../classast_1_1UnaryOperation.html#ae0ccd4283ec50786061eaab2857d6e88',1,'ast::UnaryOperation::UnaryOperation()'],['../classast_1_1Stringify.html#ae0ccd4283ec50786061eaab2857d6e88',1,'ast::Stringify::UnaryOperation()'],['../classast_1_1Not.html#ae0ccd4283ec50786061eaab2857d6e88',1,'ast::Not::UnaryOperation()']]]
 ];

@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['objectholder_0',['ObjectHolder',['../classruntime_1_1ObjectHolder.html#ad98b35bacb64be17052b8f2a8dd4b07e',1,'runtime::ObjectHolder::ObjectHolder()=default'],['../classruntime_1_1ObjectHolder.html#ae2958089094440cdb64f9b085bb21ded',1,'runtime::ObjectHolder::ObjectHolder(const ObjectHolder &amp;other)'],['../classruntime_1_1ObjectHolder.html#a0b5f3c9725039a3fe02794fa80024b26',1,'runtime::ObjectHolder::ObjectHolder(ObjectHolder &amp;&amp;other) noexcept']]],
-  ['operator_20bool_1',['operator bool',['../classruntime_1_1ObjectHolder.html#ae6b060ac95e7992bfa54bec7d5fab76b',1,'runtime::ObjectHolder']]],
-  ['operator_2a_2',['operator*',['../classruntime_1_1ObjectHolder.html#a8d4048607c733e7d5a3924e84751ec27',1,'runtime::ObjectHolder']]],
-  ['operator_2d_3e_3',['operator-&gt;',['../classruntime_1_1ObjectHolder.html#a47852c21ebd658f4c62e146dca0a016f',1,'runtime::ObjectHolder']]],
-  ['operator_3c_3c_4',['operator&lt;&lt;',['../test__runner__p_8h.html#aea0cf07fab8dac684dd045cc70ff2d52',1,'operator&lt;&lt;(std::ostream &amp;os, const std::vector&lt; T &gt; &amp;s):&#160;test_runner_p.h'],['../test__runner__p_8h.html#a7ceff19c1a2b98d7c2821d33f7b1bdf4',1,'operator&lt;&lt;(std::ostream &amp;os, const std::set&lt; T &gt; &amp;s):&#160;test_runner_p.h'],['../test__runner__p_8h.html#abe5e504ebfc580bb0ee2b1a75e7ff1f7',1,'operator&lt;&lt;(std::ostream &amp;os, const std::map&lt; K, V &gt; &amp;m):&#160;test_runner_p.h'],['../test__runner__p_8h.html#a4eb10398ab6f07196a56e4efef6f6166',1,'operator&lt;&lt;(std::ostream &amp;os, const std::unordered_map&lt; K, V &gt; &amp;m):&#160;test_runner_p.h']]],
-  ['operator_3d_5',['operator=',['../classruntime_1_1ObjectHolder.html#a9a79ec6738f57733657545e9efb9124f',1,'runtime::ObjectHolder::operator=(const ObjectHolder &amp;other)'],['../classruntime_1_1ObjectHolder.html#a72247562d975b4e1661735ccadb682ba',1,'runtime::ObjectHolder::operator=(ObjectHolder &amp;&amp;other) noexcept']]],
-  ['own_6',['Own',['../classruntime_1_1ObjectHolder.html#a0b14bf7a184cc2632891cde38ce391dc',1,'runtime::ObjectHolder']]]
+  ['newinstance_0',['NewInstance',['../classast_1_1NewInstance.html#ab047d3a20c08941b903aa357c9f8a7af',1,'ast::NewInstance::NewInstance(const runtime::Class &amp;class_)'],['../classast_1_1NewInstance.html#a007ca56eecb2a921dc04ac80824f37fd',1,'ast::NewInstance::NewInstance(const runtime::Class &amp;class_, std::vector&lt; std::unique_ptr&lt; Statement &gt; &gt; &amp;&amp;args)']]],
+  ['nexttoken_1',['NextToken',['../classparse_1_1Lexer.html#af2e7773454549634767faca8328c8d24',1,'parse::Lexer']]],
+  ['none_2',['None',['../classruntime_1_1ObjectHolder.html#a0b7a12fb2b45a05e6ef4ca3a08bf8a04',1,'runtime::ObjectHolder']]],
+  ['notequal_3',['NotEqual',['../namespaceruntime.html#a815ccd5798ebc8775f1d1bfe20eb46d3',1,'runtime']]]
 ];

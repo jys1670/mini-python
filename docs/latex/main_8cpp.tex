@@ -1,18 +1,32 @@
 \hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
 \label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include \char`\"{}lexer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parse.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}runtime.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}statement.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}test\+\_\+runner\+\_\+p.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceparse}{parse}}
+\item 
+namespace \mbox{\hyperlink{namespaceast}{ast}}
 \item 
 namespace \mbox{\hyperlink{namespaceruntime}{runtime}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{namespaceparse_a7aca64ab795a8b631c1cb733979e9661}{parse\+::\+Run\+Open\+Lexer\+Tests}} (\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&tr)
+\item 
+void \mbox{\hyperlink{namespaceast_a4d0232f45033c7a3596edb1e2193f1e5}{ast\+::\+Run\+Unit\+Tests}} (\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&tr)
+\item 
 void \mbox{\hyperlink{namespaceruntime_ac9a07edfef567626ca0f03e7168b9dd2}{runtime\+::\+Run\+Object\+Holder\+Tests}} (\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&tr)
 \item 
 void \mbox{\hyperlink{namespaceruntime_aea3df1d6bfb45537fab62402598b8203}{runtime\+::\+Run\+Objects\+Tests}} (\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&tr)
+\item 
+void \mbox{\hyperlink{main_8cpp_af8ea816f6ba26872890cd9024fa6869a}{Test\+Parse\+Program}} (\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&tr)
 \item 
 int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \end{DoxyCompactItemize}
@@ -24,4 +38,10 @@ int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \index{main@{main}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_af8ea816f6ba26872890cd9024fa6869a}\label{main_8cpp_af8ea816f6ba26872890cd9024fa6869a}} 
+\index{main.cpp@{main.cpp}!TestParseProgram@{TestParseProgram}}
+\index{TestParseProgram@{TestParseProgram}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{TestParseProgram()}{TestParseProgram()}}
+{\footnotesize\ttfamily void Test\+Parse\+Program (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&}]{tr }\end{DoxyParamCaption})}
 

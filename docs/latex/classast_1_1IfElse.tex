@@ -1,0 +1,59 @@
+\hypertarget{classast_1_1IfElse}{}\doxysection{ast\+::If\+Else Class Reference}
+\label{classast_1_1IfElse}\index{ast::IfElse@{ast::IfElse}}
+
+
+if \texorpdfstring{$<$}{<}condition\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}if\+\_\+body\texorpdfstring{$>$}{>} else \texorpdfstring{$<$}{<}else\+\_\+body\texorpdfstring{$>$}{>}  
+
+
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::If\+Else\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1IfElse}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1IfElse_aaea9034e79a84fe8883bc7a39dda9add}{If\+Else}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&condition, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&if\+\_\+body, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&else\+\_\+body)
+\begin{DoxyCompactList}\small\item\em else\+\_\+body can be nullptr \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1IfElse_a1b40495e581bf579fbec72b14deb0a3f}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+if \texorpdfstring{$<$}{<}condition\texorpdfstring{$>$}{>} \texorpdfstring{$<$}{<}if\+\_\+body\texorpdfstring{$>$}{>} else \texorpdfstring{$<$}{<}else\+\_\+body\texorpdfstring{$>$}{>} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1IfElse_aaea9034e79a84fe8883bc7a39dda9add}\label{classast_1_1IfElse_aaea9034e79a84fe8883bc7a39dda9add}} 
+\index{ast::IfElse@{ast::IfElse}!IfElse@{IfElse}}
+\index{IfElse@{IfElse}!ast::IfElse@{ast::IfElse}}
+\doxysubsubsection{\texorpdfstring{IfElse()}{IfElse()}}
+{\footnotesize\ttfamily ast\+::\+If\+Else\+::\+If\+Else (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{condition,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{if\+\_\+body,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{else\+\_\+body }\end{DoxyParamCaption})}
+
+
+
+else\+\_\+body can be nullptr 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1IfElse_a1b40495e581bf579fbec72b14deb0a3f}\label{classast_1_1IfElse_a1b40495e581bf579fbec72b14deb0a3f}} 
+\index{ast::IfElse@{ast::IfElse}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::IfElse@{ast::IfElse}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+If\+Else\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

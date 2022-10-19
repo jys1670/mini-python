@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['closure_0',['Closure',['../namespaceruntime.html#a8c77230f8dda88c5c664851be7a50f58',1,'runtime']]]
+  ['boolconst_0',['BoolConst',['../namespaceast.html#adba892001d56b3730ddeb68f30cb5640',1,'ast']]]
 ];

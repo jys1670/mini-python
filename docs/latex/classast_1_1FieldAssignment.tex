@@ -1,0 +1,55 @@
+\hypertarget{classast_1_1FieldAssignment}{}\doxysection{ast\+::Field\+Assignment Class Reference}
+\label{classast_1_1FieldAssignment}\index{ast::FieldAssignment@{ast::FieldAssignment}}
+
+
+Assigns value of the \char`\"{}rv\char`\"{} to \char`\"{}object.\+field\+\_\+name\char`\"{} field.  
+
+
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::Field\+Assignment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1FieldAssignment}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1FieldAssignment_aaf2973ba118bd4318c31393bbbe727eb}{Field\+Assignment}} (\mbox{\hyperlink{classast_1_1VariableValue}{Variable\+Value}} object, std\+::string field\+\_\+name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&rv)
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1FieldAssignment_acff1f1f8c829daad09f376b9d255f717}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Assigns value of the \char`\"{}rv\char`\"{} to \char`\"{}object.\+field\+\_\+name\char`\"{} field. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1FieldAssignment_aaf2973ba118bd4318c31393bbbe727eb}\label{classast_1_1FieldAssignment_aaf2973ba118bd4318c31393bbbe727eb}} 
+\index{ast::FieldAssignment@{ast::FieldAssignment}!FieldAssignment@{FieldAssignment}}
+\index{FieldAssignment@{FieldAssignment}!ast::FieldAssignment@{ast::FieldAssignment}}
+\doxysubsubsection{\texorpdfstring{FieldAssignment()}{FieldAssignment()}}
+{\footnotesize\ttfamily ast\+::\+Field\+Assignment\+::\+Field\+Assignment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classast_1_1VariableValue}{Variable\+Value}}}]{object,  }\item[{std\+::string}]{field\+\_\+name,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{rv }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1FieldAssignment_acff1f1f8c829daad09f376b9d255f717}\label{classast_1_1FieldAssignment_acff1f1f8c829daad09f376b9d255f717}} 
+\index{ast::FieldAssignment@{ast::FieldAssignment}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::FieldAssignment@{ast::FieldAssignment}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+Field\+Assignment\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

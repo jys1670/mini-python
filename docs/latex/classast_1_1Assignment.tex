@@ -1,0 +1,55 @@
+\hypertarget{classast_1_1Assignment}{}\doxysection{ast\+::Assignment Class Reference}
+\label{classast_1_1Assignment}\index{ast::Assignment@{ast::Assignment}}
+
+
+Assigns the value of the \char`\"{}rv\char`\"{} statement to the variable \char`\"{}var\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::Assignment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1Assignment}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1Assignment_ae48548d216f423710ef136b27c121c9b}{Assignment}} (std\+::string var, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&rv)
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1Assignment_a7a0f20bacb0c81792b37c573ca5b92ec}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Assigns the value of the \char`\"{}rv\char`\"{} statement to the variable \char`\"{}var\char`\"{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1Assignment_ae48548d216f423710ef136b27c121c9b}\label{classast_1_1Assignment_ae48548d216f423710ef136b27c121c9b}} 
+\index{ast::Assignment@{ast::Assignment}!Assignment@{Assignment}}
+\index{Assignment@{Assignment}!ast::Assignment@{ast::Assignment}}
+\doxysubsubsection{\texorpdfstring{Assignment()}{Assignment()}}
+{\footnotesize\ttfamily ast\+::\+Assignment\+::\+Assignment (\begin{DoxyParamCaption}\item[{std\+::string}]{var,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&}]{rv }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1Assignment_a7a0f20bacb0c81792b37c573ca5b92ec}\label{classast_1_1Assignment_a7a0f20bacb0c81792b37c573ca5b92ec}} 
+\index{ast::Assignment@{ast::Assignment}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::Assignment@{ast::Assignment}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+Assignment\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

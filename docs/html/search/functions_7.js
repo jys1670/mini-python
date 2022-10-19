@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['less_0',['Less',['../namespaceruntime.html#ab0ba36b671cf55518c5dec99c88304e6',1,'runtime']]],
-  ['lessorequal_1',['LessOrEqual',['../namespaceruntime.html#af7bccc5ded0da3ef4e4aa64ad8296411',1,'runtime']]]
+  ['ifelse_0',['IfElse',['../classast_1_1IfElse.html#aaea9034e79a84fe8883bc7a39dda9add',1,'ast::IfElse']]],
+  ['is_1',['Is',['../structparse_1_1Token.html#afb73ccf63a245fa6e209b02e0edaf79c',1,'parse::Token']]],
+  ['istrue_2',['IsTrue',['../namespaceruntime.html#a3c35fabf1a30a5ff92b0b5fe62274998',1,'runtime']]]
 ];

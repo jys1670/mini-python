@@ -1,0 +1,294 @@
+\hypertarget{statement_8h_source}{}\doxysection{statement.\+h}
+\label{statement_8h_source}\index{src/statement.h@{src/statement.h}}
+\mbox{\hyperlink{statement_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{runtime_8h}{runtime.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <optional>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceast}{ast}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{using }\mbox{\hyperlink{classruntime_1_1Executable}{Statement}} = \mbox{\hyperlink{classruntime_1_1Executable}{runtime::Executable}};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1ValueStatement}{ValueStatement}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18   \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1ValueStatement_a41b59898a816c3826b58c1b17f1f6122}{ValueStatement}}(T v) : value\_(std::move(v))}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1ValueStatement_a3ee4136f81d96f52f9df0dacbc4c3113}{Execute}}([[maybe\_unused]] \mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure,}
+\DoxyCodeLine{24                                   [[maybe\_unused]] \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context)\textcolor{keyword}{ override}}
+\DoxyCodeLine{25 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{26         \textcolor{keywordflow}{return} \mbox{\hyperlink{classruntime_1_1ObjectHolder_abb0b38928f91129a289664c9d63f23f3}{runtime::ObjectHolder::Share}}(value\_);}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29   \textcolor{keyword}{private}:}
+\DoxyCodeLine{30     T value\_;}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1ValueStatement}{NumericConst}} = \mbox{\hyperlink{classast_1_1ValueStatement}{ValueStatement<runtime::Number>}};}
+\DoxyCodeLine{34 \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1ValueStatement}{StringConst}} = \mbox{\hyperlink{classast_1_1ValueStatement}{ValueStatement<runtime::String>}};}
+\DoxyCodeLine{35 \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1ValueStatement}{BoolConst}} = \mbox{\hyperlink{classast_1_1ValueStatement}{ValueStatement<runtime::Bool>}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1VariableValue}{VariableValue}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43   \textcolor{keyword}{public}:}
+\DoxyCodeLine{44     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1VariableValue}{VariableValue}}(\textcolor{keyword}{const} std::string \&name);}
+\DoxyCodeLine{45     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1VariableValue}{VariableValue}}(std::vector<std::string> dotted\_ids);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1VariableValue_aca3944cb8226889332903fe374742a2d}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49   \textcolor{keyword}{private}:}
+\DoxyCodeLine{50     std::vector<std::string> ids\_;}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{54 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Assignment}{Assignment}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56   \textcolor{keyword}{public}:}
+\DoxyCodeLine{57     \mbox{\hyperlink{classast_1_1Assignment}{Assignment}}(std::string var, std::unique\_ptr<Statement> \&\&rv);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Assignment_a7a0f20bacb0c81792b37c573ca5b92ec}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61   \textcolor{keyword}{private}:}
+\DoxyCodeLine{62     std::string var\_;}
+\DoxyCodeLine{63     std::unique\_ptr<Statement> rv\_;}
+\DoxyCodeLine{64 \};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1FieldAssignment}{FieldAssignment}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69   \textcolor{keyword}{public}:}
+\DoxyCodeLine{70     \mbox{\hyperlink{classast_1_1FieldAssignment}{FieldAssignment}}(\mbox{\hyperlink{classast_1_1VariableValue}{VariableValue}} \textcolor{keywordtype}{object}, std::string field\_name, std::unique\_ptr<Statement> \&\&rv);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1FieldAssignment_acff1f1f8c829daad09f376b9d255f717}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74   \textcolor{keyword}{private}:}
+\DoxyCodeLine{75     \mbox{\hyperlink{classast_1_1VariableValue}{VariableValue}} object\_;}
+\DoxyCodeLine{76     std::string field\_name\_;}
+\DoxyCodeLine{77     std::unique\_ptr<Statement> rv\_;}
+\DoxyCodeLine{78 \};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{81 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1None}{None}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83   \textcolor{keyword}{public}:}
+\DoxyCodeLine{84     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1None_a31e0b67596f24a76cea111773df11349}{Execute}}([[maybe\_unused]] \mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure,}
+\DoxyCodeLine{85                                   [[maybe\_unused]] \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context)\textcolor{keyword}{ override}}
+\DoxyCodeLine{86 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{87         \textcolor{keywordflow}{return} \{\};}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89 \};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{92 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Print}{Print}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{93 \{}
+\DoxyCodeLine{94   \textcolor{keyword}{public}:}
+\DoxyCodeLine{96     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1Print_ab6a7b135752a0546413a9f4046d2807f}{Print}}(std::unique\_ptr<Statement> \&\&argument);}
+\DoxyCodeLine{98     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1Print_af516fd8e1641f825bec39841a88c04aa}{Print}}(std::vector<std::unique\_ptr<Statement>> \&\&args);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{101     \textcolor{keyword}{static} std::unique\_ptr<Print> \mbox{\hyperlink{classast_1_1Print_a5b923e919d406d9db41cbed67396ce45}{Variable}}(\textcolor{keyword}{const} std::string \&name);}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{104     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Print_a6ab5b27717ced4b5de9a2ec35402232e}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106   \textcolor{keyword}{private}:}
+\DoxyCodeLine{107     std::vector<std::unique\_ptr<Statement>> args\_;}
+\DoxyCodeLine{108 \};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{111 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1MethodCall}{MethodCall}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{112 \{}
+\DoxyCodeLine{113   \textcolor{keyword}{public}:}
+\DoxyCodeLine{114     \mbox{\hyperlink{classast_1_1MethodCall}{MethodCall}}(std::unique\_ptr<Statement> \&\&\textcolor{keywordtype}{object}, std::string method, std::vector<std::unique\_ptr<Statement>> \&\&args);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1MethodCall_abc5aae6aaee24d09627b2015b768163f}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118   \textcolor{keyword}{private}:}
+\DoxyCodeLine{119     std::unique\_ptr<Statement> object\_;}
+\DoxyCodeLine{120     std::string method\_;}
+\DoxyCodeLine{121     std::vector<std::unique\_ptr<Statement>> args\_;}
+\DoxyCodeLine{122 \};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{130 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1NewInstance}{NewInstance}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{131 \{}
+\DoxyCodeLine{132   \textcolor{keyword}{public}:}
+\DoxyCodeLine{133     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1NewInstance}{NewInstance}}(\textcolor{keyword}{const} \mbox{\hyperlink{classruntime_1_1Class}{runtime::Class}} \&class\_);}
+\DoxyCodeLine{134     \mbox{\hyperlink{classast_1_1NewInstance}{NewInstance}}(\textcolor{keyword}{const} \mbox{\hyperlink{classruntime_1_1Class}{runtime::Class}} \&class\_, std::vector<std::unique\_ptr<Statement>> \&\&args);}
+\DoxyCodeLine{136     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1NewInstance_ab386fba270f10bd8a12c95d172273c00}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138   \textcolor{keyword}{private}:}
+\DoxyCodeLine{139     \textcolor{keyword}{const} \mbox{\hyperlink{classruntime_1_1Class}{runtime::Class}} \&class\_;}
+\DoxyCodeLine{140     std::vector<std::unique\_ptr<Statement>> args\_;}
+\DoxyCodeLine{141 \};}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{144 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1UnaryOperation}{UnaryOperation}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{145 \{}
+\DoxyCodeLine{146   \textcolor{keyword}{public}:}
+\DoxyCodeLine{147     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1UnaryOperation_ae0ccd4283ec50786061eaab2857d6e88}{UnaryOperation}}(std::unique\_ptr<Statement> \&\&argument) : \mbox{\hyperlink{classast_1_1UnaryOperation_a21677ae9cff5955538165042dbb4c1f8}{argument\_}}(std::move(argument))}
+\DoxyCodeLine{148     \{}
+\DoxyCodeLine{149     \}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151   \textcolor{keyword}{protected}:}
+\DoxyCodeLine{152     std::unique\_ptr<Statement> \mbox{\hyperlink{classast_1_1UnaryOperation_a21677ae9cff5955538165042dbb4c1f8}{argument\_}};}
+\DoxyCodeLine{153 \};}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{156 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Stringify}{Stringify}} : \textcolor{keyword}{public} \mbox{\hyperlink{classast_1_1UnaryOperation}{UnaryOperation}}}
+\DoxyCodeLine{157 \{}
+\DoxyCodeLine{158   \textcolor{keyword}{public}:}
+\DoxyCodeLine{159     \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1UnaryOperation_ae0ccd4283ec50786061eaab2857d6e88}{UnaryOperation::UnaryOperation}};}
+\DoxyCodeLine{160     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Stringify_a78596d156830b508008d668b594f872b}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{161 \};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{164 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1BinaryOperation}{BinaryOperation}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{165 \{}
+\DoxyCodeLine{166   \textcolor{keyword}{public}:}
+\DoxyCodeLine{167     \mbox{\hyperlink{classast_1_1BinaryOperation_a8c9b0b747fdc7141d4db84a464a3b096}{BinaryOperation}}(std::unique\_ptr<Statement> \&\&lhs, std::unique\_ptr<Statement> \&\&rhs)}
+\DoxyCodeLine{168         : \mbox{\hyperlink{classast_1_1BinaryOperation_afb15d92852169a1c49b3276d0f42eee7}{left\_}}(std::move(lhs)), \mbox{\hyperlink{classast_1_1BinaryOperation_ab665b809f6945821affe329475be6ec3}{right\_}}(std::move(rhs))}
+\DoxyCodeLine{169     \{}
+\DoxyCodeLine{170     \}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172   \textcolor{keyword}{protected}:}
+\DoxyCodeLine{173     std::unique\_ptr<Statement> \mbox{\hyperlink{classast_1_1BinaryOperation_afb15d92852169a1c49b3276d0f42eee7}{left\_}};}
+\DoxyCodeLine{174     std::unique\_ptr<Statement> \mbox{\hyperlink{classast_1_1BinaryOperation_ab665b809f6945821affe329475be6ec3}{right\_}};}
+\DoxyCodeLine{175 \};}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{178 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Add}{Add}} : \textcolor{keyword}{public} \mbox{\hyperlink{classast_1_1BinaryOperation}{BinaryOperation}}}
+\DoxyCodeLine{179 \{}
+\DoxyCodeLine{180   \textcolor{keyword}{public}:}
+\DoxyCodeLine{181     \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1BinaryOperation_a8c9b0b747fdc7141d4db84a464a3b096}{BinaryOperation::BinaryOperation}};}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Add_acff76dedf700d584212341962cbdcaec}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{184 \};}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{187 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Sub}{Sub}} : \textcolor{keyword}{public} \mbox{\hyperlink{classast_1_1BinaryOperation}{BinaryOperation}}}
+\DoxyCodeLine{188 \{}
+\DoxyCodeLine{189   \textcolor{keyword}{public}:}
+\DoxyCodeLine{190     \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1BinaryOperation_a8c9b0b747fdc7141d4db84a464a3b096}{BinaryOperation::BinaryOperation}};}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Sub_ab3f40ae701da3e8da405cd99922f2db6}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{193 \};}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{196 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Mult}{Mult}} : \textcolor{keyword}{public} \mbox{\hyperlink{classast_1_1BinaryOperation}{BinaryOperation}}}
+\DoxyCodeLine{197 \{}
+\DoxyCodeLine{198   \textcolor{keyword}{public}:}
+\DoxyCodeLine{199     \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1BinaryOperation_a8c9b0b747fdc7141d4db84a464a3b096}{BinaryOperation::BinaryOperation}};}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Mult_a3044c9ed69a9ff558a971456a378c880}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{202 \};}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{205 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Div}{Div}} : \textcolor{keyword}{public} \mbox{\hyperlink{classast_1_1BinaryOperation}{BinaryOperation}}}
+\DoxyCodeLine{206 \{}
+\DoxyCodeLine{207   \textcolor{keyword}{public}:}
+\DoxyCodeLine{208     \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1BinaryOperation_a8c9b0b747fdc7141d4db84a464a3b096}{BinaryOperation::BinaryOperation}};}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Div_a60fb359ba768902cf5b6594b5b96cad7}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{211 \};}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{214 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Or}{Or}} : \textcolor{keyword}{public} \mbox{\hyperlink{classast_1_1BinaryOperation}{BinaryOperation}}}
+\DoxyCodeLine{215 \{}
+\DoxyCodeLine{216   \textcolor{keyword}{public}:}
+\DoxyCodeLine{217     \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1BinaryOperation_a8c9b0b747fdc7141d4db84a464a3b096}{BinaryOperation::BinaryOperation}};}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Or_ae5a0522781bbdc5e9c05d54078ede7f3}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{220 \};}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{223 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1And}{And}} : \textcolor{keyword}{public} \mbox{\hyperlink{classast_1_1BinaryOperation}{BinaryOperation}}}
+\DoxyCodeLine{224 \{}
+\DoxyCodeLine{225   \textcolor{keyword}{public}:}
+\DoxyCodeLine{226     \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1BinaryOperation_a8c9b0b747fdc7141d4db84a464a3b096}{BinaryOperation::BinaryOperation}};}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1And_a0d5b2e2eb17f04997f6b1e4d87a9948a}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{229 \};}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{232 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Not}{Not}} : \textcolor{keyword}{public} \mbox{\hyperlink{classast_1_1UnaryOperation}{UnaryOperation}}}
+\DoxyCodeLine{233 \{}
+\DoxyCodeLine{234   \textcolor{keyword}{public}:}
+\DoxyCodeLine{235     \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1UnaryOperation_ae0ccd4283ec50786061eaab2857d6e88}{UnaryOperation::UnaryOperation}};}
+\DoxyCodeLine{236     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Not_adca5a4fdf4a38e49f83d113cea801872}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{237 \};}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{240 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Compound}{Compound}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{241 \{}
+\DoxyCodeLine{242   \textcolor{keyword}{public}:}
+\DoxyCodeLine{243     \textcolor{keyword}{template} <\textcolor{keyword}{typename}... Args> \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1Compound_a7b3421c5d2c4c4d1d572e3902fae6722}{Compound}}(Args \&\&...args)}
+\DoxyCodeLine{244     \{}
+\DoxyCodeLine{245         (..., \mbox{\hyperlink{classast_1_1Compound_a48d7340126bb931faa5c0a2e87dc19f0}{AddStatement}}(std::forward<Args>(args)));}
+\DoxyCodeLine{246     \}}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{249     \textcolor{keywordtype}{void} \mbox{\hyperlink{classast_1_1Compound_a48d7340126bb931faa5c0a2e87dc19f0}{AddStatement}}(std::unique\_ptr<Statement> \&\&stmt)}
+\DoxyCodeLine{250     \{}
+\DoxyCodeLine{251         statements\_.emplace\_back(std::move(stmt));}
+\DoxyCodeLine{252     \}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{255     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Compound_a570e7e3f7b69add76b05d3c17cfa23d0}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257   \textcolor{keyword}{private}:}
+\DoxyCodeLine{258     std::vector<std::unique\_ptr<Statement>> statements\_;}
+\DoxyCodeLine{259 \};}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{262 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1MethodBody}{MethodBody}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{263 \{}
+\DoxyCodeLine{264   \textcolor{keyword}{public}:}
+\DoxyCodeLine{265     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1MethodBody}{MethodBody}}(std::unique\_ptr<Statement> \&\&\mbox{\hyperlink{runtime__test_8cpp_a26a6523695396e05c185b10340bb7c80}{body}});}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{268     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1MethodBody_a69ab9acba19a05d721bd65e86990eafa}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270   \textcolor{keyword}{private}:}
+\DoxyCodeLine{271     std::unique\_ptr<Statement> body\_;}
+\DoxyCodeLine{272 \};}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{275 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Return}{Return}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{276 \{}
+\DoxyCodeLine{277   \textcolor{keyword}{public}:}
+\DoxyCodeLine{278     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1Return_a5d18e4836e1ace78f7b3c8f2a64d59df}{Return}}(std::unique\_ptr<Statement> \&\&statement) : statement\_(std::move(statement))}
+\DoxyCodeLine{279     \{}
+\DoxyCodeLine{280     \}}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{283     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Return_abdea0c72c4cfc5b989460511d72b4026}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285   \textcolor{keyword}{private}:}
+\DoxyCodeLine{286     std::unique\_ptr<Statement> statement\_;}
+\DoxyCodeLine{287 \};}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{290 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1ClassDefinition}{ClassDefinition}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{291 \{}
+\DoxyCodeLine{292   \textcolor{keyword}{public}:}
+\DoxyCodeLine{294     \textcolor{keyword}{explicit} \mbox{\hyperlink{classast_1_1ClassDefinition}{ClassDefinition}}(\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} cls);}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{297     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1ClassDefinition_a1bb9898d59a0a0859108209e9d60b039}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{299   \textcolor{keyword}{private}:}
+\DoxyCodeLine{300     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} cls\_;}
+\DoxyCodeLine{301 \};}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{304 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1IfElse}{IfElse}} : \textcolor{keyword}{public} \mbox{\hyperlink{classruntime_1_1Executable}{Statement}}}
+\DoxyCodeLine{305 \{}
+\DoxyCodeLine{306   \textcolor{keyword}{public}:}
+\DoxyCodeLine{308     \mbox{\hyperlink{classast_1_1IfElse}{IfElse}}(std::unique\_ptr<Statement> \&\&condition, std::unique\_ptr<Statement> \&\&if\_body,}
+\DoxyCodeLine{309            std::unique\_ptr<Statement> \&\&else\_body);}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1IfElse_a1b40495e581bf579fbec72b14deb0a3f}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{312 }
+\DoxyCodeLine{313   \textcolor{keyword}{private}:}
+\DoxyCodeLine{314     std::unique\_ptr<Statement> condition\_;}
+\DoxyCodeLine{315     std::unique\_ptr<Statement> if\_body\_;}
+\DoxyCodeLine{316     std::unique\_ptr<Statement> else\_body\_;}
+\DoxyCodeLine{317 \};}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{320 \textcolor{keyword}{class }\mbox{\hyperlink{classast_1_1Comparison}{Comparison}} : \textcolor{keyword}{public} \mbox{\hyperlink{classast_1_1BinaryOperation}{BinaryOperation}}}
+\DoxyCodeLine{321 \{}
+\DoxyCodeLine{322   \textcolor{keyword}{public}:}
+\DoxyCodeLine{323     \textcolor{keyword}{using }\mbox{\hyperlink{classast_1_1Comparison_af1b8634f396f8abc74bfc418797a1769}{Comparator}} =}
+\DoxyCodeLine{324         std::function<bool(\textcolor{keyword}{const} \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \&, \textcolor{keyword}{const} \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \&, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&)>;}
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326     \mbox{\hyperlink{classast_1_1Comparison}{Comparison}}(\mbox{\hyperlink{classast_1_1Comparison_af1b8634f396f8abc74bfc418797a1769}{Comparator}} cmp, std::unique\_ptr<Statement> \&\&lhs, std::unique\_ptr<Statement> \&\&rhs);}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{329     \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime::ObjectHolder}} \mbox{\hyperlink{classast_1_1Comparison_aa123a1ef00235e76e6b4cccc13dafe9a}{Execute}}(\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime::Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime::Context}} \&context) \textcolor{keyword}{override};}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{331   \textcolor{keyword}{private}:}
+\DoxyCodeLine{332     \mbox{\hyperlink{classast_1_1Comparison_af1b8634f396f8abc74bfc418797a1769}{Comparator}} cmp\_;}
+\DoxyCodeLine{333 \};}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335 \} \textcolor{comment}{// namespace ast}}
+
+\end{DoxyCode}

@@ -1,0 +1,58 @@
+\hypertarget{classast_1_1VariableValue}{}\doxysection{ast\+::Variable\+Value Class Reference}
+\label{classast_1_1VariableValue}\index{ast::VariableValue@{ast::VariableValue}}
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::Variable\+Value\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1VariableValue}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1VariableValue_a1a7c2c80ad66c683fd05ef3b9eaf13ec}{Variable\+Value}} (const std\+::string \&name)
+\item 
+\mbox{\hyperlink{classast_1_1VariableValue_a9830650a90923165bb2f57dce79f2074}{Variable\+Value}} (std\+::vector$<$ std\+::string $>$ dotted\+\_\+ids)
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1VariableValue_aca3944cb8226889332903fe374742a2d}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Computes variable or object methods call chain. Example\+: x = circle.\+center.\+x where circle.\+center.\+x -\/ call chain 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1VariableValue_a1a7c2c80ad66c683fd05ef3b9eaf13ec}\label{classast_1_1VariableValue_a1a7c2c80ad66c683fd05ef3b9eaf13ec}} 
+\index{ast::VariableValue@{ast::VariableValue}!VariableValue@{VariableValue}}
+\index{VariableValue@{VariableValue}!ast::VariableValue@{ast::VariableValue}}
+\doxysubsubsection{\texorpdfstring{VariableValue()}{VariableValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ast\+::\+Variable\+Value\+::\+Variable\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classast_1_1VariableValue_a9830650a90923165bb2f57dce79f2074}\label{classast_1_1VariableValue_a9830650a90923165bb2f57dce79f2074}} 
+\index{ast::VariableValue@{ast::VariableValue}!VariableValue@{VariableValue}}
+\index{VariableValue@{VariableValue}!ast::VariableValue@{ast::VariableValue}}
+\doxysubsubsection{\texorpdfstring{VariableValue()}{VariableValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ast\+::\+Variable\+Value\+::\+Variable\+Value (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{dotted\+\_\+ids }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1VariableValue_aca3944cb8226889332903fe374742a2d}\label{classast_1_1VariableValue_aca3944cb8226889332903fe374742a2d}} 
+\index{ast::VariableValue@{ast::VariableValue}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::VariableValue@{ast::VariableValue}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} ast\+::\+Variable\+Value\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\item 
+src/\mbox{\hyperlink{statement_8cpp}{statement.\+cpp}}\end{DoxyCompactItemize}

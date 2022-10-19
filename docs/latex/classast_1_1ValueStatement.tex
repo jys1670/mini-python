@@ -1,0 +1,53 @@
+\hypertarget{classast_1_1ValueStatement}{}\doxysection{ast\+::Value\+Statement\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classast_1_1ValueStatement}\index{ast::ValueStatement$<$ T $>$@{ast::ValueStatement$<$ T $>$}}
+
+
+{\ttfamily \#include $<$statement.\+h$>$}
+
+Inheritance diagram for ast\+::Value\+Statement\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classast_1_1ValueStatement}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1ValueStatement_a41b59898a816c3826b58c1b17f1f6122}{Value\+Statement}} (T v)
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1ValueStatement_a3ee4136f81d96f52f9df0dacbc4c3113}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class ast\+::\+Value\+Statement$<$ T $>$}
+Statement that returns value of type T. This is used to create constants. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classast_1_1ValueStatement_a41b59898a816c3826b58c1b17f1f6122}\label{classast_1_1ValueStatement_a41b59898a816c3826b58c1b17f1f6122}} 
+\index{ast::ValueStatement$<$ T $>$@{ast::ValueStatement$<$ T $>$}!ValueStatement@{ValueStatement}}
+\index{ValueStatement@{ValueStatement}!ast::ValueStatement$<$ T $>$@{ast::ValueStatement$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ValueStatement()}{ValueStatement()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classast_1_1ValueStatement}{ast\+::\+Value\+Statement}}$<$ T $>$\+::\+Value\+Statement (\begin{DoxyParamCaption}\item[{T}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classast_1_1ValueStatement_a3ee4136f81d96f52f9df0dacbc4c3113}\label{classast_1_1ValueStatement_a3ee4136f81d96f52f9df0dacbc4c3113}} 
+\index{ast::ValueStatement$<$ T $>$@{ast::ValueStatement$<$ T $>$}!Execute@{Execute}}
+\index{Execute@{Execute}!ast::ValueStatement$<$ T $>$@{ast::ValueStatement$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1ValueStatement}{ast\+::\+Value\+Statement}}$<$ T $>$\+::\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&}]{closure,  }\item[{\mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
+
+Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{statement_8h}{statement.\+h}}\end{DoxyCompactItemize}

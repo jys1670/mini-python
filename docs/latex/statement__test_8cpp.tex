@@ -1,0 +1,38 @@
+\hypertarget{statement__test_8cpp}{}\doxysection{src/statement\+\_\+test.cpp File Reference}
+\label{statement__test_8cpp}\index{src/statement\_test.cpp@{src/statement\_test.cpp}}
+{\ttfamily \#include \char`\"{}statement.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test\+\_\+runner\+\_\+p.\+h\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceast}{ast}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{statement__test_8cpp_aa939b7784b3ddf9cc0009ad624978e05}{ASSERT\+\_\+\+OBJECT\+\_\+\+VALUE\+\_\+\+EQUAL}}(obj,  expected)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceast_a4d0232f45033c7a3596edb1e2193f1e5}{ast\+::\+Run\+Unit\+Tests}} (\mbox{\hyperlink{classTestRunner}{Test\+Runner}} \&tr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{statement__test_8cpp_aa939b7784b3ddf9cc0009ad624978e05}\label{statement__test_8cpp_aa939b7784b3ddf9cc0009ad624978e05}} 
+\index{statement\_test.cpp@{statement\_test.cpp}!ASSERT\_OBJECT\_VALUE\_EQUAL@{ASSERT\_OBJECT\_VALUE\_EQUAL}}
+\index{ASSERT\_OBJECT\_VALUE\_EQUAL@{ASSERT\_OBJECT\_VALUE\_EQUAL}!statement\_test.cpp@{statement\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_OBJECT\_VALUE\_EQUAL}{ASSERT\_OBJECT\_VALUE\_EQUAL}}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+OBJECT\+\_\+\+VALUE\+\_\+\+EQUAL(\begin{DoxyParamCaption}\item[{}]{obj,  }\item[{}]{expected }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{                                                                                                                  \(\backslash\)}
+\DoxyCodeLine{        std::ostringstream \_\_assert\_equal\_private\_os;                                                                  \(\backslash\)}
+\DoxyCodeLine{        \_\_assert\_equal\_private\_os << \#obj << \textcolor{stringliteral}{"{}'s value\_ "{}}sv                                                            \(\backslash\)}
+\DoxyCodeLine{                                  << \textcolor{stringliteral}{"{} != "{}}sv << \#expected << \textcolor{stringliteral}{"{}s, "{}}sv << \mbox{\hyperlink{test__runner__p_8h_ab117546549783a058d0321a287699579}{FILE\_NAME}} << \textcolor{charliteral}{':'} << \_\_LINE\_\_;                 \(\backslash\)}
+\DoxyCodeLine{        AssertObjectValueEqual(obj, expected, \_\_assert\_equal\_private\_os.str());                                        \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}

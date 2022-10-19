@@ -1,0 +1,27 @@
+\hypertarget{parse_8h_source}{}\doxysection{parse.\+h}
+\label{parse_8h_source}\index{src/parse.h@{src/parse.h}}
+\mbox{\hyperlink{parse_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceparse}{parse}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{class }Lexer;}
+\DoxyCodeLine{9 \}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceruntime}{runtime}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{class }Executable;}
+\DoxyCodeLine{14 \}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{struct }\mbox{\hyperlink{structParseError}{ParseError}} : std::runtime\_error}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{keyword}{using }std::runtime\_error::runtime\_error;}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 std::unique\_ptr<runtime::Executable> \mbox{\hyperlink{parse_8h_a3802887c8b9eb4181cced4abee985189}{ParseProgram}}(\mbox{\hyperlink{classparse_1_1Lexer}{parse::Lexer}} \&lexer);}
+
+\end{DoxyCode}
