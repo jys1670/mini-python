@@ -24,6 +24,11 @@ void \mbox{\hyperlink{classast_1_1Compound_a48d7340126bb931faa5c0a2e87dc19f0}{Ad
 \begin{DoxyCompactList}\small\item\em Adds statement to the end of compound. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1Compound_a570e7e3f7b69add76b05d3c17cfa23d0}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
 \begin{DoxyCompactList}\small\item\em Sequentially executes all compound statements and returns \mbox{\hyperlink{classast_1_1None}{None}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \mbox{\hyperlink{classast_1_1Compound_a9394b85826ee9a05254e5313abbeb157}{statements\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -63,6 +68,15 @@ Sequentially executes all compound statements and returns \mbox{\hyperlink{class
 
 
 Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classast_1_1Compound_a9394b85826ee9a05254e5313abbeb157}\label{classast_1_1Compound_a9394b85826ee9a05254e5313abbeb157}} 
+\index{ast::Compound@{ast::Compound}!statements\_@{statements\_}}
+\index{statements\_@{statements\_}!ast::Compound@{ast::Compound}}
+\doxysubsubsection{\texorpdfstring{statements\_}{statements\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ $>$ ast\+::\+Compound\+::statements\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

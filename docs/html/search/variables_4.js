@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5fsize_0',['max_size',['../namespaceparse.html#a683d5d5452c965bbd53b0b1d75d6fe51',1,'parse']]]
+  ['else_5fbody_5f_0',['else_body_',['../classast_1_1IfElse.html#adc6d4c820b9aab7bbe95710751ee9129',1,'ast::IfElse']]]
 ];

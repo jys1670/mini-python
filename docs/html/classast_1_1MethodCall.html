@@ -77,6 +77,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classast_1_1MethodCall-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ast::MethodCall Class Reference</div></div>
 </div><!--header-->
@@ -107,6 +108,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7e53f76628d68eead1d0e66b89dd246b inherit pub_methods_classruntime_1_1Executable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8760a22b05a1ab4d06eb992636e34886 inherit pub_methods_classruntime_1_1Executable"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classruntime_1_1ObjectHolder.html">ObjectHolder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classruntime_1_1Executable.html#a8760a22b05a1ab4d06eb992636e34886">Execute</a> (<a class="el" href="namespaceruntime.html#a8c77230f8dda88c5c664851be7a50f58">Closure</a> &amp;closure, <a class="el" href="classruntime_1_1Context.html">Context</a> &amp;context)=0</td></tr>
 <tr class="separator:a8760a22b05a1ab4d06eb992636e34886 inherit pub_methods_classruntime_1_1Executable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a30212ca62ddd5aae5fac911da0f20fd7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="namespaceast.html#a5ed61c9a8094ddffa1ed33a41963c226">Statement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classast_1_1MethodCall.html#a30212ca62ddd5aae5fac911da0f20fd7">object_</a></td></tr>
+<tr class="separator:a30212ca62ddd5aae5fac911da0f20fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34369301db4c3ad815381b1ebb7625df"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classast_1_1MethodCall.html#a34369301db4c3ad815381b1ebb7625df">method_</a></td></tr>
+<tr class="separator:a34369301db4c3ad815381b1ebb7625df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a09b2382b4f8655ce696ad9b41c99e0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="namespaceast.html#a5ed61c9a8094ddffa1ed33a41963c226">Statement</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classast_1_1MethodCall.html#a6a09b2382b4f8655ce696ad9b41c99e0">args_</a></td></tr>
+<tr class="separator:a6a09b2382b4f8655ce696ad9b41c99e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Calls method "object.method" with a given arguments "args". </p>
@@ -182,6 +192,73 @@ Public Member Functions</h2></td></tr>
 <p >Does something with objects inside of closure, outputs to context. Returns result or <a class="el" href="classast_1_1None.html" title="None value.">None</a> </p>
 
 <p>Implements <a class="el" href="classruntime_1_1Executable.html#a8760a22b05a1ab4d06eb992636e34886">runtime::Executable</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6a09b2382b4f8655ce696ad9b41c99e0" name="a6a09b2382b4f8655ce696ad9b41c99e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a09b2382b4f8655ce696ad9b41c99e0">&#9670;&#160;</a></span>args_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="namespaceast.html#a5ed61c9a8094ddffa1ed33a41963c226">Statement</a>&gt; &gt; ast::MethodCall::args_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34369301db4c3ad815381b1ebb7625df" name="a34369301db4c3ad815381b1ebb7625df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34369301db4c3ad815381b1ebb7625df">&#9670;&#160;</a></span>method_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ast::MethodCall::method_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30212ca62ddd5aae5fac911da0f20fd7" name="a30212ca62ddd5aae5fac911da0f20fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30212ca62ddd5aae5fac911da0f20fd7">&#9670;&#160;</a></span>object_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="namespaceast.html#a5ed61c9a8094ddffa1ed33a41963c226">Statement</a>&gt; ast::MethodCall::object_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

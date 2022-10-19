@@ -21,6 +21,32 @@ const \mbox{\hyperlink{structparse_1_1Token}{Token}} \& \mbox{\hyperlink{classpa
 \begin{DoxyCompactList}\small\item\em Returns next token as type T if it\textquotesingle{}s really that type; otherwise throws \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T , typename U $>$ }\\void \mbox{\hyperlink{classparse_1_1Lexer_aea5851740888f009c47aac2d7ce54560}{Expect\+Next}} (const U \&value)
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structparse_1_1Token}{Token}} \mbox{\hyperlink{classparse_1_1Lexer_aa0fd5342602d2ed43666530132354dca}{Get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Extracts user-\/defined name or one of predefined keywords. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparse_1_1Token}{Token}} \mbox{\hyperlink{classparse_1_1Lexer_a424c1f8fc1d9c180d3ef4a8eb0707d1c}{Get\+Comp\+Operator}} ()
+\begin{DoxyCompactList}\small\item\em Extracts comparison operators consisting from two symbols. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparse_1_1Token}{Token}} \mbox{\hyperlink{classparse_1_1Lexer_a1243e9bff13653060326606b243e1439}{Get\+Indent\+Dedent}} ()
+\begin{DoxyCompactList}\small\item\em Extracts indentation changes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparse_1_1Token}{Token}} \mbox{\hyperlink{classparse_1_1Lexer_ad96027366422dc27f7e87894e42d3e07}{Get\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Extracts numeric constant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structparse_1_1Token}{Token}} \mbox{\hyperlink{classparse_1_1Lexer_a3f9bd7cf27483e49e33182b724d8f746}{Get\+Str\+Literal}} ()
+\begin{DoxyCompactList}\small\item\em Extracts string literal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparse_1_1Lexer_a597942866a5f240649037f807e47f2d1}{Skip\+Useless\+Symbols}} ()
+\begin{DoxyCompactList}\small\item\em Skips comments, spaces, newlines etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classparse_1_1Lexer_a0e554f936aeb97323f43dbac42503a25}{indent\+\_\+}} \{0\}
+\item 
+int \mbox{\hyperlink{classparse_1_1Lexer_a547e0dac82cd02549d4a7c9a5b07dc83}{indent\+\_\+diff\+\_\+}} \{0\}
+\item 
+\mbox{\hyperlink{structparse_1_1Token}{Token}} \mbox{\hyperlink{classparse_1_1Lexer_a879a08737c06ac5bf6cf5546852bc0e8}{token\+\_\+}}
+\item 
+std\+::istream \& \mbox{\hyperlink{classparse_1_1Lexer_adb60c1f16c16f3239f0128fc1dcf18b6}{input\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -79,7 +105,57 @@ Returns next token as type T if it\textquotesingle{}s really that type; otherwis
 {\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
 void parse\+::\+Lexer\+::\+Expect\+Next (\begin{DoxyParamCaption}\item[{const U \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Checks whether next token has type T and value equal to what is given as argument, otherwise throws \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}} \mbox{\Hypertarget{classparse_1_1Lexer_af2e7773454549634767faca8328c8d24}\label{classparse_1_1Lexer_af2e7773454549634767faca8328c8d24}} 
+Checks whether next token has type T and value equal to what is given as argument, otherwise throws \mbox{\hyperlink{classparse_1_1LexerError}{Lexer\+Error}} \mbox{\Hypertarget{classparse_1_1Lexer_a424c1f8fc1d9c180d3ef4a8eb0707d1c}\label{classparse_1_1Lexer_a424c1f8fc1d9c180d3ef4a8eb0707d1c}} 
+\index{parse::Lexer@{parse::Lexer}!GetCompOperator@{GetCompOperator}}
+\index{GetCompOperator@{GetCompOperator}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{GetCompOperator()}{GetCompOperator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structparse_1_1Token}{Token}} parse\+::\+Lexer\+::\+Get\+Comp\+Operator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Extracts comparison operators consisting from two symbols. 
+
+\mbox{\Hypertarget{classparse_1_1Lexer_a1243e9bff13653060326606b243e1439}\label{classparse_1_1Lexer_a1243e9bff13653060326606b243e1439}} 
+\index{parse::Lexer@{parse::Lexer}!GetIndentDedent@{GetIndentDedent}}
+\index{GetIndentDedent@{GetIndentDedent}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{GetIndentDedent()}{GetIndentDedent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structparse_1_1Token}{Token}} parse\+::\+Lexer\+::\+Get\+Indent\+Dedent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Extracts indentation changes. 
+
+\mbox{\Hypertarget{classparse_1_1Lexer_aa0fd5342602d2ed43666530132354dca}\label{classparse_1_1Lexer_aa0fd5342602d2ed43666530132354dca}} 
+\index{parse::Lexer@{parse::Lexer}!GetName@{GetName}}
+\index{GetName@{GetName}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structparse_1_1Token}{Token}} parse\+::\+Lexer\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Extracts user-\/defined name or one of predefined keywords. 
+
+\mbox{\Hypertarget{classparse_1_1Lexer_ad96027366422dc27f7e87894e42d3e07}\label{classparse_1_1Lexer_ad96027366422dc27f7e87894e42d3e07}} 
+\index{parse::Lexer@{parse::Lexer}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{GetNumber()}{GetNumber()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structparse_1_1Token}{Token}} parse\+::\+Lexer\+::\+Get\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Extracts numeric constant. 
+
+\mbox{\Hypertarget{classparse_1_1Lexer_a3f9bd7cf27483e49e33182b724d8f746}\label{classparse_1_1Lexer_a3f9bd7cf27483e49e33182b724d8f746}} 
+\index{parse::Lexer@{parse::Lexer}!GetStrLiteral@{GetStrLiteral}}
+\index{GetStrLiteral@{GetStrLiteral}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{GetStrLiteral()}{GetStrLiteral()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structparse_1_1Token}{Token}} parse\+::\+Lexer\+::\+Get\+Str\+Literal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Extracts string literal. 
+
+\mbox{\Hypertarget{classparse_1_1Lexer_af2e7773454549634767faca8328c8d24}\label{classparse_1_1Lexer_af2e7773454549634767faca8328c8d24}} 
 \index{parse::Lexer@{parse::Lexer}!NextToken@{NextToken}}
 \index{NextToken@{NextToken}!parse::Lexer@{parse::Lexer}}
 \doxysubsubsection{\texorpdfstring{NextToken()}{NextToken()}}
@@ -89,7 +165,44 @@ Checks whether next token has type T and value equal to what is given as argumen
 
 Returns next token or \mbox{\hyperlink{structparse_1_1token__type_1_1Eof}{token\+\_\+type\+::\+Eof}} if token stream is over. 
 
-Generates token after reading from input stream, this is core function of lexer. 
+Generates token after reading from input stream, this is core function of lexer. \mbox{\Hypertarget{classparse_1_1Lexer_a597942866a5f240649037f807e47f2d1}\label{classparse_1_1Lexer_a597942866a5f240649037f807e47f2d1}} 
+\index{parse::Lexer@{parse::Lexer}!SkipUselessSymbols@{SkipUselessSymbols}}
+\index{SkipUselessSymbols@{SkipUselessSymbols}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{SkipUselessSymbols()}{SkipUselessSymbols()}}
+{\footnotesize\ttfamily void parse\+::\+Lexer\+::\+Skip\+Useless\+Symbols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Skips comments, spaces, newlines etc. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparse_1_1Lexer_a0e554f936aeb97323f43dbac42503a25}\label{classparse_1_1Lexer_a0e554f936aeb97323f43dbac42503a25}} 
+\index{parse::Lexer@{parse::Lexer}!indent\_@{indent\_}}
+\index{indent\_@{indent\_}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{indent\_}{indent\_}}
+{\footnotesize\ttfamily int parse\+::\+Lexer\+::indent\+\_\+ \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classparse_1_1Lexer_a547e0dac82cd02549d4a7c9a5b07dc83}\label{classparse_1_1Lexer_a547e0dac82cd02549d4a7c9a5b07dc83}} 
+\index{parse::Lexer@{parse::Lexer}!indent\_diff\_@{indent\_diff\_}}
+\index{indent\_diff\_@{indent\_diff\_}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{indent\_diff\_}{indent\_diff\_}}
+{\footnotesize\ttfamily int parse\+::\+Lexer\+::indent\+\_\+diff\+\_\+ \{0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classparse_1_1Lexer_adb60c1f16c16f3239f0128fc1dcf18b6}\label{classparse_1_1Lexer_adb60c1f16c16f3239f0128fc1dcf18b6}} 
+\index{parse::Lexer@{parse::Lexer}!input\_@{input\_}}
+\index{input\_@{input\_}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{input\_}{input\_}}
+{\footnotesize\ttfamily std\+::istream\& parse\+::\+Lexer\+::input\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classparse_1_1Lexer_a879a08737c06ac5bf6cf5546852bc0e8}\label{classparse_1_1Lexer_a879a08737c06ac5bf6cf5546852bc0e8}} 
+\index{parse::Lexer@{parse::Lexer}!token\_@{token\_}}
+\index{token\_@{token\_}!parse::Lexer@{parse::Lexer}}
+\doxysubsubsection{\texorpdfstring{token\_}{token\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structparse_1_1Token}{Token}} parse\+::\+Lexer\+::token\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

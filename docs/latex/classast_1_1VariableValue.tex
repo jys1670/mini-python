@@ -19,6 +19,11 @@ Inheritance diagram for ast\+::Variable\+Value\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1VariableValue_aca3944cb8226889332903fe374742a2d}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classast_1_1VariableValue_ab464a94b230845833d427ea6ec3d5186}{ids\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -49,6 +54,15 @@ Computes variable or object methods call chain. Example\+: x = circle.\+center.\
 Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
 
 Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classast_1_1VariableValue_ab464a94b230845833d427ea6ec3d5186}\label{classast_1_1VariableValue_ab464a94b230845833d427ea6ec3d5186}} 
+\index{ast::VariableValue@{ast::VariableValue}!ids\_@{ids\_}}
+\index{ids\_@{ids\_}!ast::VariableValue@{ast::VariableValue}}
+\doxysubsubsection{\texorpdfstring{ids\_}{ids\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ ast\+::\+Variable\+Value\+::ids\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

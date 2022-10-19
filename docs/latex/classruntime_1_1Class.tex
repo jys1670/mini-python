@@ -26,6 +26,17 @@ const std\+::string \& \mbox{\hyperlink{classruntime_1_1Class_a93c75fed57627588b
 \begin{DoxyCompactList}\small\item\em Returns class name. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classruntime_1_1Class_a572c29c9430551609997519150a2254d}{Print}} (std\+::ostream \&os, \mbox{\hyperlink{classruntime_1_1Context}{Context}} \&context) override
 \begin{DoxyCompactList}\small\item\em prints \char`\"{}\+Class $<$name$>$\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classruntime_1_1Class_a98175f4e407583d4a539374f32f6a450}{name\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structruntime_1_1Method}{Method}} $>$ \mbox{\hyperlink{classruntime_1_1Class_abc3617b8386cf27d5af6554bd893949c}{methods\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, size\+\_\+t $>$ \mbox{\hyperlink{classruntime_1_1Class_af10db4e7ba06151931a67a9730b2978b}{name\+\_\+to\+\_\+method\+\_\+}}
+\item 
+const \mbox{\hyperlink{classruntime_1_1Class}{Class}} $\ast$ \mbox{\hyperlink{classruntime_1_1Class_a3d25bdaf74a3b17687fb4dfdcd977e92}{parent\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -78,6 +89,33 @@ prints \char`\"{}\+Class $<$name$>$\char`\"{}
 
 
 Implements \mbox{\hyperlink{classruntime_1_1Object_a5d102c104edcf14e2889a438b68f0889}{runtime\+::\+Object}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classruntime_1_1Class_abc3617b8386cf27d5af6554bd893949c}\label{classruntime_1_1Class_abc3617b8386cf27d5af6554bd893949c}} 
+\index{runtime::Class@{runtime::Class}!methods\_@{methods\_}}
+\index{methods\_@{methods\_}!runtime::Class@{runtime::Class}}
+\doxysubsubsection{\texorpdfstring{methods\_}{methods\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structruntime_1_1Method}{Method}}$>$ runtime\+::\+Class\+::methods\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classruntime_1_1Class_a98175f4e407583d4a539374f32f6a450}\label{classruntime_1_1Class_a98175f4e407583d4a539374f32f6a450}} 
+\index{runtime::Class@{runtime::Class}!name\_@{name\_}}
+\index{name\_@{name\_}!runtime::Class@{runtime::Class}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string runtime\+::\+Class\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classruntime_1_1Class_af10db4e7ba06151931a67a9730b2978b}\label{classruntime_1_1Class_af10db4e7ba06151931a67a9730b2978b}} 
+\index{runtime::Class@{runtime::Class}!name\_to\_method\_@{name\_to\_method\_}}
+\index{name\_to\_method\_@{name\_to\_method\_}!runtime::Class@{runtime::Class}}
+\doxysubsubsection{\texorpdfstring{name\_to\_method\_}{name\_to\_method\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, size\+\_\+t$>$ runtime\+::\+Class\+::name\+\_\+to\+\_\+method\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classruntime_1_1Class_a3d25bdaf74a3b17687fb4dfdcd977e92}\label{classruntime_1_1Class_a3d25bdaf74a3b17687fb4dfdcd977e92}} 
+\index{runtime::Class@{runtime::Class}!parent\_@{parent\_}}
+\index{parent\_@{parent\_}!runtime::Class@{runtime::Class}}
+\doxysubsubsection{\texorpdfstring{parent\_}{parent\_}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classruntime_1_1Class}{Class}}$\ast$ runtime\+::\+Class\+::parent\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

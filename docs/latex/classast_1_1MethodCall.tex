@@ -22,6 +22,15 @@ Inheritance diagram for ast\+::Method\+Call\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1MethodCall_abc5aae6aaee24d09627b2015b768163f}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \mbox{\hyperlink{classast_1_1MethodCall_a30212ca62ddd5aae5fac911da0f20fd7}{object\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classast_1_1MethodCall_a34369301db4c3ad815381b1ebb7625df}{method\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \mbox{\hyperlink{classast_1_1MethodCall_a6a09b2382b4f8655ce696ad9b41c99e0}{args\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,6 +55,27 @@ Calls method \char`\"{}object.\+method\char`\"{} with a given arguments \char`\"
 Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
 
 Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classast_1_1MethodCall_a6a09b2382b4f8655ce696ad9b41c99e0}\label{classast_1_1MethodCall_a6a09b2382b4f8655ce696ad9b41c99e0}} 
+\index{ast::MethodCall@{ast::MethodCall}!args\_@{args\_}}
+\index{args\_@{args\_}!ast::MethodCall@{ast::MethodCall}}
+\doxysubsubsection{\texorpdfstring{args\_}{args\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ $>$ ast\+::\+Method\+Call\+::args\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classast_1_1MethodCall_a34369301db4c3ad815381b1ebb7625df}\label{classast_1_1MethodCall_a34369301db4c3ad815381b1ebb7625df}} 
+\index{ast::MethodCall@{ast::MethodCall}!method\_@{method\_}}
+\index{method\_@{method\_}!ast::MethodCall@{ast::MethodCall}}
+\doxysubsubsection{\texorpdfstring{method\_}{method\_}}
+{\footnotesize\ttfamily std\+::string ast\+::\+Method\+Call\+::method\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classast_1_1MethodCall_a30212ca62ddd5aae5fac911da0f20fd7}\label{classast_1_1MethodCall_a30212ca62ddd5aae5fac911da0f20fd7}} 
+\index{ast::MethodCall@{ast::MethodCall}!object\_@{object\_}}
+\index{object\_@{object\_}!ast::MethodCall@{ast::MethodCall}}
+\doxysubsubsection{\texorpdfstring{object\_}{object\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ ast\+::\+Method\+Call\+::object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

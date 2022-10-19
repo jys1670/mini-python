@@ -22,6 +22,15 @@ Inheritance diagram for ast\+::Field\+Assignment\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1FieldAssignment_acff1f1f8c829daad09f376b9d255f717}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classast_1_1VariableValue}{Variable\+Value}} \mbox{\hyperlink{classast_1_1FieldAssignment_a3b744967d3c888a2330525cc476723cc}{object\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classast_1_1FieldAssignment_a13b6370316251e37d952551e1e85d443}{field\+\_\+name\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \mbox{\hyperlink{classast_1_1FieldAssignment_aea7f570490830a7fdb616b62e60f41e9}{rv\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,6 +55,27 @@ Assigns value of the \char`\"{}rv\char`\"{} to \char`\"{}object.\+field\+\_\+nam
 Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
 
 Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classast_1_1FieldAssignment_a13b6370316251e37d952551e1e85d443}\label{classast_1_1FieldAssignment_a13b6370316251e37d952551e1e85d443}} 
+\index{ast::FieldAssignment@{ast::FieldAssignment}!field\_name\_@{field\_name\_}}
+\index{field\_name\_@{field\_name\_}!ast::FieldAssignment@{ast::FieldAssignment}}
+\doxysubsubsection{\texorpdfstring{field\_name\_}{field\_name\_}}
+{\footnotesize\ttfamily std\+::string ast\+::\+Field\+Assignment\+::field\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classast_1_1FieldAssignment_a3b744967d3c888a2330525cc476723cc}\label{classast_1_1FieldAssignment_a3b744967d3c888a2330525cc476723cc}} 
+\index{ast::FieldAssignment@{ast::FieldAssignment}!object\_@{object\_}}
+\index{object\_@{object\_}!ast::FieldAssignment@{ast::FieldAssignment}}
+\doxysubsubsection{\texorpdfstring{object\_}{object\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classast_1_1VariableValue}{Variable\+Value}} ast\+::\+Field\+Assignment\+::object\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classast_1_1FieldAssignment_aea7f570490830a7fdb616b62e60f41e9}\label{classast_1_1FieldAssignment_aea7f570490830a7fdb616b62e60f41e9}} 
+\index{ast::FieldAssignment@{ast::FieldAssignment}!rv\_@{rv\_}}
+\index{rv\_@{rv\_}!ast::FieldAssignment@{ast::FieldAssignment}}
+\doxysubsubsection{\texorpdfstring{rv\_}{rv\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ ast\+::\+Field\+Assignment\+::rv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

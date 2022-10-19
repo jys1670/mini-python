@@ -1,3 +1,7 @@
+/*!
+ * \file lexer.h
+ * \brief Lexical analyzer
+ */
 #pragma once
 
 #include <cassert>

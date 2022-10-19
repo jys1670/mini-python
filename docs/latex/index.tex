@@ -2,10 +2,43 @@
 \Hypertarget{index_md_README}%
  
 
-An interpreter consists from several parts\+:
+This is educational mini-\/\+Python interpreter build under the guidance of yandex practicum. The project consists of several independent parts\+:
 
-1) Lexical analyzer — reads symbols stream and groups them into meaningful sequences called lexemes. Each lexeme is then used to generate so-\/called token.
+1) {\itshape Lexical analyzer} — reads symbols stream and groups them into meaningful sequences called lexemes. Each lexeme is then used to generate so-\/called token.
 
-2) Syntax analyzer — reads token stream and generates abstract syntax tree (AST). Each inner node represents some kind of operation, where child nodes are its arguments.
+2) {\itshape Syntax analyzer} — reads token stream and generates abstract syntax tree (AST). Each inner node represents some kind of operation, where child nodes are its arguments.
 
-3) Semantic analyzer — traverses AST, completes node actions, updates symbols table. 
+3) {\itshape Runtime module} — traverses AST, completes node actions according to their semantics, updates symbols table, etc.
+
+\href{https://jys1670.github.io/mini-python/html/index.html}{\texttt{ Documentation}} might make things a bit more clear\hypertarget{index_autotoc_md1}{}\doxysubsection{Building\+:}\label{index_autotoc_md1}
+Requirements\+:
+\begin{DoxyItemize}
+\item GCC or alternative (supporting C++17 or later)
+\item Cmake (tested with 3.\+24)
+\item \mbox{[}optional\mbox{]} Doxygen (tested with 1.\+9.\+5)
+\end{DoxyItemize}
+
+Preparations\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/jys1670/mini-\/python}
+\DoxyCodeLine{cd mini-\/python}
+\DoxyCodeLine{mkdir build \&\& cd build}
+
+\end{DoxyCode}
+
+
+Building and running main executable\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake -\/DCMAKE\_BUILD\_TYPE=Release ..}
+\DoxyCodeLine{cmake -\/-\/build . -\/-\/config Release -\/-\/target mini-\/python}
+\DoxyCodeLine{./mini-\/python \# reads from stdin}
+
+\end{DoxyCode}
+
+
+Updating documentation\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake -\/-\/build . -\/-\/config Release -\/-\/target doxygen}
+
+\end{DoxyCode}
+ 

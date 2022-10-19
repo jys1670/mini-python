@@ -22,6 +22,15 @@ Inheritance diagram for ast\+::If\+Else\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em else\+\_\+body can be nullptr \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1IfElse_a1b40495e581bf579fbec72b14deb0a3f}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \mbox{\hyperlink{classast_1_1IfElse_ace5c4dbd9c5d9b3e43708a93ba38f165}{condition\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \mbox{\hyperlink{classast_1_1IfElse_a3c8b871f762ee33cbfe878c56096efb7}{if\+\_\+body\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \mbox{\hyperlink{classast_1_1IfElse_adc6d4c820b9aab7bbe95710751ee9129}{else\+\_\+body\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -50,6 +59,27 @@ else\+\_\+body can be nullptr
 Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
 
 Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classast_1_1IfElse_ace5c4dbd9c5d9b3e43708a93ba38f165}\label{classast_1_1IfElse_ace5c4dbd9c5d9b3e43708a93ba38f165}} 
+\index{ast::IfElse@{ast::IfElse}!condition\_@{condition\_}}
+\index{condition\_@{condition\_}!ast::IfElse@{ast::IfElse}}
+\doxysubsubsection{\texorpdfstring{condition\_}{condition\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ ast\+::\+If\+Else\+::condition\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classast_1_1IfElse_adc6d4c820b9aab7bbe95710751ee9129}\label{classast_1_1IfElse_adc6d4c820b9aab7bbe95710751ee9129}} 
+\index{ast::IfElse@{ast::IfElse}!else\_body\_@{else\_body\_}}
+\index{else\_body\_@{else\_body\_}!ast::IfElse@{ast::IfElse}}
+\doxysubsubsection{\texorpdfstring{else\_body\_}{else\_body\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ ast\+::\+If\+Else\+::else\+\_\+body\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classast_1_1IfElse_a3c8b871f762ee33cbfe878c56096efb7}\label{classast_1_1IfElse_a3c8b871f762ee33cbfe878c56096efb7}} 
+\index{ast::IfElse@{ast::IfElse}!if\_body\_@{if\_body\_}}
+\index{if\_body\_@{if\_body\_}!ast::IfElse@{ast::IfElse}}
+\doxysubsubsection{\texorpdfstring{if\_body\_}{if\_body\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ ast\+::\+If\+Else\+::if\+\_\+body\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -77,6 +77,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classparse_1_1Lexer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">parse::Lexer Class Reference</div></div>
 </div><!--header-->
@@ -108,6 +110,38 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea5851740888f009c47aac2d7ce54560"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:aea5851740888f009c47aac2d7ce54560"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#aea5851740888f009c47aac2d7ce54560">ExpectNext</a> (const U &amp;value)</td></tr>
 <tr class="separator:aea5851740888f009c47aac2d7ce54560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa0fd5342602d2ed43666530132354dca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparse_1_1Token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#aa0fd5342602d2ed43666530132354dca">GetName</a> ()</td></tr>
+<tr class="memdesc:aa0fd5342602d2ed43666530132354dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts user-defined name or one of predefined keywords.  <a href="classparse_1_1Lexer.html#aa0fd5342602d2ed43666530132354dca">More...</a><br /></td></tr>
+<tr class="separator:aa0fd5342602d2ed43666530132354dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424c1f8fc1d9c180d3ef4a8eb0707d1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparse_1_1Token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#a424c1f8fc1d9c180d3ef4a8eb0707d1c">GetCompOperator</a> ()</td></tr>
+<tr class="memdesc:a424c1f8fc1d9c180d3ef4a8eb0707d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts comparison operators consisting from two symbols.  <a href="classparse_1_1Lexer.html#a424c1f8fc1d9c180d3ef4a8eb0707d1c">More...</a><br /></td></tr>
+<tr class="separator:a424c1f8fc1d9c180d3ef4a8eb0707d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1243e9bff13653060326606b243e1439"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparse_1_1Token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#a1243e9bff13653060326606b243e1439">GetIndentDedent</a> ()</td></tr>
+<tr class="memdesc:a1243e9bff13653060326606b243e1439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts indentation changes.  <a href="classparse_1_1Lexer.html#a1243e9bff13653060326606b243e1439">More...</a><br /></td></tr>
+<tr class="separator:a1243e9bff13653060326606b243e1439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad96027366422dc27f7e87894e42d3e07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparse_1_1Token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#ad96027366422dc27f7e87894e42d3e07">GetNumber</a> ()</td></tr>
+<tr class="memdesc:ad96027366422dc27f7e87894e42d3e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts numeric constant.  <a href="classparse_1_1Lexer.html#ad96027366422dc27f7e87894e42d3e07">More...</a><br /></td></tr>
+<tr class="separator:ad96027366422dc27f7e87894e42d3e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f9bd7cf27483e49e33182b724d8f746"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparse_1_1Token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#a3f9bd7cf27483e49e33182b724d8f746">GetStrLiteral</a> ()</td></tr>
+<tr class="memdesc:a3f9bd7cf27483e49e33182b724d8f746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts string literal.  <a href="classparse_1_1Lexer.html#a3f9bd7cf27483e49e33182b724d8f746">More...</a><br /></td></tr>
+<tr class="separator:a3f9bd7cf27483e49e33182b724d8f746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597942866a5f240649037f807e47f2d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#a597942866a5f240649037f807e47f2d1">SkipUselessSymbols</a> ()</td></tr>
+<tr class="memdesc:a597942866a5f240649037f807e47f2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips comments, spaces, newlines etc.  <a href="classparse_1_1Lexer.html#a597942866a5f240649037f807e47f2d1">More...</a><br /></td></tr>
+<tr class="separator:a597942866a5f240649037f807e47f2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0e554f936aeb97323f43dbac42503a25"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#a0e554f936aeb97323f43dbac42503a25">indent_</a> {0}</td></tr>
+<tr class="separator:a0e554f936aeb97323f43dbac42503a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547e0dac82cd02549d4a7c9a5b07dc83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#a547e0dac82cd02549d4a7c9a5b07dc83">indent_diff_</a> {0}</td></tr>
+<tr class="separator:a547e0dac82cd02549d4a7c9a5b07dc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879a08737c06ac5bf6cf5546852bc0e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparse_1_1Token.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#a879a08737c06ac5bf6cf5546852bc0e8">token_</a></td></tr>
+<tr class="separator:a879a08737c06ac5bf6cf5546852bc0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb60c1f16c16f3239f0128fc1dcf18b6"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classparse_1_1Lexer.html#adb60c1f16c16f3239f0128fc1dcf18b6">input_</a></td></tr>
+<tr class="separator:adb60c1f16c16f3239f0128fc1dcf18b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae62ad255092b96c4099e541c972f50bd" name="ae62ad255092b96c4099e541c972f50bd"></a>
@@ -273,6 +307,141 @@ template&lt;typename T , typename U &gt; </div>
 
 </div>
 </div>
+<a id="a424c1f8fc1d9c180d3ef4a8eb0707d1c" name="a424c1f8fc1d9c180d3ef4a8eb0707d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a424c1f8fc1d9c180d3ef4a8eb0707d1c">&#9670;&#160;</a></span>GetCompOperator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structparse_1_1Token.html">Token</a> parse::Lexer::GetCompOperator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extracts comparison operators consisting from two symbols. </p>
+
+</div>
+</div>
+<a id="a1243e9bff13653060326606b243e1439" name="a1243e9bff13653060326606b243e1439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1243e9bff13653060326606b243e1439">&#9670;&#160;</a></span>GetIndentDedent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structparse_1_1Token.html">Token</a> parse::Lexer::GetIndentDedent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extracts indentation changes. </p>
+
+</div>
+</div>
+<a id="aa0fd5342602d2ed43666530132354dca" name="aa0fd5342602d2ed43666530132354dca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0fd5342602d2ed43666530132354dca">&#9670;&#160;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structparse_1_1Token.html">Token</a> parse::Lexer::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extracts user-defined name or one of predefined keywords. </p>
+
+</div>
+</div>
+<a id="ad96027366422dc27f7e87894e42d3e07" name="ad96027366422dc27f7e87894e42d3e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad96027366422dc27f7e87894e42d3e07">&#9670;&#160;</a></span>GetNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structparse_1_1Token.html">Token</a> parse::Lexer::GetNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extracts numeric constant. </p>
+
+</div>
+</div>
+<a id="a3f9bd7cf27483e49e33182b724d8f746" name="a3f9bd7cf27483e49e33182b724d8f746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f9bd7cf27483e49e33182b724d8f746">&#9670;&#160;</a></span>GetStrLiteral()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structparse_1_1Token.html">Token</a> parse::Lexer::GetStrLiteral </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extracts string literal. </p>
+
+</div>
+</div>
 <a id="af2e7773454549634767faca8328c8d24" name="af2e7773454549634767faca8328c8d24"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2e7773454549634767faca8328c8d24">&#9670;&#160;</a></span>NextToken()</h2>
 
@@ -290,6 +459,122 @@ template&lt;typename T , typename U &gt; </div>
 
 <p>Returns next token or <a class="el" href="structparse_1_1token__type_1_1Eof.html" title="End of file.">token_type::Eof</a> if token stream is over. </p>
 <p >Generates token after reading from input stream, this is core function of lexer. </p>
+
+</div>
+</div>
+<a id="a597942866a5f240649037f807e47f2d1" name="a597942866a5f240649037f807e47f2d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a597942866a5f240649037f807e47f2d1">&#9670;&#160;</a></span>SkipUselessSymbols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parse::Lexer::SkipUselessSymbols </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Skips comments, spaces, newlines etc. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0e554f936aeb97323f43dbac42503a25" name="a0e554f936aeb97323f43dbac42503a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e554f936aeb97323f43dbac42503a25">&#9670;&#160;</a></span>indent_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parse::Lexer::indent_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a547e0dac82cd02549d4a7c9a5b07dc83" name="a547e0dac82cd02549d4a7c9a5b07dc83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547e0dac82cd02549d4a7c9a5b07dc83">&#9670;&#160;</a></span>indent_diff_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parse::Lexer::indent_diff_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb60c1f16c16f3239f0128fc1dcf18b6" name="adb60c1f16c16f3239f0128fc1dcf18b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb60c1f16c16f3239f0128fc1dcf18b6">&#9670;&#160;</a></span>input_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; parse::Lexer::input_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a879a08737c06ac5bf6cf5546852bc0e8" name="a879a08737c06ac5bf6cf5546852bc0e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879a08737c06ac5bf6cf5546852bc0e8">&#9670;&#160;</a></span>token_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structparse_1_1Token.html">Token</a> parse::Lexer::token_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

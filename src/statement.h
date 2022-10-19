@@ -1,3 +1,7 @@
+/*!
+ * \file statement.h
+ * \brief Abstract syntax tree nodes
+ */
 #pragma once
 
 #include "runtime.h"

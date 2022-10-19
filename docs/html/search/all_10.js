@@ -1,27 +1,8 @@
 var searchData=
 [
-  ['test_5frunner_5fp_2eh_0',['test_runner_p.h',['../test__runner__p_8h.html',1,'']]],
-  ['testalwaysemitsnewlineattheendofnonemptyline_1',['TestAlwaysEmitsNewlineAtTheEndOfNonemptyLine',['../namespaceparse.html#a6eb78aff6915d3133555eba82416bdc5',1,'parse']]],
-  ['testclassicalpolymorphism_2',['TestClassicalPolymorphism',['../namespaceparse.html#ae20a188bfa08aaa9adcdbebee4ce00b9',1,'parse']]],
-  ['testcommentsareignored_3',['TestCommentsAreIgnored',['../namespaceparse.html#a35c0b6f7f8c168db67509b621842fb49',1,'parse']]],
-  ['testcomplexlogicalexpression_4',['TestComplexLogicalExpression',['../namespaceparse.html#a17fb0f1ec3867391b0c8ace200bfd0b6',1,'parse']]],
-  ['testemptylinesareignored_5',['TestEmptyLinesAreIgnored',['../namespaceparse.html#a42d5ce01c2582767825227a707d71543',1,'parse']]],
-  ['testexpect_6',['TestExpect',['../namespaceparse.html#a814ac396b8ac8bbcd98ed9b792703a07',1,'parse']]],
-  ['testexpectnext_7',['TestExpectNext',['../namespaceparse.html#ae6f1b7bbd2b393c8302f0d1a1762e183',1,'parse']]],
-  ['testindentsandnewlines_8',['TestIndentsAndNewlines',['../namespaceparse.html#a1ce76b79279181f260419c4dff0a30de',1,'parse']]],
-  ['testmythonprogram_9',['TestMythonProgram',['../namespaceparse.html#a1e6b13b7ad8108fdcde7f3eb269eb817',1,'parse']]],
-  ['testoperations_10',['TestOperations',['../namespaceparse.html#ac2a001bce1450375376a939683187da6',1,'parse']]],
-  ['testparseprogram_11',['TestParseProgram',['../parse__test_8cpp.html#af8ea816f6ba26872890cd9024fa6869a',1,'TestParseProgram(TestRunner &amp;tr):&#160;parse_test.cpp'],['../main_8cpp.html#af8ea816f6ba26872890cd9024fa6869a',1,'TestParseProgram(TestRunner &amp;tr):&#160;parse_test.cpp']]],
-  ['testprogramwithclasses_12',['TestProgramWithClasses',['../namespaceparse.html#ace8b4f31f2fe16dda5cd04015911dade',1,'parse']]],
-  ['testprogramwithif_13',['TestProgramWithIf',['../namespaceparse.html#aac1b65603a9711d4d138548ccf7def96',1,'parse']]],
-  ['testrecursion_14',['TestRecursion',['../namespaceparse.html#a156ae9549e007ed41540d58a600fffac',1,'parse']]],
-  ['testrecursion2_15',['TestRecursion2',['../namespaceparse.html#a978af8a10b63c718c3dd6e6e8ea94868',1,'parse']]],
-  ['testreturnfromif_16',['TestReturnFromIf',['../namespaceparse.html#a13c4c414a7d5c3daeed63cc9790f0235',1,'parse']]],
-  ['testrunner_17',['TestRunner',['../classTestRunner.html',1,'']]],
-  ['testrunnerprivate_18',['TestRunnerPrivate',['../namespaceTestRunnerPrivate.html',1,'']]],
-  ['testsimpleprogram_19',['TestSimpleProgram',['../namespaceparse.html#a40eecb3153aff8261dc83762b92810e8',1,'parse']]],
-  ['token_20',['Token',['../structparse_1_1Token.html',1,'parse']]],
-  ['tokenbase_21',['TokenBase',['../namespaceparse.html#a381d67b58756d5aa9eb7031b4f9d91a2',1,'parse']]],
-  ['true_22',['True',['../structparse_1_1token__type_1_1True.html',1,'parse::token_type']]],
-  ['tryas_23',['TryAs',['../classruntime_1_1ObjectHolder.html#a9d3cd09d877066cf3ea6cb01249e6d7f',1,'runtime::ObjectHolder::TryAs()'],['../structparse_1_1Token.html#a0974c83ca781e92d2686b762a6420fd9',1,'parse::Token::TryAs()']]]
+  ['token_0',['Token',['../structparse_1_1Token.html',1,'parse']]],
+  ['token_5f_1',['token_',['../classparse_1_1Lexer.html#a879a08737c06ac5bf6cf5546852bc0e8',1,'parse::Lexer']]],
+  ['tokenbase_2',['TokenBase',['../namespaceparse.html#a381d67b58756d5aa9eb7031b4f9d91a2',1,'parse']]],
+  ['true_3',['True',['../structparse_1_1token__type_1_1True.html',1,'parse::token_type']]],
+  ['tryas_4',['TryAs',['../structparse_1_1Token.html#a0974c83ca781e92d2686b762a6420fd9',1,'parse::Token::TryAs()'],['../classruntime_1_1ObjectHolder.html#a9d3cd09d877066cf3ea6cb01249e6d7f',1,'runtime::ObjectHolder::TryAs()']]]
 ];

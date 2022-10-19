@@ -1,3 +1,7 @@
+/*!
+ * \file runtime.h
+ * \brief Built-in mini-Python data types and a symbol table
+ */
 #pragma once
 
 #include <cassert>

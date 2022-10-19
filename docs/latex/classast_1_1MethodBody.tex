@@ -18,10 +18,15 @@ Inheritance diagram for ast\+::Method\+Body\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classast_1_1MethodBody_a99c701004732d952a20b2a9052487892}{Method\+Body}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&\mbox{\hyperlink{runtime__test_8cpp_a26a6523695396e05c185b10340bb7c80}{body}})
+\mbox{\hyperlink{classast_1_1MethodBody_a99c701004732d952a20b2a9052487892}{Method\+Body}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \&\&body)
 \item 
 \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1MethodBody_a69ab9acba19a05d721bd65e86990eafa}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
 \begin{DoxyCompactList}\small\item\em Computes statement passed as body\+\_\+, returns \mbox{\hyperlink{classast_1_1None}{None}} unless there is return statement as body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \mbox{\hyperlink{classast_1_1MethodBody_aaaf50cd6c7a995a2b41f2d2fac3f1cf2}{body\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -50,6 +55,15 @@ Computes statement passed as body\+\_\+, returns \mbox{\hyperlink{classast_1_1No
 
 
 Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classast_1_1MethodBody_aaaf50cd6c7a995a2b41f2d2fac3f1cf2}\label{classast_1_1MethodBody_aaaf50cd6c7a995a2b41f2d2fac3f1cf2}} 
+\index{ast::MethodBody@{ast::MethodBody}!body\_@{body\_}}
+\index{body\_@{body\_}!ast::MethodBody@{ast::MethodBody}}
+\doxysubsubsection{\texorpdfstring{body\_}{body\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ ast\+::\+Method\+Body\+::body\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

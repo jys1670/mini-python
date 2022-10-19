@@ -77,6 +77,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classruntime_1_1Class-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">runtime::Class Class Reference</div></div>
 </div><!--header-->
@@ -116,6 +117,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d102c104edcf14e2889a438b68f0889 inherit pub_methods_classruntime_1_1Object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classruntime_1_1Object.html#a5d102c104edcf14e2889a438b68f0889">Print</a> (std::ostream &amp;os, <a class="el" href="classruntime_1_1Context.html">Context</a> &amp;context)=0</td></tr>
 <tr class="memdesc:a5d102c104edcf14e2889a438b68f0889 inherit pub_methods_classruntime_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Each object must have string representation, which can be printed.  <a href="classruntime_1_1Object.html#a5d102c104edcf14e2889a438b68f0889">More...</a><br /></td></tr>
 <tr class="separator:a5d102c104edcf14e2889a438b68f0889 inherit pub_methods_classruntime_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a98175f4e407583d4a539374f32f6a450"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classruntime_1_1Class.html#a98175f4e407583d4a539374f32f6a450">name_</a></td></tr>
+<tr class="separator:a98175f4e407583d4a539374f32f6a450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3617b8386cf27d5af6554bd893949c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structruntime_1_1Method.html">Method</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classruntime_1_1Class.html#abc3617b8386cf27d5af6554bd893949c">methods_</a></td></tr>
+<tr class="separator:abc3617b8386cf27d5af6554bd893949c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10db4e7ba06151931a67a9730b2978b"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classruntime_1_1Class.html#af10db4e7ba06151931a67a9730b2978b">name_to_method_</a></td></tr>
+<tr class="separator:af10db4e7ba06151931a67a9730b2978b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d25bdaf74a3b17687fb4dfdcd977e92"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classruntime_1_1Class.html">Class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classruntime_1_1Class.html#a3d25bdaf74a3b17687fb4dfdcd977e92">parent_</a></td></tr>
+<tr class="separator:a3d25bdaf74a3b17687fb4dfdcd977e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Implements class. </p>
@@ -241,6 +253,95 @@ Public Member Functions</h2></td></tr>
 <p>prints "Class &lt;name&gt;" </p>
 
 <p>Implements <a class="el" href="classruntime_1_1Object.html#a5d102c104edcf14e2889a438b68f0889">runtime::Object</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="abc3617b8386cf27d5af6554bd893949c" name="abc3617b8386cf27d5af6554bd893949c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc3617b8386cf27d5af6554bd893949c">&#9670;&#160;</a></span>methods_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structruntime_1_1Method.html">Method</a>&gt; runtime::Class::methods_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98175f4e407583d4a539374f32f6a450" name="a98175f4e407583d4a539374f32f6a450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98175f4e407583d4a539374f32f6a450">&#9670;&#160;</a></span>name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string runtime::Class::name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af10db4e7ba06151931a67a9730b2978b" name="af10db4e7ba06151931a67a9730b2978b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10db4e7ba06151931a67a9730b2978b">&#9670;&#160;</a></span>name_to_method_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, size_t&gt; runtime::Class::name_to_method_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d25bdaf74a3b17687fb4dfdcd977e92" name="a3d25bdaf74a3b17687fb4dfdcd977e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d25bdaf74a3b17687fb4dfdcd977e92">&#9670;&#160;</a></span>parent_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classruntime_1_1Class.html">Class</a>* runtime::Class::parent_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

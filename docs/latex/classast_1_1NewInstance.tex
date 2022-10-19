@@ -13,12 +13,19 @@ Inheritance diagram for ast\+::New\+Instance\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classast_1_1NewInstance_ab047d3a20c08941b903aa357c9f8a7af}{New\+Instance}} (const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}} \&class\+\_\+)
+\mbox{\hyperlink{classast_1_1NewInstance_ab047d3a20c08941b903aa357c9f8a7af}{New\+Instance}} (const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}} \&\mbox{\hyperlink{classast_1_1NewInstance_a04ecc068a602cf4e572481b555783f06}{class\+\_\+}})
 \item 
-\mbox{\hyperlink{classast_1_1NewInstance_a007ca56eecb2a921dc04ac80824f37fd}{New\+Instance}} (const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}} \&class\+\_\+, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \&\&args)
+\mbox{\hyperlink{classast_1_1NewInstance_a007ca56eecb2a921dc04ac80824f37fd}{New\+Instance}} (const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}} \&\mbox{\hyperlink{classast_1_1NewInstance_a04ecc068a602cf4e572481b555783f06}{class\+\_\+}}, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \&\&args)
 \item 
 \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1NewInstance_ab386fba270f10bd8a12c95d172273c00}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
 \begin{DoxyCompactList}\small\item\em Returns object containing value of type Class\+Instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}} \& \mbox{\hyperlink{classast_1_1NewInstance_a04ecc068a602cf4e572481b555783f06}{class\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ $>$ \mbox{\hyperlink{classast_1_1NewInstance_a99e2324ba37f9f7502c7a2aa058b28eb}{args\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -53,6 +60,21 @@ Returns object containing value of type Class\+Instance.
 
 
 Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classast_1_1NewInstance_a99e2324ba37f9f7502c7a2aa058b28eb}\label{classast_1_1NewInstance_a99e2324ba37f9f7502c7a2aa058b28eb}} 
+\index{ast::NewInstance@{ast::NewInstance}!args\_@{args\_}}
+\index{args\_@{args\_}!ast::NewInstance@{ast::NewInstance}}
+\doxysubsubsection{\texorpdfstring{args\_}{args\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ $>$ ast\+::\+New\+Instance\+::args\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classast_1_1NewInstance_a04ecc068a602cf4e572481b555783f06}\label{classast_1_1NewInstance_a04ecc068a602cf4e572481b555783f06}} 
+\index{ast::NewInstance@{ast::NewInstance}!class\_@{class\_}}
+\index{class\_@{class\_}!ast::NewInstance@{ast::NewInstance}}
+\doxysubsubsection{\texorpdfstring{class\_}{class\_}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classruntime_1_1Class}{runtime\+::\+Class}}\& ast\+::\+New\+Instance\+::class\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

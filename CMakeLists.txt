@@ -14,10 +14,33 @@ endif ()
 
 include_directories(src)
 
-
-aux_source_directory(./src MPYTHON_SRC)
-
 add_executable(
         mini-python
-        ${MPYTHON_SRC}
+        src/lexer.cpp
+        src/lexer.h
+        src/main.cpp
+        src/parse.cpp
+        src/parse.h
+        src/runtime.cpp
+        src/runtime.h
+        src/statement.cpp
+        src/statement.h
+)
+
+add_executable(
+        unit-tests
+        src/lexer.cpp
+        src/lexer.h
+        src/parse.cpp
+        src/parse.h
+        src/runtime.cpp
+        src/runtime.h
+        src/statement.cpp
+        src/statement.h
+        tests/lexer_test_open.cpp
+        tests/main.cpp
+        tests/parse_test.cpp
+        tests/runtime_test.cpp
+        tests/statement_test.cpp
+        tests/test_runner_p.h
 )

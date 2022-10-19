@@ -1,3 +1,7 @@
+/*!
+ * \file parse.h
+ * \brief Syntax analyzer
+ */
 #pragma once
 
 #include <memory>

@@ -41,6 +41,18 @@ static \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \mbox{\hy
 \item 
 static \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \mbox{\hyperlink{classruntime_1_1ObjectHolder_a0b7a12fb2b45a05e6ef4ca3a08bf8a04}{None}} ()
 \begin{DoxyCompactList}\small\item\em Returns empty \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}}, \char`\"{}\+None\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classruntime_1_1ObjectHolder_ac5b0eb7616d5f051a1e7b1d7648f734c}{Object\+Holder}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classruntime_1_1Object}{Object}} $>$ data)
+\item 
+void \mbox{\hyperlink{classruntime_1_1ObjectHolder_a551dbee673b4259483bca17297158098}{Assert\+Is\+Valid}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classruntime_1_1Object}{Object}} $>$ \mbox{\hyperlink{classruntime_1_1ObjectHolder_a621150b20f3b256f58ef9fe10ea373c1}{data\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -50,7 +62,7 @@ Special wrapper, contains methods that make it easier to construct Objects and a
 \mbox{\Hypertarget{classruntime_1_1ObjectHolder_ad98b35bacb64be17052b8f2a8dd4b07e}\label{classruntime_1_1ObjectHolder_ad98b35bacb64be17052b8f2a8dd4b07e}} 
 \index{runtime::ObjectHolder@{runtime::ObjectHolder}!ObjectHolder@{ObjectHolder}}
 \index{ObjectHolder@{ObjectHolder}!runtime::ObjectHolder@{runtime::ObjectHolder}}
-\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily runtime\+::\+Object\+Holder\+::\+Object\+Holder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
@@ -60,18 +72,30 @@ Create empty value.
 \mbox{\Hypertarget{classruntime_1_1ObjectHolder_ae2958089094440cdb64f9b085bb21ded}\label{classruntime_1_1ObjectHolder_ae2958089094440cdb64f9b085bb21ded}} 
 \index{runtime::ObjectHolder@{runtime::ObjectHolder}!ObjectHolder@{ObjectHolder}}
 \index{ObjectHolder@{ObjectHolder}!runtime::ObjectHolder@{runtime::ObjectHolder}}
-\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily runtime\+::\+Object\+Holder\+::\+Object\+Holder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 \mbox{\Hypertarget{classruntime_1_1ObjectHolder_a0b5f3c9725039a3fe02794fa80024b26}\label{classruntime_1_1ObjectHolder_a0b5f3c9725039a3fe02794fa80024b26}} 
 \index{runtime::ObjectHolder@{runtime::ObjectHolder}!ObjectHolder@{ObjectHolder}}
 \index{ObjectHolder@{ObjectHolder}!runtime::ObjectHolder@{runtime::ObjectHolder}}
-\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily runtime\+::\+Object\+Holder\+::\+Object\+Holder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classruntime_1_1ObjectHolder}{Object\+Holder}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_ac5b0eb7616d5f051a1e7b1d7648f734c}\label{classruntime_1_1ObjectHolder_ac5b0eb7616d5f051a1e7b1d7648f734c}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!ObjectHolder@{ObjectHolder}}
+\index{ObjectHolder@{ObjectHolder}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{ObjectHolder()}{ObjectHolder()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily runtime\+::\+Object\+Holder\+::\+Object\+Holder (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classruntime_1_1Object}{Object}} $>$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}
 
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_a551dbee673b4259483bca17297158098}\label{classruntime_1_1ObjectHolder_a551dbee673b4259483bca17297158098}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!AssertIsValid@{AssertIsValid}}
+\index{AssertIsValid@{AssertIsValid}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{AssertIsValid()}{AssertIsValid()}}
+{\footnotesize\ttfamily void runtime\+::\+Object\+Holder\+::\+Assert\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classruntime_1_1ObjectHolder_aa4f1c38d938ceb41a9e130621fd5e805}\label{classruntime_1_1ObjectHolder_aa4f1c38d938ceb41a9e130621fd5e805}} 
 \index{runtime::ObjectHolder@{runtime::ObjectHolder}!Get@{Get}}
 \index{Get@{Get}!runtime::ObjectHolder@{runtime::ObjectHolder}}
@@ -157,6 +181,15 @@ T $\ast$ runtime\+::\+Object\+Holder\+::\+Try\+As (\begin{DoxyParamCaption}{ }\e
 
 
 Returns raw pointer to object of type T or nullptr. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classruntime_1_1ObjectHolder_a621150b20f3b256f58ef9fe10ea373c1}\label{classruntime_1_1ObjectHolder_a621150b20f3b256f58ef9fe10ea373c1}} 
+\index{runtime::ObjectHolder@{runtime::ObjectHolder}!data\_@{data\_}}
+\index{data\_@{data\_}!runtime::ObjectHolder@{runtime::ObjectHolder}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classruntime_1_1Object}{Object}}$>$ runtime\+::\+Object\+Holder\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

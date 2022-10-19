@@ -74,12 +74,27 @@ $(function() {
   <div class="headertitle"><div class="title">Minimalistic Python </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_README"></a> <img src="https://img.shields.io/badge/C%2B%2B-17-blue" alt="C++ version" class="inline"/></p>
-<p >An interpreter consists from several parts:</p>
-<p >1) Lexical analyzer — reads symbols stream and groups them into meaningful sequences called lexemes. Each lexeme is then used to generate so-called token.</p>
-<p >2) Syntax analyzer — reads token stream and generates abstract syntax tree (AST). Each inner node represents some kind of operation, where child nodes are its arguments.</p>
-<p >3) Semantic analyzer — traverses AST, completes node actions, updates symbols table. </p>
-</div></div><!-- PageDoc -->
+<div class="textblock"><p ><a class="anchor" id="md_README"></a> <img src="https://github.com/jys1670/mini-python/blob/master/docs/example/example.gif?raw=true" alt="Alt Text" class="inline"/></p>
+<p >This is educational mini-Python interpreter build under the guidance of yandex practicum. The project consists of several independent parts:</p>
+<p >1) <em>Lexical analyzer</em> — reads symbols stream and groups them into meaningful sequences called lexemes. Each lexeme is then used to generate so-called token.</p>
+<p >2) <em>Syntax analyzer</em> — reads token stream and generates abstract syntax tree (AST). Each inner node represents some kind of operation, where child nodes are its arguments.</p>
+<p >3) <em>Runtime module</em> — traverses AST, completes node actions according to their semantics, updates symbols table, etc.</p>
+<p ><a href="https://jys1670.github.io/mini-python/html/index.html">Documentation</a> might make things a bit more clear</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Building:</h2>
+<p >Requirements:</p><ul>
+<li>GCC or alternative (supporting C++17 or later)</li>
+<li>Cmake (tested with 3.24)</li>
+<li>[optional] Doxygen (tested with 1.9.5)</li>
+</ul>
+<p >Preparations: </p><div class="fragment"><div class="line">git clone https://github.com/jys1670/mini-python</div>
+<div class="line">cd mini-python</div>
+<div class="line">mkdir build &amp;&amp; cd build</div>
+</div><!-- fragment --><p >Building and running main executable: </p><div class="fragment"><div class="line">cmake -DCMAKE_BUILD_TYPE=Release ..</div>
+<div class="line">cmake --build . --config Release --target mini-python</div>
+<div class="line">./mini-python # reads from stdin</div>
+</div><!-- fragment --><p >Updating documentation: </p><div class="fragment"><div class="line">cmake --build . --config Release --target doxygen</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -22,6 +22,13 @@ Inheritance diagram for ast\+::Assignment\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classruntime_1_1ObjectHolder}{runtime\+::\+Object\+Holder}} \mbox{\hyperlink{classast_1_1Assignment_a7a0f20bacb0c81792b37c573ca5b92ec}{Execute}} (\mbox{\hyperlink{namespaceruntime_a8c77230f8dda88c5c664851be7a50f58}{runtime\+::\+Closure}} \&closure, \mbox{\hyperlink{classruntime_1_1Context}{runtime\+::\+Context}} \&context) override
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classast_1_1Assignment_aa5562dddfc5cfc3aac414f8910c88335}{var\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}} $>$ \mbox{\hyperlink{classast_1_1Assignment_a70117084802e5dc96aae57b7272c8599}{rv\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,6 +53,21 @@ Assigns the value of the \char`\"{}rv\char`\"{} statement to the variable \char`
 Does something with objects inside of closure, outputs to context. Returns result or \mbox{\hyperlink{classast_1_1None}{None}} 
 
 Implements \mbox{\hyperlink{classruntime_1_1Executable_a8760a22b05a1ab4d06eb992636e34886}{runtime\+::\+Executable}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classast_1_1Assignment_a70117084802e5dc96aae57b7272c8599}\label{classast_1_1Assignment_a70117084802e5dc96aae57b7272c8599}} 
+\index{ast::Assignment@{ast::Assignment}!rv\_@{rv\_}}
+\index{rv\_@{rv\_}!ast::Assignment@{ast::Assignment}}
+\doxysubsubsection{\texorpdfstring{rv\_}{rv\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{namespaceast_a5ed61c9a8094ddffa1ed33a41963c226}{Statement}}$>$ ast\+::\+Assignment\+::rv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classast_1_1Assignment_aa5562dddfc5cfc3aac414f8910c88335}\label{classast_1_1Assignment_aa5562dddfc5cfc3aac414f8910c88335}} 
+\index{ast::Assignment@{ast::Assignment}!var\_@{var\_}}
+\index{var\_@{var\_}!ast::Assignment@{ast::Assignment}}
+\doxysubsubsection{\texorpdfstring{var\_}{var\_}}
+{\footnotesize\ttfamily std\+::string ast\+::\+Assignment\+::var\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
